@@ -7,9 +7,6 @@ import Categories from "./Categories.js";
 import Code from "./Code.js";
 
 class App extends Component {
-  componentWillMount() {
-    this.props.fetchProducts();
-  }
 
   render() {
     return (
