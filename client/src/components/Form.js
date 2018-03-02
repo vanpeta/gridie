@@ -1,20 +1,18 @@
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 
+import CategoryField from "./CategoryField";
+
 class Form extends Component {
 	render() {
-		return (
-			<div>
-				<form onSubmit={this.props.handleSubmit(values =>
-						console.log(values)
-					)}>
-					<Field />
-					<button type="submit">
-						Get Gridie
-					</button>
-				</form>
-			</div>
-		);
+		return <div>
+        <form onSubmit={this.props.handleSubmit(values =>
+            console.log(values)
+          )}>
+          <Field name="category" type="text" component={CategoryField} label="Category URL" />
+          <button type="submit">Get Gridie</button>
+        </form>
+      </div>;
 	}
 }
 
