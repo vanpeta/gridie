@@ -1,10 +1,15 @@
 import React, { Component } from "react";
+import Code from "./Code";
 import axios from "axios";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { url: "" };
+    this.state = {
+      url: "",
+      images: [],
+      links: []
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -26,23 +31,39 @@ class App extends Component {
 
   handleProducts(response) {
     const products = response.data.Value.Abstract.Products;
-    console.log(products);
+    const imageUrls = [];
+    const productUrls = [];
+    for (let i = 0; i < 6; i++) {
+      let imageUrl = products[i].ImageURLThumb;
+      imageUrls.push(imageUrl.substring(0, imageUrl.indexOf("?")));
+      let productUrl = "http://shop.guess.com/en/Catalog/View/" + products[i].ProductCode;
+      productUrls.push(productUrl);
+    }
+    this.setState({ images: imageUrls, links: productUrls });
+  }
+  renderCode() {
+    return (
+      <div>
+        <Code
+          images = { this.state.images }
+          links = { this.state.links }
+        />
+      </div>
+    )
   }
 
   render() {
-    return (
-      <div className="App">
+    return <div className="App">
         <header className="App-header" />
         <label htmlFor="url">Category url</label>
-        <input
-          type="text"
-          id="url"
-          value={this.state.url}
-          onChange={event => this.onInputChange(event.target.value)}
-        />
+        <input type="text" id="url" value={this.state.url} onChange={event => this.onInputChange(event.target.value)} />
         <button onClick={this.handleClick}>Get Gridie</button>
-      </div>
-    );
+        <pre>
+          <code>
+            <p>{ this.renderCode() }</p>
+          </code>
+        </pre>
+      </div>;
   }
 }
 

@@ -13,7 +13,8 @@ module.exports = app => {
           res.send(response.data);
         })
         .catch(error => {
-          console.log(error);
+          res.status(400);
+          res.send(error);
         });
     }
   });
