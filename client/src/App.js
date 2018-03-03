@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Code from "./Code";
+import Codesnippet from "./Codesnippet";
 import axios from "axios";
 
 class App extends Component {
@@ -44,7 +44,7 @@ class App extends Component {
   renderCode() {
     return (
       <div>
-        <Code
+        <Codesnippet
           images = { this.state.images }
           links = { this.state.links }
         />
@@ -60,7 +60,7 @@ class App extends Component {
         <button onClick={this.handleClick}>Get Gridie</button>
         <pre>
           <code>
-            <p>{ this.renderCode() }</p>
+            <div>{ this.renderCode() }</div>
           </code>
         </pre>
       </div>;
