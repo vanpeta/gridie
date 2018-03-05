@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Codesnippet from "./Codesnippet";
+import SitesContainer from "./SitesContainer";
+import CodeSnippet from "./CodeSnippet";
 import axios from "axios";
 
 class App extends Component {
@@ -44,7 +45,7 @@ class App extends Component {
   renderCode() {
     return (
       <div>
-        <Codesnippet
+        <CodeSnippet
           images = { this.state.images }
           links = { this.state.links }
         />
@@ -54,13 +55,13 @@ class App extends Component {
 
   render() {
     return <div className="App">
-        <header className="App-header" />
+        <SitesContainer />
         <label htmlFor="url">Category url</label>
         <input type="text" id="url" value={this.state.url} onChange={event => this.onInputChange(event.target.value)} />
         <button onClick={this.handleClick}>Get Gridie</button>
         <pre>
           <code>
-            <div>{ this.renderCode() }</div>
+            <div>{this.renderCode()}</div>
           </code>
         </pre>
       </div>;
