@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SitesContainer from "./SitesContainer";
+import SideMenu from "./sideMenu/SideMenu";
 import CodeSnippet from "./CodeSnippet";
 import axios from "axios";
 
@@ -55,7 +55,7 @@ class App extends Component {
 
   render() {
     return <div className="App">
-        <SitesContainer />
+        <SideMenu />
         <label htmlFor="url">Category url</label>
         <input type="text" id="url" value={this.state.url} onChange={event => this.onInputChange(event.target.value)} />
         <button onClick={this.handleClick}>Get Gridie</button>
