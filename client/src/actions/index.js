@@ -1,7 +1,13 @@
 export function selectCategory (category) {
-	console.log("category selected = ", category);
 	return {
 		type: 'CATEGORY_SELECTED',
-		category: category
+		payload: category
 	}
 };
+export function newImagesAndLinks (newData) {
+	console.log(newData)
+	return {
+		type: 'UPDATE_LINKS_AND_IMAGES',
+		payload: newData
+	}
+}
