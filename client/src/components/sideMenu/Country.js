@@ -1,13 +1,23 @@
 import React, { Component } from "react";
 import Gender from "./Gender";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { selectCountry } from "../../actions/index";
 
 class Country extends Component {
+  handleClick (country) {
+    this.props.selectCountry(Object.keys(country)[0]);
+  }
   renderCountries() {
     return this.props.site.countries.map(country => {
-      return <li key={this.props.site.countries.indexOf(country)}>
+      return (
+        <li
+          onClick={ () => this.handleClick(country) } 
+          key={this.props.site.countries.indexOf(country)}>
           {Object.keys(country)}
           <Gender country={country[Object.keys(country)]} />
-        </li>;
+        </li>
+      );
     });
   }
   render() {
@@ -15,4 +25,16 @@ class Country extends Component {
   }
 }
 
-export default Country;
+function mapStateToProps(state) {
+  return {
+    activeCountry: state.activeCountry
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    selectCountry: selectCountry
+  }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Country);

@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 
 class CodeSnippet extends Component {
   render() {
-		console.log(this.props.newImagesAndLinks);
 		if (!this.props.newImagesAndLinks) {
       return <div>Select a url!</div>;
     }

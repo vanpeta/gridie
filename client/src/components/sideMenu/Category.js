@@ -4,6 +4,7 @@ import { selectCategory, newImagesAndLinks } from "../../actions/index";
 import { bindActionCreators } from "redux";
 import axios from "axios";
 
+let rootUrl = "";
 
 class Category extends Component {
   handleClick(category) {
@@ -18,16 +19,43 @@ class Category extends Component {
     };
     axios.request(config).then(response => this.handleProducts(response));
   }
+  buildRootUrl() {
+    if (this.props.activeBrand === "GUESS") {
+      if (this.props.activeCountry === "US") {
+        rootUrl = "https://shop.guess.com/en/";
+      } else {
+        rootUrl = "https://guess.ca/en/";
+      }
+    } else if (this.props.activeBrand === "G by GUESS") {
+      if (this.props.activeCountry === "US") {
+        rootUrl = "https://gbyguess.com/en/";
+      } else {
+        rootUrl = "https://gbyguess.ca/en/";
+      }
+    } else if (this.props.activeBrand === "GUESS Factory") {
+      if (this.props.activeCountry === "US") {
+        rootUrl = "https://guessfactory.com/en/";
+      } else {
+        rootUrl = "https://guessfactory.ca/en/";
+      }
+    } else if (this.props.activeBrand === "Marciano") {
+      if (this.props.activeCountry === "US") {
+        rootUrl = "https://guessbymarciano.guess.com/en/";
+      } else {
+        rootUrl = "https://guessbymarciano.guess.ca/en";
+      }
+    }
+    return rootUrl;
+  }
   handleProducts(response) {
-    console.log(this.props);
+    this.buildRootUrl();
     const products = response.data.Value.Abstract.Products;
     const imageUrls = [];
     const productUrls = [];
     for (let i = 0; i < 6; i++) {
       let imageUrl = products[i].ImageURLThumb;
       imageUrls.push(imageUrl.substring(0, imageUrl.indexOf("?")));
-      let productUrl =
-        "http://shop.guess.com/en/Catalog/View/" + products[i].ProductCode;
+      let productUrl = rootUrl + "Catalog/View/" + products[i].ProductCode;
       productUrls.push(productUrl);
     }
     this.props.newLinksAndImages({ images: imageUrls, links: productUrls });
@@ -51,8 +79,9 @@ class Category extends Component {
 
 function mapStateToProps(state) {
   return {
-    selectCategory: selectCategory,
-    newLinksAndImages: newImagesAndLinks
+    activeGender: state.activeGender,
+    activeCountry: state.activeCountry,
+    activeBrand: state.activeBrand
   };
 }
 
