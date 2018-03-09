@@ -14,14 +14,14 @@ class Country extends Component {
         <li
           onClick={ () => this.handleClick(country) } 
           key={this.props.site.countries.indexOf(country)}>
-          {Object.keys(country)}
+          <p>{Object.keys(country)}</p>
           <Gender country={country[Object.keys(country)]} />
         </li>
       );
     });
   }
   render() {
-    return <ul>{this.renderCountries()}</ul>;
+    return <ul className="nav flex-column countryItem">{this.renderCountries()}</ul>;
   }
 }
 

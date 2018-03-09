@@ -54,17 +54,29 @@ class App extends Component {
   }
 
   render() {
-    return <div className="App">
-        <SideMenu />
-        <label htmlFor="url">Category url</label>
-        <input type="text" id="url" value={this.state.url} onChange={event => this.onInputChange(event.target.value)} />
-        <button onClick={this.handleClick}>Get Gridie</button>
-        <pre>
-          <code>
-            <div>{this.renderCode()}</div>
-          </code>
-        </pre>
-      </div>;
+    return (
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-3">
+            <SideMenu />
+          </div>
+          <div className="col-9">
+            <div className="container-fluid">
+              <div className="row">
+                SETTINGS
+              </div>
+              <div className="row">
+                <pre>
+                  <code>
+                    <div>{this.renderCode()}</div>
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 

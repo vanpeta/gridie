@@ -12,17 +12,17 @@ class Gender extends Component {
   renderGenders() {
     return this.props.country.map(gender => {
       return (
-        <li 
+        <li
           onClick={ () => this.handleClick(gender) }
           key={this.props.country.indexOf(gender)}>
-          {Object.keys(gender)}
-          <Category gender={gender[Object.keys(gender)]}/>
+          <p>{Object.keys(gender)}</p>
+          <ul className="nav flex-column categoryItem"><Category gender={gender[Object.keys(gender)]}/></ul>
         </li>
       );
     });
   }
   render() {
-    return <ul>{this.renderGenders()}</ul>;
+    return <ul className="nav flex-column genderItem">{this.renderGenders()}</ul>;
   }
 }
 

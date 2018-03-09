@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Country from "./Country";
 import { bindActionCreators } from "redux";
 import { selectBrand } from "../../actions/index";
+import "./css/sideMenuStyle.css";
 
 class SideMenu extends Component {
   handleClick(brand) {
@@ -11,19 +12,24 @@ class SideMenu extends Component {
   renderCountries() {
     return this.props.sites.map(site => {
       return (
-        <li
-          onClick={ () => this.handleClick(site.name) } 
+        <li className="nav-item"
+          onClick={ () => this.handleClick(site.name) }
           key={this.props.sites.indexOf(site)}>
-          { site.name }
-          <ul>
+          <p>{ site.name }</p>
             <Country site={site} />
-          </ul>
         </li>
       );
     });
   }
   render() {
-    return <ul>{this.renderCountries()}</ul>;
+    return (
+      <nav>
+        <div>
+          <h5>Select Brand, Country, Gender and Category</h5>
+        </div>
+        <ul className="nav flex-column mainmenu">{this.renderCountries()}</ul>
+      </nav>
+    );
   }
 }
 
@@ -35,7 +41,8 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
   return {
-    sites: state.sites
+    sites: state.sites,
+    brand: state.activeBrand
   };
 }
 

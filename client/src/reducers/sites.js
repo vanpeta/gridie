@@ -1,4 +1,4 @@
-export default function() {
+export default function () {
   return [
     {
       name: "GUESS",
@@ -8,31 +8,25 @@ export default function() {
             {
               Men: [
                 {
-                  "View All":
-                    "https://shop.guess.com/en/catalog/browse/men/view-all/"
+                  "View All": "https://shop.guess.com/en/catalog/browse/men/view-all/"
                 },
                 {
-                  "New Arrivals":
-                    "https://shop.guess.com/en/catalog/browse/new-arrivals/men/view-all/"
+                  "New Arrivals": "https://shop.guess.com/en/catalog/browse/new-arrivals/men/view-all/"
                 },
                 {
-                  "Denim":
-                    "https://shop.guess.com/en/catalog/browse/denim/men/view-all/"
+                  Denim: "https://shop.guess.com/en/catalog/browse/denim/men/view-all/"
                 },
                 {
-                  "Tanks & T-shirts":
-                    "https://shop.guess.com/en/catalog/browse/men/tanks-t-shirts/view-all/"
+                  "Tanks & T-shirts": "https://shop.guess.com/en/catalog/browse/men/tanks-t-shirts/view-all/"
                 },
                 {
-                  "Jackets":
-                    "https://shop.guess.com/en/catalog/browse/men/jackets-outerwear/view-all/"
+                  Jackets: "https://shop.guess.com/en/catalog/browse/men/jackets-outerwear/view-all/"
                 },
                 {
-                  "Shirts":
-                    "https://shop.guess.com/en/catalog/browse/men/shirts/view-all/"
+                  Shirts: "https://shop.guess.com/en/catalog/browse/men/shirts/view-all/"
                 },
                 {
-                  "Sweaters":
+                  Sweaters:
                     "https://shop.guess.com/en/catalog/browse/men/sweaters/"
                 },
                 {
@@ -40,16 +34,16 @@ export default function() {
                     "https://shop.guess.com/en/catalog/browse/men/pants-shorts/view-all/"
                 },
                 {
-                  "Activewear":
+                  Activewear:
                     "https://shop.guess.com/en/catalog/browse/men/activewear/"
                 },
                 {
-                  "Underwear":
+                  Underwear:
                     "https://shop.guess.com/en/catalog/browse/men/underwear/"
                 },
                 {
-									"Swim": "https://shop.guess.com/en/catalog/browse/men/swim/"
-								}
+                  Swim: "https://shop.guess.com/en/catalog/browse/men/swim/"
+                }
               ]
             },
             {
@@ -63,39 +57,39 @@ export default function() {
                     "https://shop.guess.com/en/catalog/browse/new-arrivals/women/view-all/"
                 },
                 {
-                  "Dresses":
+                  Dresses:
                     "https://shop.guess.com/en/catalog/browse/women/dresses/view-all/"
                 },
                 {
-                  "Denim":
+                  Denim:
                     "https://shop.guess.com/en/catalog/browse/denim/women/view-all/"
                 },
                 {
-                  "Tops":
+                  Tops:
                     "https://shop.guess.com/en/catalog/browse/women/tops/view-all/"
                 },
                 {
-                  "Jackets":
+                  Jackets:
                     "https://shop.guess.com/en/catalog/browse/women/jackets-and-outerwear/view-all/"
                 },
                 {
-                  "Sweaters":
+                  Sweaters:
                     "https://shop.guess.com/en/catalog/browse/women/sweaters/"
                 },
                 {
-                  "Bottoms":
+                  Bottoms:
                     "https://shop.guess.com/en/catalog/browse/women/bottoms/view-all/"
                 },
                 {
-                  "Activewear":
+                  Activewear:
                     "https://shop.guess.com/en/catalog/browse/women/activewear/"
                 },
                 {
-                  "Swim":
+                  Swim:
                     "https://shop.guess.com/en/catalog/browse/women/swimwear/view-all/"
                 },
                 {
-                  "Lingerie":
+                  Lingerie:
                     "https://shop.guess.com/en/catalog/browse/women/lingerie/view-all/"
                 }
               ]
@@ -115,7 +109,7 @@ export default function() {
                     "https://www.guess.ca/en/catalog/browse/new-arrivals/men/view-all/"
                 },
                 {
-                  "Denim":
+                  Denim:
                     "https://www.guess.ca/en/catalog/browse/denim/men/view-all/"
                 },
                 {
@@ -123,15 +117,15 @@ export default function() {
                     "https://www.guess.ca/en/catalog/browse/men/tanks-t-shirts/view-all/"
                 },
                 {
-                  "Jackets":
+                  Jackets:
                     "https://www.guess.ca/en/catalog/browse/men/jackets-outerwear/view-all/"
                 },
                 {
-                  "Shirts":
+                  Shirts:
                     "https://www.guess.ca/en/catalog/browse/men/shirts/view-all/"
                 },
                 {
-                  "Sweaters":
+                  Sweaters:
                     "https://www.guess.ca/en/catalog/browse/men/sweaters/"
                 },
                 {
@@ -139,16 +133,17 @@ export default function() {
                     "https://www.guess.ca/en/catalog/browse/men/pants-shorts/view-all/"
                 },
                 {
-                  "Activewear":
+                  Activewear:
                     "https://www.guess.ca/en/catalog/browse/men/activewear/"
                 },
                 {
-                  "Underwear":
+                  Underwear:
                     "https://www.guess.ca/en/catalog/browse/men/underwear/"
                 },
                 {
-									"Sale": "https://www.guess.ca/en/catalog/browse/sale/men/view-all/"
-								}
+                  Sale:
+                    "https://www.guess.ca/en/catalog/browse/sale/men/view-all/"
+                }
               ]
             },
             {
@@ -162,40 +157,41 @@ export default function() {
                     "https://www.guess.ca/en/catalog/browse/new-arrivals/women/view-all/"
                 },
                 {
-                  "Dresses":
+                  Dresses:
                     "https://www.guess.ca/en/catalog/browse/women/dresses/view-all/"
                 },
                 {
-                  "Tops":
+                  Tops:
                     "https://www.guess.ca/en/catalog/browse/women/tops/view-all/"
                 },
                 {
-                  "Denim":
+                  Denim:
                     "https://www.guess.ca/en/Catalog/Browse/denim/women/view-all/"
                 },
                 {
-                  "Jackets":
+                  Jackets:
                     "https://www.guess.ca/en/catalog/browse/women/jackets-and-outerwear/view-all/"
                 },
                 {
-                  "Sweaters":
+                  Sweaters:
                     "https://www.guess.ca/en/catalog/browse/women/sweaters/"
                 },
                 {
-                  "Bottoms":
+                  Bottoms:
                     "https://www.guess.ca/en/catalog/browse/women/bottoms/view-all/"
                 },
                 {
-                  "Activewear":
+                  Activewear:
                     "https://www.guess.ca/en/catalog/browse/women/activewear/"
                 },
                 {
-                  "Swimwear":
+                  Swimwear:
                     "https://www.guess.ca/en/catalog/browse/women/swimwear/view-all/"
                 },
                 {
-									"Lingerie": "https://www.guess.ca/en/catalog/browse/women/lingerie/view-all/"
-								}
+                  Lingerie:
+                    "https://www.guess.ca/en/catalog/browse/women/lingerie/view-all/"
+                }
               ]
             }
           ]
@@ -226,7 +222,7 @@ export default function() {
                     "https://www.guessfactory.com/en/catalog/browse/men/button-downs/view-all/"
                 },
                 {
-                  "Denim":
+                  Denim:
                     "https://www.guessfactory.com/en/catalog/browse/men/denim/view-all/"
                 },
                 {
@@ -234,29 +230,32 @@ export default function() {
                     "https://www.guessfactory.com/en/catalog/browse/men/joggers-pants/view-all/"
                 },
                 {
-                  "Short":
+                  Short:
                     "https://www.guessfactory.com/en/catalog/browse/men/shorts/"
                 },
                 {
-                  "Activewear":
+                  Activewear:
                     "https://www.guessfactory.com/en/catalog/browse/men/activewear/"
                 },
                 {
-                  "Sweaters":
+                  Sweaters:
                     "https://www.guessfactory.com/en/catalog/browse/men/sweaters/"
                 },
                 {
                   "Blazers & Vests":
                     "https://www.guessfactory.com/en/catalog/browse/men/jackets-blazers-vests/view-all/"
                 },
-                { 
-                  "Jackets & Outerwear": "https://www.guessfactory.com/en/catalog/browse/men/outerwear/view-all/"
+                {
+                  "Jackets & Outerwear":
+                    "https://www.guessfactory.com/en/catalog/browse/men/outerwear/view-all/"
                 },
                 {
-                  "Accessories": "https://www.guessfactory.com/en/catalog/browse/men/accessories/view-all/"
+                  Accessories:
+                    "https://www.guessfactory.com/en/catalog/browse/men/accessories/view-all/"
                 },
                 {
-                  "Shoes": "https://www.guessfactory.com/en/catalog/browse/men/shoes/"
+                  Shoes:
+                    "https://www.guessfactory.com/en/catalog/browse/men/shoes/"
                 }
               ]
             },
@@ -279,19 +278,19 @@ export default function() {
                     "https://www.guessfactory.com/en/catalog/browse/women/shirts-tops/view-all/"
                 },
                 {
-                  "Dresses":
+                  Dresses:
                     "https://www.guessfactory.com/en/catalog/browse/women/dresses/view-all/"
                 },
                 {
-                  "Denim":
+                  Denim:
                     "https://www.guessfactory.com/en/catalog/browse/women/denim/view-all/"
                 },
                 {
-                  "Leggings":
+                  Leggings:
                     "https://www.guessfactory.com/en/catalog/browse/women/leggings/"
                 },
                 {
-                  "Pants":
+                  Pants:
                     "https://www.guessfactory.com/en/catalog/browse/women/pants/"
                 },
                 {
@@ -303,29 +302,36 @@ export default function() {
                     "https://www.guessfactory.com/en/catalog/browse/women/jumpsuits-rompers/"
                 },
                 {
-                  "Activewear":
+                  Activewear:
                     "https://www.guessfactory.com/en/catalog/browse/women/activewear/"
                 },
                 {
-                  "Sweaters": "https://www.guessfactory.com/en/catalog/browse/women/sweaters/"
+                  Sweaters:
+                    "https://www.guessfactory.com/en/catalog/browse/women/sweaters/"
                 },
                 {
-                  "Jackets & Outerwear": "https://www.guessfactory.com/en/catalog/browse/women/jackets-blazers-vests/view-all/"
+                  "Jackets & Outerwear":
+                    "https://www.guessfactory.com/en/catalog/browse/women/jackets-blazers-vests/view-all/"
                 },
                 {
-                  "Blazers & Vests": "https://www.guessfactory.com/en/catalog/browse/women/outerwear/view-all/"
+                  "Blazers & Vests":
+                    "https://www.guessfactory.com/en/catalog/browse/women/outerwear/view-all/"
                 },
                 {
-                  "Handbags": "https://www.guessfactory.com/en/catalog/browse/women/handbags/view-all/"
+                  Handbags:
+                    "https://www.guessfactory.com/en/catalog/browse/women/handbags/view-all/"
                 },
                 {
-                  "Shoes": "https://www.guessfactory.com/en/catalog/browse/women/shoes/view-all/"
+                  Shoes:
+                    "https://www.guessfactory.com/en/catalog/browse/women/shoes/view-all/"
                 },
                 {
-                  "Jewelery": "https://www.guessfactory.com/en/catalog/browse/women/jewelry/view-all/"
+                  Jewelery:
+                    "https://www.guessfactory.com/en/catalog/browse/women/jewelry/view-all/"
                 },
                 {
-                  "Accessories": "https://www.guessfactory.com/en/catalog/browse/women/accessories/view-all/"
+                  Accessories:
+                    "https://www.guessfactory.com/en/catalog/browse/women/accessories/view-all/"
                 }
               ]
             }
@@ -348,7 +354,7 @@ export default function() {
                     "https://www.guessfactory.ca/en/catalog/browse/men/button-downs/view-all/"
                 },
                 {
-                  "Denim":
+                  Denim:
                     "https://www.guessfactory.ca/en/catalog/browse/men/denim/view-all/"
                 },
                 {
@@ -356,15 +362,15 @@ export default function() {
                     "https://www.guessfactory.ca/en/catalog/browse/men/joggers-pants/view-all/"
                 },
                 {
-                  "Shorts":
+                  Shorts:
                     "https://www.guessfactory.ca/en/catalog/browse/men/shorts/"
                 },
                 {
-                  "Activewear":
+                  Activewear:
                     "https://www.guessfactory.ca/en/catalog/browse/men/activewear/"
                 },
                 {
-                  "Sweaters":
+                  Sweaters:
                     "https://www.guessfactory.ca/en/catalog/browse/men/sweaters/"
                 },
                 {
@@ -375,11 +381,13 @@ export default function() {
                   "Jackets & Outerwear":
                     "https://www.guessfactory.ca/en/catalog/browse/men/outerwear/view-all/"
                 },
-                { 
-                  "Accessories": "https://www.guessfactory.ca/en/catalog/browse/men/accessories/view-all/"
+                {
+                  Accessories:
+                    "https://www.guessfactory.ca/en/catalog/browse/men/accessories/view-all/"
                 },
                 {
-                  "Sale": "https://www.guessfactory.ca/en/catalog/browse/sale/men/view-all/"
+                  Sale:
+                    "https://www.guessfactory.ca/en/catalog/browse/sale/men/view-all/"
                 }
               ]
             },
@@ -398,19 +406,19 @@ export default function() {
                     "https://www.guessfactory.ca/en/catalog/browse/women/shirts-tops/view-all/"
                 },
                 {
-                  "Dresses":
+                  Dresses:
                     "https://www.guessfactory.ca/en/catalog/browse/women/dresses/view-all/"
                 },
                 {
-                  "Denim":
+                  Denim:
                     "https://www.guessfactory.ca/en/catalog/browse/women/denim/view-all/"
                 },
                 {
-                  "Leggins":
+                  Leggins:
                     "https://www.guessfactory.ca/en/catalog/browse/women/leggings/"
                 },
                 {
-                  "Pants":
+                  Pants:
                     "https://www.guessfactory.ca/en/catalog/browse/women/pants/"
                 },
                 {
@@ -422,32 +430,40 @@ export default function() {
                     "https://www.guessfactory.ca/en/catalog/browse/women/jumpsuits-rompers/"
                 },
                 {
-                  "Activewear":
+                  Activewear:
                     "https://www.guessfactory.ca/en/catalog/browse/women/activewear/"
                 },
                 {
-                  "Sweaters": "https://www.guessfactory.ca/en/catalog/browse/women/sweaters/"
+                  Sweaters:
+                    "https://www.guessfactory.ca/en/catalog/browse/women/sweaters/"
                 },
                 {
-                  "Jackets & Outerwear": "https://www.guessfactory.ca/en/catalog/browse/women/jackets-blazers-vests/view-all/"
+                  "Jackets & Outerwear":
+                    "https://www.guessfactory.ca/en/catalog/browse/women/jackets-blazers-vests/view-all/"
                 },
                 {
-                  "Blazers & Vests": "https://www.guessfactory.ca/en/catalog/browse/women/outerwear/view-all/"
+                  "Blazers & Vests":
+                    "https://www.guessfactory.ca/en/catalog/browse/women/outerwear/view-all/"
                 },
                 {
-                  "Handbags": "https://www.guessfactory.ca/en/catalog/browse/women/handbags/view-all/"
+                  Handbags:
+                    "https://www.guessfactory.ca/en/catalog/browse/women/handbags/view-all/"
                 },
                 {
-                  "Shoes": "https://www.guessfactory.ca/en/catalog/browse/women/shoes/view-all/"
+                  Shoes:
+                    "https://www.guessfactory.ca/en/catalog/browse/women/shoes/view-all/"
                 },
                 {
-                  "Jewelry": "https://www.guessfactory.ca/en/catalog/browse/women/shoes/view-all/"
+                  Jewelry:
+                    "https://www.guessfactory.ca/en/catalog/browse/women/shoes/view-all/"
                 },
                 {
-                  "Accessories": "https://www.guessfactory.ca/en/catalog/browse/women/accessories/view-all/"
+                  Accessories:
+                    "https://www.guessfactory.ca/en/catalog/browse/women/accessories/view-all/"
                 },
                 {
-                  "Sale": "https://www.guessfactory.ca/en/catalog/browse/sale/women/view-all/"
+                  Sale:
+                    "https://www.guessfactory.ca/en/catalog/browse/sale/women/view-all/"
                 }
               ]
             }
