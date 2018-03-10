@@ -12,10 +12,12 @@ class SideMenu extends Component {
   renderCountries() {
     return this.props.sites.map(site => {
       return (
-        <li className="nav-item"
+        <li
           onClick={ () => this.handleClick(site.name) }
           key={this.props.sites.indexOf(site)}>
-          <p>{ site.name }</p>
+          <p>
+            { site.name }
+          </p>
             <Country site={site} />
         </li>
       );
@@ -24,10 +26,12 @@ class SideMenu extends Component {
   render() {
     return (
       <nav>
-        <div>
-          <h5>Select Brand, Country, Gender and Category</h5>
-        </div>
-        <ul className="nav flex-column mainmenu">{this.renderCountries()}</ul>
+        <ul>
+          <li>
+            <h5>Select Brand, Country, Gender and Category</h5>
+          </li>
+          {this.renderCountries()}
+        </ul>
       </nav>
     );
   }

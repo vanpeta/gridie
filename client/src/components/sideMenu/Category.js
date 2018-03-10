@@ -63,17 +63,17 @@ class Category extends Component {
   renderGenders() {
     return this.props.gender.map(category => {
       return (
-        <li className="nav-item"
+        <li
           key={this.props.gender.indexOf(category)}
           onClick={() => this.handleClick(category)}
         >
-          <p className="categoryItem">{Object.keys(category)}</p>
+          <p>{Object.keys(category)}</p>
         </li>
       );
     });
   }
   render() {
-    return <ul className="nav flex-column submenu">{this.renderGenders()}</ul>;
+    return <ul>{this.renderGenders()}</ul>;
   }
 }
 

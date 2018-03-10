@@ -21,7 +21,7 @@ class Country extends Component {
     });
   }
   render() {
-    return <ul className="nav flex-column countryItem">{this.renderCountries()}</ul>;
+    return <ul>{this.renderCountries()}</ul>;
   }
 }
 

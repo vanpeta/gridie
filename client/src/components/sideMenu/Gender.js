@@ -16,13 +16,13 @@ class Gender extends Component {
           onClick={ () => this.handleClick(gender) }
           key={this.props.country.indexOf(gender)}>
           <p>{Object.keys(gender)}</p>
-          <ul className="nav flex-column categoryItem"><Category gender={gender[Object.keys(gender)]}/></ul>
+          <ul><Category gender={gender[Object.keys(gender)]}/></ul>
         </li>
       );
     });
   }
   render() {
-    return <ul className="nav flex-column genderItem">{this.renderGenders()}</ul>;
+    return <ul>{this.renderGenders()}</ul>;
   }
 }
 
