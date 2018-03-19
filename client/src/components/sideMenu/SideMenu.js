@@ -1,52 +1,41 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Country from "./Country";
 import { bindActionCreators } from "redux";
-import { selectBrand } from "../../actions/index";
+import { selectSite } from "../../actions/index";
 import "./css/sideMenuStyle.css";
+import SideMenuItem from "./SideMenuItem";
 
 class SideMenu extends Component {
-  handleClick(brand) {
-    this.props.selectBrand(brand);
-  }
-  renderCountries() {
-    return this.props.sites.map(site => {
-      return (
-        <li
-          onClick={ () => this.handleClick(site.name) }
-          key={this.props.sites.indexOf(site)}>
-          <p>
-            { site.name }
-          </p>
-            <Country site={site} />
-        </li>
-      );
+
+  renderSites() {
+    return this.props.sites.map((site, index) => {
+      return <div key={index}>
+          {/* <div onClick={() => this.props.selectSite(site)}>{site.title}</div> */}
+          <ul>
+            <SideMenuItem 
+              data={site} 
+              address={[index]} 
+            />
+          </ul>
+        </div>;
     });
   }
   render() {
-    return (
-      <nav>
-        <ul>
-          <li>
-            <h5>Select Brand, Country, Gender and Category</h5>
-          </li>
-          {this.renderCountries()}
-        </ul>
-      </nav>
-    );
+    console.log('this.props =', this.props)
+    return <div>{this.renderSites()}</div>;
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    selectBrand: selectBrand
+    selectSite
   }, dispatch);
 }
 
 function mapStateToProps(state) {
   return {
     sites: state.sites,
-    brand: state.activeBrand
+    selectedSite: state.activeSite
   };
 }
 
