@@ -1,7 +1,7 @@
 export function selectSite(address, data, sites) {
 	console.log('in selectSite > address =', address, data, sites);
 
-	const newSites = {...sites};
+	const newSites = [...sites];
 
 	let siteReference = newSites;
 

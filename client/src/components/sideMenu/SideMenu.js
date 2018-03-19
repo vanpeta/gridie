@@ -35,7 +35,6 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
   return {
     sites: state.sites,
-    selectedSite: state.activeSite
   };
 }
 
