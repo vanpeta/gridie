@@ -32,7 +32,8 @@ class SideMenuItem extends Component {
 		const children = data.isOpen ? this.renderChildren(data.children, currentAddress) : null;
 		return (
 			<li 
-				onClick={(event) => this.handleClick(event, currentAddress, data, this.props.sites)}>
+				onClick={(event) => this.handleClick(event, currentAddress, data, this.props.sites)}
+				style={data.style}>
 				{data.title}
 				{children}
 			</li>

@@ -1,6 +1,6 @@
-import sites2 from './sites2';
+import sites from './sites';
 
-export default function (state = sites2, action) {
+export default function (state = sites, action) {
 	
 	switch (action.type) {
     case "SITE_SELECTED":

@@ -20,7 +20,7 @@ class SideMenu extends Component {
     });
   }
   render() {
-    return <div>{this.renderSites()}</div>;
+    return <div style={{backgroundColor: "#000000"}}>{this.renderSites()}</div>;
   }
 }
 
