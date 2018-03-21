@@ -11,18 +11,19 @@ class App extends Component {
           <div className="col-3">
             <SideMenu />
           </div>
-          <div className="col-md-9">
-            <div className="row">
-              <div className="col-md-12">
-                <pre>
-                  <code>
-                    <div>
-                      <CodeSnippet />
-                    </div>
-                  </code>
-                </pre>
-              </div>
-            </div>
+          <div className="col-9">
+            SETTINGS
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <pre>
+              <code>
+                <div>
+                  <CodeSnippet />
+                </div>
+              </code>
+            </pre>
           </div>
         </div>
       </div>
