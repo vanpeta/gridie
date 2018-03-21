@@ -1,12 +1,11 @@
 import { combineReducers } from 'redux';
-// import sites from './sites2';
-import updateImagesAndLinks from './updateImagesAndLinks';
-import selectSite from './selectedSite';
+
+import reducer_links_images from './reducer_links_images';
+import selectSite from './reducer_site_opened';
 
 const rootReducer = combineReducers({
   sites: selectSite,
-  newLinksAndImages: updateImagesAndLinks,
-  activeSite: selectSite
+  newImagesAndLinks: reducer_links_images
 });
 
 export default rootReducer;

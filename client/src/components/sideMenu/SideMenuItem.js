@@ -1,45 +1,29 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { selectSite } from "../../actions/index";
+import { selectSite, fetchImages } from "../../actions/index";
 
 class SideMenuItem extends Component {
 
-	toggle(event, address, data, sites) {
+	handleClick(event, address, data, sites) {
 		event.stopPropagation();
-		this.props.selectSite(address, data, sites);
+		if (data.value !== "") {
+			this.props.callForProducts(data.value);
+		} else {
+			this.props.openSideMenuItem(address, data, sites);
+		}
 	}
 
 	renderChildren(children, currentAddress) {
-		// const nextAddress = currentAddress.push()
 		if (children.length > 0) {
 			return (
-				<ul>
+				<ul className="list-unstyled">
 					{children.map((child, index) => {
 						return <NestedSideMenuItem data={child} key={index} address={[...currentAddress, index]} />;
-                // selectSite={this.props.selectSite}
 					})}
 				</ul>
 			)
 		}
-		// if (this.props.children && this.props.isOpen) {
-		// if (children.legth) {
-		// 	return (
-		// 		this.props.children.map(child => {
-		// 			return (
-		// 				<li
-		// 					key={this.props.children.indexOf(child)}>
-		// 						{child.title}
-		// 						<ul>
-		// 							<SideMenuItem
-		// 								children={child.children}
-		// 							/>
-		// 						</ul>
-		// 				</li>
-		// 			);
-		// 		})
-		// 	)
-		// }
 	}
 
 	render() {
@@ -47,18 +31,20 @@ class SideMenuItem extends Component {
 		const currentAddress = this.props.address;
 		const children = data.isOpen ? this.renderChildren(data.children, currentAddress) : null;
 		return (
-			<li onClick={(event) => this.toggle(event, currentAddress, data, this.props.sites)}>
+			<li 
+				onClick={(event) => this.handleClick(event, currentAddress, data, this.props.sites)}>
 				{data.title}
 				{children}
 			</li>
 		)		
-  }
+	}
 }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      selectSite
+			openSideMenuItem: selectSite,
+			callForProducts: fetchImages
     },
     dispatch
   );

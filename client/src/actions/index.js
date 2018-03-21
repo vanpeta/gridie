@@ -1,10 +1,8 @@
+import axios from "axios";
+
 export function selectSite(address, data, sites) {
-	console.log('in selectSite > address =', address, data, sites);
-
 	const newSites = [...sites];
-
 	let siteReference = newSites;
-
 	address.forEach(index => {
 		if (siteReference.children) {
 			siteReference = siteReference.children[index];
@@ -12,19 +10,27 @@ export function selectSite(address, data, sites) {
 			siteReference = siteReference[index];
 		}
 	})
-
-	// siteReference = newSelectedSite;
 	siteReference.isOpen = !siteReference.isOpen;
-	console.log("newSites=", newSites);
-
   return {
     type: "SITE_SELECTED",
     payload: newSites
   };
 }
-export function newImagesAndLinks (newData) {
-	return {
-		type: 'UPDATE_LINKS_AND_IMAGES',
-		payload: newData
+
+export const FETCH_LINKS_IMGS = "FETCH_LINKS_IMGS";
+
+export function fetchImages(action) {
+  const request = axios.get("/api/get_products?url=" + action);
+  return {
+		type: FETCH_LINKS_IMGS,
+		payload: request
 	}
 }
+
+
+
+
+
+
+
+

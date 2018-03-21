@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { selectSite } from "../../actions/index";
 import "./css/sideMenuStyle.css";
 import SideMenuItem from "./SideMenuItem";
 
@@ -9,27 +7,21 @@ class SideMenu extends Component {
 
   renderSites() {
     return this.props.sites.map((site, index) => {
-      return <div key={index}>
-          {/* <div onClick={() => this.props.selectSite(site)}>{site.title}</div> */}
-          <ul>
+      return (
+        <div key={index}>
+          <ul className="list-unstyled">
             <SideMenuItem 
               data={site} 
               address={[index]} 
             />
           </ul>
-        </div>;
+        </div>
+      );
     });
   }
   render() {
-    console.log('this.props =', this.props)
     return <div>{this.renderSites()}</div>;
   }
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({
-    selectSite
-  }, dispatch);
 }
 
 function mapStateToProps(state) {
@@ -38,4 +30,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SideMenu);
+export default connect(mapStateToProps)(SideMenu);
