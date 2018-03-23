@@ -1,18 +1,20 @@
 import React, { Component } from "react";
+
 import SideMenu from "./sideMenu/SideMenu";
 import CodeSnippet from "./CodeSnippet";
+import Settings from "./Settings";
 
 class App extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
-          <div className="col-3">
+          <div className="col">
             <SideMenu />
           </div>
           <div className="col-9">
-            SETTINGS
+            <Settings />
           </div>
         </div>
         <div className="row">

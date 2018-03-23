@@ -32,6 +32,7 @@ class SideMenuItem extends Component {
 		const children = data.isOpen ? this.renderChildren(data.children, currentAddress) : null;
 		return (
 			<li 
+				className="nav-item"
 				onClick={(event) => this.handleClick(event, currentAddress, data, this.props.sites)}
 				style={data.style}>
 				{data.title}
@@ -52,7 +53,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps (state) {
-	return {sites: state.sites}
+	return { sites: state.sites };
 }
 
 const NestedSideMenuItem = connect(mapStateToProps, mapDispatchToProps)(SideMenuItem);

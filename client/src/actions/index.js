@@ -27,6 +27,15 @@ export function fetchImages(action) {
 	}
 }
 
+export const NUMBER_OF_PRODUCTS = "NUMBER_OF_PRODUCTS";
+
+export function numberOfProducts(data) {
+	return {
+		type: NUMBER_OF_PRODUCTS,
+		payload: data
+	}
+}
+
 
 
 

@@ -9,7 +9,7 @@ class SideMenu extends Component {
     return this.props.sites.map((site, index) => {
       return (
         <div key={index}>
-          <ul className="list-unstyled">
+          <ul className="nav flex-column">
             <SideMenuItem 
               data={site} 
               address={[index]} 

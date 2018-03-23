@@ -356,7 +356,7 @@ export default [
 									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
 									value: "https://www.guess.ca/en/catalog/browse/sale/men/view-all/",
 									children: []
-								},
+								}
 							]
 						}
 					]
@@ -863,14 +863,226 @@ export default [
 							isOpen: false,
 							style: {backgroundColor: "#7c8696", color: "#ffffff"},
 							value: "",
-							children: []
+							children: [
+								{
+									title: "Discounts & Deals",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/discounts-deals/",
+									children: []
+								},
+								{
+									title: "View All",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/view-all/",
+									children: []
+								},
+								{
+									title: "Dresses",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/dresses/view-all/",
+									children: []
+								},
+								{
+									title: "Tops",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/tops/view-all/",
+									children: []
+								},
+								{
+									title: "Shorts & Skirts",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/shorts-skirts/view-all/",
+									children: []
+								},
+								{
+									title: "Denim",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/denim/view-all/",
+									children: []
+								},
+								{
+									title: "Pants",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/pants/",
+									children: []
+								},
+								{
+									title: "Leggins",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/leggings/",
+									children: []
+								},
+								{
+									title: "Jumpsuits & Rompers",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/jumpsuits-rompers/",
+									children: []
+								},
+								{
+									title: "Athleisure",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/athleisure/",
+									children: []
+								},
+								{
+									title: "Sweaters",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/sweaters/",
+									children: []
+								},
+								{
+									title: "Jackets outerwear",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/jackets-outerwear/view-all/",
+									children: []
+								},
+								{
+									title: "Shoes",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/shoes/view-all/",
+									children: []
+								},
+								{
+									title: "Handbags",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/handbags/view-all/",
+									children: []
+								},
+								{
+									title: "Accessories",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/accessories/view-all/",
+									children: []
+								},
+								{
+									title: "Jewelry",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/womens/jewelry/view-all/",
+									children: []
+								},
+								{
+									title: "Sale",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/sale/women/view-all/",
+									children: []
+								}
+							]
 						},
 						{
 							title: "Men",
 							isOpen: false,
 							style: {backgroundColor: "#7c8696", color: "#ffffff"},
 							value: "",
-							children: []
+							children: [
+								{
+									title: "Discounts & Deals",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/discounts-deals/",
+									children: []
+								},
+								{
+									title: "View All",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/view-all/",
+									children: []
+								},
+								{
+									title: "Tees & Tanks",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/tees-tanks/view-all/",
+									children: []
+								},
+								{
+									title: "Shirts",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/shirts/view-all/",
+									children: []
+								},
+								{
+									title: "Denim",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/denim/view-all/",
+									children: []
+								},
+								{
+									title: "Shorts",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/shorts/",
+									children: []
+								},
+								{
+									title: "Joggers & Pants",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/joggers-pants/view-all/",
+									children: []
+								},
+								{
+									title: "Athleisure",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/athleisure/",
+									children: []
+								},
+								{
+									title: "Sweaters",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/sweaters/",
+									children: []
+								},
+								{
+									title: "Jackets & Outerwear",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/jackets-outerwear/view-all/",
+									children: []
+								},
+								{
+									title: "Shoes",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/shoes/view-all/",
+									children: []
+								},
+								{
+									title: "Accessories",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/accessories/view-all/",
+									children: []
+								},
+								{
+									title: "Jewelry",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.com/en/catalog/browse/mens/jewelry/view-all/",
+									children: []
+								}
+							]
 						}
 					]
 				},
@@ -885,14 +1097,205 @@ export default [
 							isOpen: false,
 							style: {backgroundColor: "#7c8696", color: "#ffffff"},
 							value: "",
-							children: []
+							children: [
+								{
+									title: "Discount & Deals",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/discount-deals/",
+									children: []
+								},
+								{
+									title: "View All",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/view-all/",
+									children: []
+								},
+								{
+									title: "Denim",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/denim/view-all/",
+									children: []
+								},
+								{
+									title: "Tops",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/tops/view-all/",
+									children: []
+								},
+								{
+									title: "Dresses",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/dresses/view-all/",
+									children: []
+								},
+								{
+									title: "Pants",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/pants/",
+									children: []
+								},
+								{
+									title: "Leggings",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/leggings/",
+									children: []
+								},
+								{
+									title: "Athleisure",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/athleisure/",
+									children: []
+								},
+								{
+									title: "Shorts & Skirts",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/shorts-skirts/view-all/",
+									children: []
+								},
+								{
+									title: "Jumpsuits & Rompers",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/jumpsuits-rompers/",
+									children: []
+								},
+								{
+									title: "Jackets & Outerwear",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/jackets-outerwear/view-all/",
+									children: []
+								},
+								{
+									title: "Sweaters",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/sweaters/",
+									children: []
+								},
+								{
+									title: "Handbags",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/handbags/view-all/",
+									children: []
+								},
+								{
+									title: "Shoes",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/shoes/view-all/",
+									children: []
+								},
+								{
+									title: "Accessories",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/Catalog/Browse/mens/accessories/view-all/",
+									children: []
+								},
+								{
+									title: "Jewelry",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/womens/jewelry/view-all/",
+									children: []
+								}
+							]
 						},
 						{
 							title: "Men",
 							isOpen: false,
 							style: {backgroundColor: "#7c8696", color: "#ffffff"},
 							value: "",
-							children: []
+							children: [
+								{
+									title: "Discount & Deals",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/mens/discount-deals/",
+									children: []
+								},
+								{
+									title: "View All",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/mens/view-all/",
+									children: []
+								},
+								{
+									title: "Denim",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/mens/denim/view-all/",
+									children: []
+								},
+								{
+									title: "Tees & Tanks",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/mens/tees-tanks/view-all/",
+									children: []
+								},
+								{
+									title: "Shirts",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/mens/shirts/view-all/",
+									children: []
+								},
+								{
+									title: "Joggers & Pants",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/mens/joggers-pants/",
+									children: []
+								},
+								{
+									title: "Athleisure",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/mens/athleisure/",
+									children: []
+								},
+								{
+									title: "Sweaters",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/mens/sweaters/",
+									children: []
+								},
+								{
+									title: "Jackets & Outerwear",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/mens/jackets-outerwear/view-all/",
+									children: []
+								},
+								{
+									title: "Shoes",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/mens/shoes/view-all/",
+									children: []
+								},
+								{
+									title: "Jewelry",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://www.gbyguess.ca/en/catalog/browse/mens/jewelry/view-all/",
+									children: []
+								}
+							]
 						}
 					]
 				},
