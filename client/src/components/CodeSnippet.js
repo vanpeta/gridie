@@ -15,17 +15,17 @@ import {
 
 class CodeSnippet extends Component {
   handleMouseOver(e) {
-		console.log(e);
+		console.log("MOUSEOVER in codeSnippet",e);
   }
 
   snippet(data, numProds) {
-		console.log("snippet function", numProds);
-		let newData = data
+		console.log("snippet function", data);
+		let newData = [];
 		data.links.map( (link, index) => {
 			return (
-				newData.links[index] = newData.selectedSite + link
+				newData[index] = { image: data.images[index], link: data.selectedSite + link }
 			)
-		});
+    });
 		switch (numProds) {
       case "1":
         return Snippet1(newData);

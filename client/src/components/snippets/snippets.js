@@ -1,73 +1,280 @@
 import React from "react";
 
-export const Snippet1 = (newData) => {
+export const Product = (props) => {
 	return (
 		<div>
-			{`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="80%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[0]}">\n    <img width="194" src="${newData.images[0]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table>`}
+			{`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0"> 
+				<tr>
+					<td align="center" width="100%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">
+						<a _label="product-grid" href="${props.data.link}">
+							<img width="194" src="${props.data.image}" style="display:block; border-style: none;">
+						</a>
+					</td>
+				</tr>
+			</table>`}
 		</div>
 	)
 };
 
-export const Snippet2 = (newData) => {
+
+export const Snippet1 = (props) => {
+
+	return <div>
+      <Product data={props} />
+    </div>;
+};
+
+export const Snippet2 = (props) => {
+         return (
+				 	<div>
+           {`<table width="582" align="center" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="50%" align="center">`}
+             			<Product data={props[0]} />
+             {`</td>
+								<td width="50%" align="center">`}
+             			<Product data={props[1]} />
+             {`</td>
+							</tr>
+						</table>`}
+					 </div>
+				 );
+       };
+
+export const Snippet3 = (props) => {
+	return <div>
+      {`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center" width="33.3%">`}
+      <Product data={props[0]} />
+      {`</td>
+					<td align="center" width="33.3%">`}
+      <Product data={props[1]} />
+      {`</td>
+					<td align="center" width="33.3%">`}
+      <Product data={props[2]} />
+      {`</td>
+				</tr>
+			</table>`}
+    </div>;
+};
+
+export const Snippet4 = (props) => {
+	return <div>
+      {`<table width="582" align="center" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="50%" align="center">`}
+      <Product data={props[0]} />
+      {`</td>
+						<td width="50%" align="center">`}
+      <Product data={props[1]} />
+      {`</td>
+				</tr>
+			</table>
+    	<table width="582" align="center" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="50%" align="center">`}
+  			    <Product data={props[2]} />
+      	{`</td>
+					<td width="50%" align="center">`}
+      			<Product data={props[3]} />
+      	{`</td>
+				</tr>
+			</table>`}
+    </div>;
+};
+
+export const Snippet5 = (props) => {
+	return <div>
+      {`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center" width="33.3%">`}
+      <Product data={props[0]} />
+      {`</td>
+					<td align="center" width="33.3%">`}
+      <Product data={props[1]} />
+      {`</td>
+					<td align="center" width="33.3%">`}
+      <Product data={props[2]} />
+      {`</td>
+				</tr>
+			</table>
+			<table width="582" align="center" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="50%" align="center">`}
+      <Product data={props[3]} />
+      {`</td>
+					<td width="50%" align="center">`}
+      <Product data={props[4]} />
+      {`</td>
+				</tr>
+			</table>`}
+    </div>;
+};
+
+export const Snippet6 = (props) => {
 	return (
 		<div>
-			{`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[0]}">\n    <img width="194" src="${newData.images[0]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[1]}">\n    <img width="194" src="${newData.images[1]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table>`}
+		{`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center" width="33.3%">`}
+      			<Product data={props[0]} />
+      	{`</td>
+					<td align="center" width="33.3%">`}
+						<Product data={props[1]} />
+				{`</td>
+					<td align="center" width="33.3%">`}
+						<Product data={props[2]} />
+					{`</td>
+				</tr>
+			</table>
+			<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center" width="33.3%">`}
+      			<Product data={props[4]} />
+      	{`</td>
+					<td align="center" width="33.3%">`}
+						<Product data={props[5]} />
+				{`</td>
+					<td align="center" width="33.3%">`}
+						<Product data={props[6]} />
+					{`</td>
+				</tr>
+			</table>`}
 		</div>
 	)
 };
 
-export const Snippet3 = (newData) => {
+export const Snippet7 = (props) => {
 	return (
 		<div>
-			{`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[0]}">\n    <img width="194" src="${newData.images[0]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[1]}">\n    <img width="194" src="${newData.images[1]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[2]}">\n    <img width="194" src="${newData.images[2]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table>`}
+			{`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center" width="33.3%">`}
+      			<Product data={props[0]} />
+      	{`</td>
+					<td align="center" width="33.3%">`}
+						<Product data={props[1]} />
+				{`</td>
+					<td align="center" width="33.3%">`}
+						<Product data={props[2]} />
+					{`</td>
+				</tr>
+			</table>
+			<table width="582" align="center" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="50%" align="center">`}
+						<Product data={props[3]} />
+				{`</td>
+					<td width="50%" align="center">`}
+						<Product data={props[4]} />
+				{`</td>
+				</tr>
+			</table>
+			<table width="582" align="center" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="50%" align="center">`}
+						<Product data={props[5]} />
+				{`</td>
+					<td width="50%" align="center">`}
+						<Product data={props[6]} />
+				{`</td>
+				</tr>
+			</table>`}
 		</div>
 	)
 };
 
-export const Snippet4 = (newData) => {
+export const Snippet8 = (props) => {
+	console.log("SNIPPE82=", props);
 	return (
 		<div>
-			{`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[0]}">\n    <img width="194" src="${newData.images[0]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[1]}">\n    <img width="194" src="${newData.images[1]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n<tr>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[2]}">\n    <img width="194" src="${newData.images[2]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[3]}">\n    <img width="194" src="${newData.images[3]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table>`}
+			{`<table width="582" align="center" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="50%" align="center">`}
+      <Product data={props[0]} />
+      {`</td>
+						<td width="50%" align="center">`}
+      <Product data={props[1]} />
+      {`</td>
+				</tr>
+			</table>
+    	<table width="582" align="center" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="50%" align="center">`}
+  			    <Product data={props[2]} />
+      	{`</td>
+					<td width="50%" align="center">`}
+      			<Product data={props[3]} />
+      	{`</td>
+				</tr>
+			</table>
+			<table width="582" align="center" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="50%" align="center">`}
+      			<Product data={props[4]} />
+      	{`</td>
+					<td width="50%" align="center">`}
+      			<Product data={props[5]} />
+      	{`</td>
+				</tr>
+			</table>
+    	<table width="582" align="center" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="50%" align="center">`}
+  			    <Product data={props[6]} />
+      	{`</td>
+					<td width="50%" align="center">`}
+      			<Product data={props[7]} />
+      	{`</td>
+				</tr>
+			</table>`}
 		</div>
 	)
 };
 
-export const Snippet5 = (newData) => {
+export const Snippet9 = (props) => {
 	return (
 		<div>
-			{`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[0]}">\n    <img width="194" src="${newData.images[0]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[1]}">\n    <img width="194" src="${newData.images[1]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[2]}">\n    <img width="194" src="${newData.images[2]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n </tr>\n</table>\n<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[3]}">\n    <img width="194" src="${newData.images[3]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="50%%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[4]}">\n    <img width="194" src="${newData.images[4]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table>`}
-		</div>
-	)
-};
-
-export const Snippet6 = (newData) => {
-	return (
-		<div>
-			{`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[0]}">\n    <img width="194" src="${newData.images[0]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[1]}">\n    <img width="194" src="${newData.images[1]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[2]}">\n    <img width="194" src="${newData.images[2]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n </tr>\n <tr>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[3]}">\n    <img width="194" src="${newData.images[3]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[4]}">\n    <img width="194" src="${newData.images[4]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[5]}">\n    <img width="194" src="${newData.images[5]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n </tr>\n</table>`}
-		</div>
-	)
-};
-
-export const Snippet7 = (newData) => {
-	return (
-		<div>
-			{`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[0]}">\n    <img width="194" src="${newData.images[0]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[1]}">\n    <img width="194" src="${newData.images[1]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[2]}">\n    <img width="194" src="${newData.images[2]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[3]}">\n    <img width="194" src="${newData.images[3]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[4]}">\n    <img width="194" src="${newData.images[4]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[5]}">\n    <img width="194" src="${newData.images[5]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="80%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[6]}">\n    <img width="194" src="${newData.images[6]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table>`}
-		</div>
-	)
-};
-
-export const Snippet8 = (newData) => {
-	return (
-		<div>
-			{`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[0]}">\n    <img width="194" src="${newData.images[0]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[1]}">\n    <img width="194" src="${newData.images[1]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[2]}">\n    <img width="194" src="${newData.images[2]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[3]}">\n    <img width="194" src="${newData.images[3]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[4]}">\n    <img width="194" src="${newData.images[4]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[5]}">\n    <img width="194" src="${newData.images[5]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[6]}">\n    <img width="194" src="${newData.images[6]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="50%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[7]}">\n    <img width="194" src="${newData.images[7]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table>`}
-		</div>
-	)
-};
-
-export const Snippet9 = (newData) => {
-	return (
-		<div>
-			{`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[0]}">\n    <img width="194" src="${newData.images[0]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[1]}">\n    <img width="194" src="${newData.images[1]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[2]}">\n    <img width="194" src="${newData.images[2]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[3]}">\n    <img width="194" src="${newData.images[3]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[4]}">\n    <img width="194" src="${newData.images[4]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[5]}">\n    <img width="194" src="${newData.images[5]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table><table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">\n <tr>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[6]}">\n    <img width="194" src="${newData.images[6]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[7]}">\n    <img width="194" src="${newData.images[7]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  <td align="center" width="33.3%" style="padding-top: 20px; padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%;">\n   <a _label="product-grid" href="${newData.links[8]}">\n    <img width="194" src="${newData.images[8]}" style="display:block; border-style: none;">\n   </a>\n  </td>\n  </tr>\n</table>`}
+			{`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center" width="33.3%">`}
+      			<Product data={props[0]} />
+      	{`</td>
+					<td align="center" width="33.3%">`}
+						<Product data={props[1]} />
+				{`</td>
+					<td align="center" width="33.3%">`}
+						<Product data={props[2]} />
+					{`</td>
+				</tr>
+			</table>
+			<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center" width="33.3%">`}
+      			<Product data={props[3]} />
+      	{`</td>
+					<td align="center" width="33.3%">`}
+						<Product data={props[4]} />
+				{`</td>
+					<td align="center" width="33.3%">`}
+						<Product data={props[5]} />
+					{`</td>
+				</tr>
+			</table>
+			<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center" width="33.3%">`}
+      			<Product data={props[6]} />
+      	{`</td>
+					<td align="center" width="33.3%">`}
+						<Product data={props[7]} />
+				{`</td>
+					<td align="center" width="33.3%">`}
+						<Product data={props[8]} />
+					{`</td>
+				</tr>
+			</table>`}
 		</div>
 	)
 };

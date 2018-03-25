@@ -81,10 +81,10 @@ export default [
 									children: []
 								},
 								{
-									title: "Underwear",
+									title: "Lingerie",
 									isOpen: false,
 									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
-									value: "https://shop.guess.com/en/catalog/browse/men/underwear/",
+									value: "https://shop.guess.com/en/catalog/browse/women/lingerie/view-all/",
 									children: []
 								},
 								{
