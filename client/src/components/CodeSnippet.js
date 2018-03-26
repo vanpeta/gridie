@@ -1,17 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import {
-  Snippet1,
-  Snippet2,
-  Snippet3,
-  Snippet4,
-  Snippet5,
-  Snippet6,
-  Snippet7,
-  Snippet8,
-  Snippet9
-} from "../components/snippets/snippets";
+import Snippet from "./snippets/Snippet";
 
 class CodeSnippet extends Component {
   handleMouseOver(e) {
@@ -26,33 +16,15 @@ class CodeSnippet extends Component {
 				newData[index] = { image: data.images[index], link: data.selectedSite + link }
 			)
     });
-		switch (numProds) {
-      case "1":
-        return Snippet1(newData);
-      case "2":
-        return Snippet2(newData);
-      case "3":
-        return Snippet3(newData);
-      case "4":
-        return Snippet4(newData);
-      case "5":
-        return Snippet5(newData);
-      case "6":
-        return Snippet6(newData);
-      case "7":
-        return Snippet7(newData);
-      case "8":
-        return Snippet8(newData);
-      case "9":
-      	return Snippet9(newData);
-      default:
-    }
-}
-	// copyToDasboard(e) {
-	// 	e.preventDefault();
-	// 	console.log(e)
-  //   e.clipboardData.setData('text/plain', this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts));
-	// }
+    return (
+      <Snippet data={newData} numProds={numProds} />
+    );
+  }
+	copyToDasboard(e) {
+		e.preventDefault();
+		console.log(e)
+    e.clipboardData.setData('text/plain', this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts));
+	}
   render() {
     if (!this.props.newImagesAndLinks || !this.props.numberOfProducts) {
       return (
@@ -66,10 +38,16 @@ class CodeSnippet extends Component {
         className="display-linebreak"
         // onMouseOver={this.handleMouseOver}
       >
-				{/* <div className="btn float-right" onClick={(event) => this.copyToDasboard(event)}>
-					button
-				</div> */}
-        {this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts)}
+        <button 
+          type="button"
+          className="btn btn-primary btn-sm float-right"
+          onClick={(event) => this.copyToDasboard(event)}
+        >
+          copy
+        </button>
+        <code>
+          {this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts)}
+        </code>
       </div>
     );
   }

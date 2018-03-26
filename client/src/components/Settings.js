@@ -18,7 +18,7 @@ class Settings extends Component {
 				<label htmlFor="productsInput">
 					Number of products:
 				</label>
-					<select 
+				<select 
 					className="form-control form-control-sm"
 					id="productsInput"
 					type="number"
@@ -35,7 +35,7 @@ class Settings extends Component {
 						<option>7</option>
 						<option>8</option>
 						<option>9</option>
-					</select>
+				</select>
       </div>
     );
   }
