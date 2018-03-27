@@ -22,8 +22,9 @@ class CodeSnippet extends Component {
   }
 	copyToDasboard(e) {
 		e.preventDefault();
-		console.log(e)
-    e.clipboardData.setData('text/plain', this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts));
+    console.log(e)
+    document.execCommand(this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts));
+    // e.clipboardData.setData('text/plain', this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts));
 	}
   render() {
     if (!this.props.newImagesAndLinks || !this.props.numberOfProducts) {
@@ -45,9 +46,7 @@ class CodeSnippet extends Component {
         >
           copy
         </button>
-        <code>
-          {this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts)}
-        </code>
+        {this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts)}
       </div>
     );
   }

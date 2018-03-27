@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import SideMenu from "./sideMenu/SideMenu";
-import CodeSnippet from "./CodeSnippet";
-import Settings from "./Settings";
+import CodeSnippet from "./settings/CodeSnippet";
+import Settings from "./settings/Settings";
 
 class App extends Component {
 
@@ -14,7 +14,7 @@ class App extends Component {
           <div className="col-3">
             <SideMenu />
           </div>
-          <div className="col-1">
+          <div className="col-9">
             <Settings />
           </div>
         </div>

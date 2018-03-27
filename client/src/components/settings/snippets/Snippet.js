@@ -8,13 +8,13 @@ class Snippet extends Component {
   switch (this.props.numProds) {
     case "1":
       return (
-        <div>
+        <div id="snippet">
           <Product data={this.props.data[0]} />
         </div>
       );
     case "2":
       return (
-        <div>
+        <div id="snippet">
           {`<table width="582" align="center" cellspacing="0" cellpadding="0">
 						<tr>
 							<td width="50%" align="center">`}
@@ -29,7 +29,7 @@ class Snippet extends Component {
       );
     case "3":
       return (
-        <div>
+        <div id="snippet">
         {`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td align="center" width="33.3%">`}
@@ -47,7 +47,7 @@ class Snippet extends Component {
       );
     case "4":
       return (
-        <div>
+        <div id="snippet">
         {`<table width="582" align="center" cellspacing="0" cellpadding="0">
             <tr>
               <td width="50%" align="center">`}
@@ -72,7 +72,7 @@ class Snippet extends Component {
       );
     case "5":
       return (
-        <div>
+        <div id="snippet">
         {`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td align="center" width="33.3%">`}
@@ -100,7 +100,7 @@ class Snippet extends Component {
       );
     case "6":
       return (
-        	<div>
+        	<div id="snippet">
       		{`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
 			      	<tr>
 					      <td align="center" width="33.3%">`}
@@ -131,7 +131,7 @@ class Snippet extends Component {
         );
       case "7":
         return (
-        	<div>
+        	<div id="snippet">
           {`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td align="center" width="33.3%">`}
@@ -169,7 +169,7 @@ class Snippet extends Component {
         );
         case "8":
           return (
-            <div>
+            <div id="snippet">
 			{`<table width="582" align="center" cellspacing="0" cellpadding="0">
 					<tr>
 						<td width="50%" align="center">`}
@@ -214,7 +214,7 @@ class Snippet extends Component {
           );
       case "9":
       return (
-        		<div>
+        		<div id="snippet">
 			{`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
 				<tr>
 					<td align="center" width="33.3%">`}
