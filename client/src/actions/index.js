@@ -20,7 +20,7 @@ export function selectSite(address, data, sites) {
 export const FETCH_LINKS_IMGS = "FETCH_LINKS_IMGS";
 
 export function fetchImages(action) {
-  const request = axios.get("/api/get_products?url=" + action);
+	const request = axios.get("/api/get_products?url=" + action);
   return {
 		type: FETCH_LINKS_IMGS,
 		payload: request

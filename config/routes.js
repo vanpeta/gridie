@@ -24,8 +24,14 @@ module.exports = app => {
           res.send(newData);
         })
         .catch(error => {
-          res.status(400);
-          res.send(error);
+          console.log("ERROR=>", error)
+          if (error.code === "ECONNREFUSED") {
+            res.status(200);
+            res.send("Please provide a valid url");
+          } else {
+            res.status(400);
+            res.send(error);
+          }
         });
     }
   });

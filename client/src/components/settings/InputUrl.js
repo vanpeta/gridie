@@ -18,9 +18,24 @@ class InputUrl extends Component {
     handleSubmit(event) {
         event.preventDefault()
         console.log("EVENT in SUBMIT =>", event)
-        this.props.callForProducts(this.state.url);
+        const url = this.state.url.split("?")[0]
+        this.props.callForProducts(url);
     }
+
+    renderError() {
+        if (this.props.newImagesAndLinks) {
+            console.log("RENDER ERROR PROPS=>", this.props.newImagesAndLinks)
+            if (this.props.newImagesAndLinks.data === "Please provide a valid url") {
+                console.log("PROPS IS STRING")
+                return (
+                    <div>Please provide a valid url</div>
+                )
+            }
+        }
+    }
+
     render() {
+        
         return (
             <form className="input-group input-group-sm mb-5 col-9" onSubmit={ e => this.handleSubmit(e)} >
                 <div className="input-group-prepend">
@@ -33,10 +48,17 @@ class InputUrl extends Component {
                     className="form-control"
                     id="basic-url" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
                     <input type="submit" className="btn" value="submit"/>
+                    {this.renderError()}
             </form>
         )
     }
 } 
+
+function mapStateToProps (state) {
+    return {
+        newImagesAndLinks: state.newImagesAndLinks
+    }
+}
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(
@@ -49,4 +71,4 @@ function mapDispatchToProps(dispatch) {
 
 
 
-export default connect(null, mapDispatchToProps)(InputUrl);
+export default connect(mapStateToProps, mapDispatchToProps)(InputUrl);
