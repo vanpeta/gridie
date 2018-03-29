@@ -6,7 +6,7 @@ module.exports = app => {
     url = req.query.url;
     if (!url) {
       res.status(400);
-      res.send('bad request: please provide a url');
+      res.send('Please provide a url');
     } else {
       axios
         .get(url+"?json=1")
@@ -24,9 +24,8 @@ module.exports = app => {
           res.send(newData);
         })
         .catch(error => {
-          console.log("ERROR=>", error)
           if (error.code === "ECONNREFUSED") {
-            res.status(200);
+            res.status(400);
             res.send("Please provide a valid url");
           } else {
             res.status(400);

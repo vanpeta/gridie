@@ -2,7 +2,8 @@ import React, { Component } from "react"
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { fetchImages } from "../../actions/index";
+import { fetchImages, cleanUrl } from "../../actions/index";
+import "./css/inputUrl.css";
 
 class InputUrl extends Component {
     constructor(props) {
@@ -12,23 +13,20 @@ class InputUrl extends Component {
     }
 
     handleChange(event) {
-        console.log("event.target.value=", event.target.value)
         this.setState({ url: event.target.value });
     }
     handleSubmit(event) {
-        event.preventDefault()
-        console.log("EVENT in SUBMIT =>", event)
-        const url = this.state.url.split("?")[0]
+        event.preventDefault();
+        const url = this.state.url.split("?")[0];
         this.props.callForProducts(url);
     }
 
     renderError() {
         if (this.props.newImagesAndLinks) {
-            console.log("RENDER ERROR PROPS=>", this.props.newImagesAndLinks)
-            if (this.props.newImagesAndLinks.data === "Please provide a valid url") {
-                console.log("PROPS IS STRING")
+            console.log("error=", this.props.newImagesAndLinks.response);
+            if (this.props.newImagesAndLinks.response.status === 400) {
                 return (
-                    <div>Please provide a valid url</div>
+                    <div className="error">{this.props.newImagesAndLinks.response.data}</div>
                 )
             }
         }
@@ -37,19 +35,21 @@ class InputUrl extends Component {
     render() {
         
         return (
-            <form className="input-group input-group-sm mb-5 col-9" onSubmit={ e => this.handleSubmit(e)} >
-                <div className="input-group-prepend">
-                    <span className="input-group-text" id="inputGroup-sizing-sm">url</span>
-                </div>
-                <input 
-                    type="text"
-                    value={this.state.url}
-                    onChange={ e => this.handleChange(e) }
-                    className="form-control"
-                    id="basic-url" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
-                    <input type="submit" className="btn" value="submit"/>
-                    {this.renderError()}
-            </form>
+            <div className="col-9">
+                <form className="input-group input-group-sm" onSubmit={ e => this.handleSubmit(e)} >
+                    <div className="input-group-prepend">
+                        <span className="input-group-text" id="inputGroup-sizing-sm">url</span>
+                    </div>
+                    <input 
+                        type="text"
+                        value={this.state.url}
+                        onChange={ e => this.handleChange(e) }
+                        className="form-control"
+                        id="basic-url" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                        <input type="submit" className="btn" value="submit"/>
+                </form>
+                {this.renderError()}
+            </div>
         )
     }
 } 
@@ -63,7 +63,8 @@ function mapStateToProps (state) {
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(
       {
-        callForProducts: fetchImages
+        callForProducts: fetchImages,
+        cleanUrl: cleanUrl
       },
       dispatch
     );

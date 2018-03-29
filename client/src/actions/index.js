@@ -36,7 +36,15 @@ export function numberOfProducts(data) {
 	}
 }
 
+export const CLEAN_URL = "CLEAN_URL";
 
+export function cleanUrl (data) {
+	data = ""
+	return {
+		type: CLEAN_URL,
+		payload: data
+	}
+}
 
 
 
