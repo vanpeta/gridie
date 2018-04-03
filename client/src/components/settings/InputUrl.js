@@ -22,7 +22,7 @@ class InputUrl extends Component {
     }
 
     renderError() {
-        if (this.props.newImagesAndLinks) {
+        if (this.props.newImagesAndLinks && this.props.newImagesAndLinks.response) {
             console.log("error=", this.props.newImagesAndLinks.response);
             if (this.props.newImagesAndLinks.response.status === 400) {
                 return (

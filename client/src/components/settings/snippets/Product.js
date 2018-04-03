@@ -13,6 +13,16 @@ const Product = props => {
 						</a>
 					</td>
 				</tr>
+				<tr>
+					<td align="center" style="padding-left:5%; padding-right:5%; font-family: 'Century Gothic', Futura, Verdana, sans-serif; font-size: 13px; color: #000000; letter-spacing: .15em; line-height: 200%; font-weight: bold;">${
+						props.data.name
+					}</td>
+				</tr>
+				<tr>
+					<td align="center" style="font-family: 'Century Gothic', Futura, Verdana, sans-serif; font-size: 13px; color: #000000; letter-spacing: .15em; line-height: 200%; font-weight: bold;">${
+						props.data.price
+					}</td>
+				<tr>
 			</table>`}
     </div>
   );

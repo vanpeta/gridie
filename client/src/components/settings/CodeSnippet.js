@@ -13,7 +13,7 @@ class CodeSnippet extends Component {
 		let newData = [];
 		data.links.map( (link, index) => {
 			return (
-				newData[index] = { image: data.images[index], link: data.selectedSite + link }
+				newData[index] = { image: data.images[index], link: data.selectedSite + link, name: data.productName[index], price: data.price[index] }
 			)
     });
     return (
