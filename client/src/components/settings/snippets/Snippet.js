@@ -15,7 +15,7 @@ class Snippet extends Component {
     case "2":
       return (
         <div id="snippet">
-          {`<table width="582" align="center" cellspacing="0" cellpadding="0">
+          {`<table width="100%" align="center" cellspacing="0" cellpadding="0">
 						<tr>
 							<td width="50%" align="center">`}
           <Product data={this.props.data[0]} />
@@ -30,7 +30,7 @@ class Snippet extends Component {
     case "3":
       return (
         <div id="snippet">
-        {`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+        {`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td align="center" width="33.3%">`}
                 <Product data={this.props.data[0]} />
@@ -48,7 +48,7 @@ class Snippet extends Component {
     case "4":
       return (
         <div id="snippet">
-        {`<table width="582" align="center" cellspacing="0" cellpadding="0">
+        {`<table width="100%" align="center" cellspacing="0" cellpadding="0">
             <tr>
               <td width="50%" align="center">`}
                 <Product data={this.props.data[0]} />
@@ -58,7 +58,7 @@ class Snippet extends Component {
             {`</td>
             </tr>
           </table>
-          <table width="582" align="center" cellspacing="0" cellpadding="0">
+          <table width="100%" align="center" cellspacing="0" cellpadding="0">
             <tr>
               <td width="50%" align="center">`}
                 <Product data={this.props.data[2]} />
@@ -73,7 +73,7 @@ class Snippet extends Component {
     case "5":
       return (
         <div id="snippet">
-        {`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+        {`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td align="center" width="33.3%">`}
                 <Product data={this.props.data[0]} />
@@ -86,7 +86,7 @@ class Snippet extends Component {
               {`</td>
             </tr>
           </table>
-          <table width="582" align="center" cellspacing="0" cellpadding="0">
+          <table width="100%" align="center" cellspacing="0" cellpadding="0">
             <tr>
               <td width="50%" align="center">`}
                 <Product data={this.props.data[3]} />
@@ -101,7 +101,7 @@ class Snippet extends Component {
     case "6":
       return (
         	<div id="snippet">
-      		{`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+      		{`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
 			      	<tr>
 					      <td align="center" width="33.3%">`}
       			      <Product data={this.props.data[0]} />
@@ -114,7 +114,7 @@ class Snippet extends Component {
                 {`</td>
               </tr>
             </table>
-			      <table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+			      <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
 				      <tr>
 					      <td align="center" width="33.3%">`}
       			      <Product data={this.props.data[4]} />
@@ -132,7 +132,7 @@ class Snippet extends Component {
       case "7":
         return (
         	<div id="snippet">
-          {`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+          {`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td align="center" width="33.3%">`}
                 <Product data={this.props.data[0]} />
@@ -145,7 +145,7 @@ class Snippet extends Component {
               {`</td>
             </tr>
           </table>
-          <table width="582" align="center" cellspacing="0" cellpadding="0">
+          <table width="100%" align="center" cellspacing="0" cellpadding="0">
             <tr>
               <td width="50%" align="center">`}
                 <Product data={this.props.data[3]} />
@@ -155,7 +155,7 @@ class Snippet extends Component {
             {`</td>
             </tr>
           </table>
-          <table width="582" align="center" cellspacing="0" cellpadding="0">
+          <table width="100%" align="center" cellspacing="0" cellpadding="0">
             <tr>
               <td width="50%" align="center">`}
                 <Product data={this.props.data[5]} />
@@ -170,7 +170,7 @@ class Snippet extends Component {
         case "8":
           return (
             <div id="snippet">
-			{`<table width="582" align="center" cellspacing="0" cellpadding="0">
+			{`<table width="100%" align="center" cellspacing="0" cellpadding="0">
 					<tr>
 						<td width="50%" align="center">`}
       <Product data={this.props.data[0]} />
@@ -180,7 +180,7 @@ class Snippet extends Component {
       {`</td>
 				</tr>
 			</table>
-    	<table width="582" align="center" cellspacing="0" cellpadding="0">
+    	<table width="100%" align="center" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="50%" align="center">`}
   			    <Product data={this.props.data[2]} />
@@ -190,7 +190,7 @@ class Snippet extends Component {
       	{`</td>
 				</tr>
 			</table>
-			<table width="582" align="center" cellspacing="0" cellpadding="0">
+			<table width="100%" align="center" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="50%" align="center">`}
       			<Product data={this.props.data[4]} />
@@ -200,7 +200,7 @@ class Snippet extends Component {
       	{`</td>
 				</tr>
 			</table>
-    	<table width="582" align="center" cellspacing="0" cellpadding="0">
+    	<table width="100%" align="center" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="50%" align="center">`}
   			    <Product data={this.props.data[6]} />
@@ -215,7 +215,7 @@ class Snippet extends Component {
       case "9":
       return (
         		<div id="snippet">
-			{`<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+			{`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
 				<tr>
 					<td align="center" width="33.3%">`}
       			<Product data={this.props.data[0]} />
@@ -228,7 +228,7 @@ class Snippet extends Component {
 					{`</td>
 				</tr>
 			</table>
-			<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+			<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
 				<tr>
 					<td align="center" width="33.3%">`}
       			<Product data={this.props.data[3]} />
@@ -241,7 +241,7 @@ class Snippet extends Component {
 					{`</td>
 				</tr>
 			</table>
-			<table align="center" width="582" border="0" cellpadding="0" cellspacing="0">
+			<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
 				<tr>
 					<td align="center" width="33.3%">`}
       			<Product data={this.props.data[6]} />
