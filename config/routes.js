@@ -23,9 +23,10 @@ module.exports = app => {
             newData.images.push(product.ImageURLThumb.split('?')[0] + "?wid=600&hei=807&fmt=pjpeg&pscan=auto&qlt=70,0&op_sharpen=1&resMode=bicub&op_usm=0.1,0.1,5,0&crop=0,136,1684,2261");
             newData.links.push("/en/catalog/view/" + product.ProductCode);
             let name = product.Name;
-            if (name.length > 25) {
-              console.log("OVER 25");
-              name = name.substring(0,24)+"..."
+            let tail = name.split(" ").slice(1).join(" ");
+            console.log("OVER 25",tail);
+            if (tail.length > 19) {
+              name = name.substring(0, 19) + "...";
             }
             if (name.includes(" ")) {
               newData.productName.push(name.replace(" ", "<br />"));
