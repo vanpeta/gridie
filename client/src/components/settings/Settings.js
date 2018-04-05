@@ -4,6 +4,7 @@ import { bindActionCreators } from "redux";
 
 import { numberOfProducts } from "../../actions/index";
 import InputUrl from "./InputUrl"
+import InputTitle from "./InputTitle";
 
 class Settings extends Component {
 	constructor(props) {
@@ -17,7 +18,7 @@ class Settings extends Component {
     return (
       <div className="container">
 				<div className="row">
-					<div className="form-group col-3">
+					<div className="form-group">
 						<label htmlFor="productsInput">
 							Number of products:
 						</label>
@@ -40,7 +41,12 @@ class Settings extends Component {
 								<option>9</option>
 						</select>
 					</div>
-						<InputUrl />
+				</div>
+				<div className="row">
+					<InputUrl />
+				</div>
+				<div className="row">
+					<InputTitle />
 				</div>
       </div>
     );

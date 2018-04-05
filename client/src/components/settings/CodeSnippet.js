@@ -8,8 +8,8 @@ class CodeSnippet extends Component {
 		console.log("MOUSEOVER in codeSnippet",e);
   }
 
-  snippet(data, numProds) {
-		console.log("snippet function", data);
+  snippet(data, numProds, title) {
+		console.log("snippet function", title);
 		let newData = [];
 		data.links.map( (link, index) => {
 			return (
@@ -17,13 +17,13 @@ class CodeSnippet extends Component {
 			)
     });
     return (
-      <Snippet data={newData} numProds={numProds} />
+      <Snippet data={newData} numProds={numProds} title={title}/>
     );
   }
 	copyToDasboard(e) {
 		e.preventDefault();
     console.log(e)
-    document.execCommand(this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts));
+    document.execCommand(this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts, this.props.gridTitle));
     // e.clipboardData.setData('text/plain', this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts));
 	}
   render() {
@@ -46,7 +46,7 @@ class CodeSnippet extends Component {
         >
           copy
         </button>
-        {this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts)}
+        {this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts, this.props.gridTitle)}
       </div>
     );
   }
@@ -55,7 +55,8 @@ class CodeSnippet extends Component {
 function mapStateToProps(state) {
   return {
     newImagesAndLinks: state.newImagesAndLinks,
-    numberOfProducts: state.numberOfProducts
+    numberOfProducts: state.numberOfProducts,
+    gridTitle: state.titleCopy
   };
 }
 

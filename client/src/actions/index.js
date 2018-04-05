@@ -46,6 +46,17 @@ export function cleanUrl (data) {
 	}
 }
 
+export const UPDATE_TITLE_COPY = "UPDATE_TITLE_COPY";
+
+export function updateTitleCopy (titleCopy) {
+	console.log("ACTION=",titleCopy )
+	return {
+		type: UPDATE_TITLE_COPY,
+		payload: titleCopy
+	}
+}
+
+
 
 
 
