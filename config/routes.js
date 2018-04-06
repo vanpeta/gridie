@@ -3,14 +3,18 @@ const axios = require("axios");
 module.exports = app => {
   let url = '';
 	app.get("/api/get_products", (req, res) => {
+    console.log("ROUTE QUERY=", req.query);
     url = req.query.url;
     if (!url) {
+      console.log("NO URL IN QUERY", url);
       res.status(400);
       res.send('Please provide a url');
     } else {
       axios
         .get(url+"?json=1")
         .then(response => {
+          // console.log("RESPONSE SUCCESS=", response.data.Value.Abstract.Products);
+          // console.log("RESPONSE=", response.data.Value.Abstract);
           const products = response.data.Value.Abstract.Products;
           let newData = {
             images: [],
@@ -43,6 +47,7 @@ module.exports = app => {
           res.send(newData);
         })
         .catch(error => {
+          console.log("INSIDE CATCH :-(", error);
           if (error.code === "ECONNREFUSED") {
             res.status(400);
             res.send("Please provide a valid url");

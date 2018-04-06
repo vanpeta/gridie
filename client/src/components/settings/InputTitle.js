@@ -29,7 +29,7 @@ class InputTitle extends Component {
     render() {
         return (
             <div className="col-9">
-							<form className="input-group input-group-sm">
+							<form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
 									<div className="input-group-prepend">
 											<span className="input-group-text" id="inputGroup-sizing-sm">title copy</span>
 									</div>

@@ -15,27 +15,21 @@ class InputNumberOfProducts extends Component {
 
   render() {
     return (
-      <div className="form-group">
-        <label htmlFor="productsInput">Number of products:</label>
-        <select
-          className="form-control form-control-sm"
-          id="productsInput"
-          type="number"
-          min="1"
-          max="9"
-          step="1"
-          onChange={this.handleChange}
-        >
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-          <option>9</option>
-        </select>
+      <div className="col-9">
+        <form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
+					<div className="input-group-prepend">
+						<span className="input-group-text" id="inputGroup-sizing-sm"># of products</span>
+					</div>
+					<input
+						className="form-control form-control-sm"
+						id="productsInput"
+						type="number"
+						min="1"
+						max="9"
+						step="1"
+						onChange={this.handleChange}
+					/>
+        </form>
       </div>
     );
   }

@@ -13,12 +13,11 @@ class InputUrl extends Component {
     }
 
     handleChange(event) {
-        this.setState({ url: event.target.value });
-    }
-    handleSubmit(event) {
         event.preventDefault();
-        const url = this.state.url.split("?")[0];
-        this.props.callForProducts(url);
+        this.setState({ url: event.target.value }, () => {
+            const url = this.state.url.split("?")[0];
+            this.props.callForProducts(url);
+        });
     }
 
     renderError() {
@@ -36,7 +35,7 @@ class InputUrl extends Component {
         
         return (
             <div className="col-9">
-                <form className="input-group input-group-sm" onSubmit={ e => this.handleSubmit(e)} >
+                <form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
                     <div className="input-group-prepend">
                         <span className="input-group-text" id="inputGroup-sizing-sm">url</span>
                     </div>
@@ -46,9 +45,10 @@ class InputUrl extends Component {
                         onChange={ e => this.handleChange(e) }
                         className="form-control"
                         id="basic-url" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
-                        <input type="submit" className="btn" value="submit"/>
                 </form>
-                {this.renderError()}
+                <div className="row">
+                    {this.renderError()}
+                </div>
             </div>
         )
     }
