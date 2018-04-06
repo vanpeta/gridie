@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import SideMenu from "./sideMenu/SideMenu";
-import CodeSnippet from "./settings/CodeSnippet";
+import CodeSnippet from "./snippets/CodeSnippet";
 import Settings from "./settings/Settings";
 
 class App extends Component {
