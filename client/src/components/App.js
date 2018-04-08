@@ -19,8 +19,8 @@ class App extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-12">
-          <CodeSnippet />
+          <div className="col-6">
+            <CodeSnippet />
           </div>
         </div>
       </div>

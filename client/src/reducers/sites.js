@@ -21,63 +21,63 @@ export default [
 									title: "View All",
 									isOpen: false,
 									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
-									value: "https://shop.guess.com/en/catalog/browse/men/view-all/",
+									value: "https://shop.guess.com/en/catalog/browse/women/view-all/",
 									children: []
 								},
 								{
 									title: "New Arrivals",
 									isOpen: false,
 									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
-									value: "https://shop.guess.com/en/catalog/browse/new-arrivals/men/view-all/",
+									value: "https://shop.guess.com/en/catalog/browse/new-arrivals/women/view-all/",
 									children: []
 								},
 								{
 									title: "Denim",
 									isOpen: false,
 									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
-									value: "https://shop.guess.com/en/catalog/browse/denim/men/view-all/",
+									value: "https://shop.guess.com/en/catalog/browse/denim/women/view-all/",
 									children: []
 								},
 								{
-									title: "Tanks & T-shirts",
+									title: "Dresses",
 									isOpen: false,
 									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
-									value: "https://shop.guess.com/en/catalog/browse/men/tanks-t-shirts/view-all/",
+									value: "https://shop.guess.com/en/catalog/browse/women/dresses/view-all/",
+									children: []
+								},
+								{
+									title: "Tops",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://shop.guess.com/en/catalog/browse/women/tops/view-all/",
 									children: []
 								},
 								{
 									title: "Jackets",
 									isOpen: false,
 									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
-									value: "https://shop.guess.com/en/catalog/browse/men/jackets-outerwear/view-all/",
-									children: []
-								},
-								{
-									title: "Shirts",
-									isOpen: false,
-									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
-									value: "https://shop.guess.com/en/catalog/browse/men/shirts/view-all/",
+									value: "https://shop.guess.com/en/catalog/browse/women/jackets-and-outerwear/view-all/",
 									children: []
 								},
 								{
 									title: "Sweaters",
 									isOpen: false,
 									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
-									value: "https://shop.guess.com/en/catalog/browse/men/sweaters/",
+									value: "https://shop.guess.com/en/catalog/browse/women/sweaters/",
 									children: []
 								},
 								{
-									title: "Pants & Shorts",
+									title: "Bottoms",
 									isOpen: false,
 									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
-									value: "https://shop.guess.com/en/catalog/browse/men/pants-shorts/view-all/",
+									value: "https://shop.guess.com/en/catalog/browse/women/bottoms/view-all/",
 									children: []
 								},
 								{
 									title: "Activewear",
 									isOpen: false,
 									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
-									value: "https://shop.guess.com/en/catalog/browse/men/activewear/",
+									value: "https://shop.guess.com/en/catalog/browse/women/activewear/",
 									children: []
 								},
 								{
@@ -88,10 +88,10 @@ export default [
 									children: []
 								},
 								{
-									title: "Swim",
+									title: "Swimwear",
 									isOpen: false,
 									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
-									value: "https://shop.guess.com/en/catalog/browse/men/swim/",
+									value: "https://shop.guess.com/en/catalog/browse/women/swimwear/view-all/",
 									children: []
 								}
 							]
@@ -1318,14 +1318,72 @@ export default [
 							isOpen: false,
 							style: {backgroundColor: "#7c8696", color: "#ffffff"},
 							value: "",
-							children: []
+							children: [
+								{
+									title: "View All",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://guessbymarciano.guess.com/en/catalog/browse/women/view-all/",
+									children: []
+								},
+								{
+									title: "Dresses",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://guessbymarciano.guess.com/en/catalog/browse/new-arrivals/women/dresses/",
+									children: []
+								},
+								{
+									title: "Tops",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://guessbymarciano.guess.com/en/catalog/browse/new-arrivals/women/tops/",
+									children: []
+								},
+								{
+									title: "Jackets",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://guessbymarciano.guess.com/en/catalog/browse/new-arrivals/women/jackets-and-outerwear/",
+									children: []
+								},
+								{
+									title: "Bottoms",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://guessbymarciano.guess.com/en/catalog/browse/new-arrivals/women/bottoms/",
+									children: []
+								},
+								{
+									title: "Shoes",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://guessbymarciano.guess.com/en/catalog/browse/new-arrivals/women/shoes/",
+									children: []
+								},
+								{
+									title: "Accessories",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://guessbymarciano.guess.com/en/catalog/browse/new-arrivals/women/accessories/",
+									children: []
+								}
+							]
 						},
 						{
 							title: "Men",
 							isOpen: false,
 							style: {backgroundColor: "#7c8696", color: "#ffffff"},
 							value: "",
-							children: []
+							children: [
+								{
+									title: "View All",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://guessbymarciano.guess.com/en/catalog/browse/men/view-all/",
+									children: []
+								}
+							]
 						}
 					]
 				},

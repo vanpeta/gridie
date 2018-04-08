@@ -40,15 +40,19 @@ class Snippet extends Component {
     if (this.props.title) {
       console.log("INSIDE CONDITION")
       return (
-        <div id="snippetContainer">
-          {style}<Title title={this.props.title}/>{this.getGrid(this.props.numProds)}
+        <div className="col-12">
+          <form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
+            <textarea class="form-control" id="snippetContainer" type="text-area" value={style + Title(this.props.title) + this.getGrid(this.props.numProds)} />
+          </form>
         </div>
       )
     } else {
       console.log("OUTSIDE CONDITION");
       return (
-        <div id="snippetContainer">
-          {style}{this.getGrid(this.props.numProds)}
+        <div className="col-12">
+          <form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
+            <textarea class="form-control" id="snippetContainer" type="text-area" value={style + this.getGrid(this.props.numProds)} />
+          </form>
         </div>
       )
     }
@@ -57,39 +61,34 @@ class Snippet extends Component {
     switch (numProds) {
       case "1":
         return (
-          <div id="snippet">
-            <Product data={this.props.data[0]} />
-          </div>
+            Product(this.props.data[0])
         );
       case "2":
         return (
-          <div id="snippet">
-            {`<table width="100%" align="center" cellspacing="0" cellpadding="0">
+            `<table width="100%" align="center" cellspacing="0" cellpadding="0">
               <tr>
-                <td width="50%" align="center">`}
-            <Product data={this.props.data[0]} />
-            {`</td>
-                <td width="50%" align="center">`}
-            <Product data={this.props.data[1]} />
-            {`</td>
+                <td width="50%" align="center">
+                  ${Product (this.props.data[0])}
+                </td>
+                <td width="50%" align="center">
+                  ${Product (this.props.data[1])}
+                </td>
               </tr>
-            </table>`}
-          </div>
+            </table>`
         );
       case "3":
         return (
-          <div id="snippet">
-            {`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
+          `<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
               <tr>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[0]} />
-              {`</td>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[1]} />
-              {`</td>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[2]} />
-              {`</td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[0])}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[1])}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[2])}
+                </td>
               </tr>
             </table>
             <!-- mobile view -->
@@ -97,74 +96,70 @@ class Snippet extends Component {
             <div class="show_for_mobile" align="center" style="display: none; width: 0px; height: 0px; overflow: hidden; min-height: 0px; line-height: 0px; font-size: 0px;">
               <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td align="center" width="50%">`}
-                    <Product data={this.props.data[0]} />
-                {`</td>
-                  <td align="center" width="50%">`}
-                    <Product data={this.props.data[1]} />
-                {`</td>
+                  <td align="center" width="50%">
+                    ${Product (this.props.data[0])}
+                  </td>
+                  <td align="center" width="50%">
+                    ${Product (this.props.data[1])}
+                  </td>
                 </tr>
               </table>
               <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td align="center" width="50%" style="max-width: 50%;">`}
-                    <Product data={this.props.data[2]} />
-                {`</td>
+                  <td align="center" width="50%" style="max-width: 50%;">
+                    ${Product (this.props.data[2])}
+                  </td>
                 </tr>
               </table>
             </div>
-            <!--<![endif]-->`}
-          </div>
+            <!--<![endif]-->`
         );
       case "4":
         return (
-          <div id="snippet">
-          {`<table width="100%" align="center" cellspacing="0" cellpadding="0">
+          `<table width="100%" align="center" cellspacing="0" cellpadding="0">
               <tr>
-                <td width="50%" align="center">`}
-                  <Product data={this.props.data[0]} />
-              {`</td>
-                <td width="50%" align="center">`}
-                  <Product data={this.props.data[1]} />
-              {`</td>
+                <td width="50%" align="center">
+                  ${Product (this.props.data[0])}
+                </td>
+                <td width="50%" align="center">
+                  ${Product (this.props.data[1])}
+                </td>
               </tr>
             </table>
             <table width="100%" align="center" cellspacing="0" cellpadding="0">
               <tr>
-                <td width="50%" align="center">`}
-                  <Product data={this.props.data[2]} />
-              {`</td>
-                <td width="50%" align="center">`}
-                  <Product data={this.props.data[3]} />
-              {`</td>
+                <td width="50%" align="center">
+                  ${Product (this.props.data[2])}
+                </td>
+                <td width="50%" align="center">
+                  ${Product (this.props.data[3])}
+                </td>
               </tr>
-            </table>`}
-          </div>
+            </table>`
         );
       case "5":
         return (
-          <div id="snippet">
-          {`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
+          `<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
               <tr>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[0]} />
-              {`</td>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[1]} />
-                {`</td>
-                  <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[2]} />
-                {`</td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[0])}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[1])}
+                  </td>
+                  <td align="center" width="33.3%">
+                  ${Product (this.props.data[2])}
+                  </td>
                 </tr>
               </table>
               <table width="100%" align="center" cellspacing="0" cellpadding="0" class="hide_mobile">
                 <tr>
-                  <td width="50%" align="center">`}
-                    <Product data={this.props.data[3]} />
-                {`</td>
-                  <td width="50%" align="center">`}
-                    <Product data={this.props.data[4]} />
-                {`</td>
+                  <td width="50%" align="center">
+                    ${Product (this.props.data[3])}
+                  </td>
+                  <td width="50%" align="center">
+                    ${Product (this.props.data[4])}
+                  </td>
                 </tr>
               </table>
               <!-- mobile view -->
@@ -172,136 +167,60 @@ class Snippet extends Component {
               <div class="show_for_mobile" align="center" style="display: none; width: 0px; height: 0px; overflow: hidden; min-height: 0px; line-height: 0px; font-size: 0px;">
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[0]} />
-                  {`</td>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[1]} />
-                  {`</td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[0])}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[1])}
+                    </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[2]} />
-                  {`</td>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[3]} />
-                  {`</td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[2])}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[3])}
+                    </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td align="center" width="50%" style="max-width: 50%;">`}
-                      <Product data={this.props.data[4]} />
-                  {`</td>
+                    <td align="center" width="50%" style="max-width: 50%;">
+                      ${Product (this.props.data[4])}
+                    </td>
                   </tr>
                 </table>
               </div>
-              <!--<![endif]-->
-              `}
-            </div>
+              <!--<![endif]-->`
           );
         case "6":
           return (
-            <div id="snippet">
-              {`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
-                  <tr>
-                    <td align="center" width="33.3%">`}
-                      <Product data={this.props.data[0]} />
-                  {`</td>
-                    <td align="center" width="33.3%">`}
-                      <Product data={this.props.data[1]} />
-                  {`</td>
-                    <td align="center" width="33.3%">`}
-                      <Product data={this.props.data[2]} />
-                    {`</td>
-                  </tr>
-                </table>
-                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
-                  <tr>
-                    <td align="center" width="33.3%">`}
-                      <Product data={this.props.data[4]} />
-                  {`</td>
-                    <td align="center" width="33.3%">`}
-                      <Product data={this.props.data[5]} />
-                  {`</td>
-                    <td align="center" width="33.3%">`}
-                      <Product data={this.props.data[6]} />
-                    {`</td>
-                  </tr>
-                </table>
-                <!-- mobile view -->
-                <!--[if !mso]><!-- -->
-                <div class="show_for_mobile" align="center" style="display: none; width: 0px; height: 0px; overflow: hidden; min-height: 0px; line-height: 0px; font-size: 0px;">
-                  <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td align="center" width="50%">`}
-                        <Product data={this.props.data[0]} />
-                    {`</td>
-                      <td align="center" width="50%">`}
-                        <Product data={this.props.data[1]} />
-                    {`</td>
-                    </tr>
-                  </table>
-                  <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td align="center" width="50%">`}
-                        <Product data={this.props.data[2]} />
-                    {`</td>
-                      <td align="center" width="50%">`}
-                        <Product data={this.props.data[3]} />
-                    {`</td>
-                    </tr>
-                  </table>
-                  <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td align="center" width="50%">`}
-                        <Product data={this.props.data[4]} />
-                    {`</td>
-                      <td align="center" width="50%">`}
-                        <Product data={this.props.data[5]} />
-                    {`</td>
-                    </tr>
-                  </table>
-                </div>
-                <!--<![endif]-->`}
-              </div>
-            );
-          case "7":
-            return (
-              <div id="snippet">
-              {`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
+              `<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
                 <tr>
-                  <td align="center" width="33.3%">`}
-                    <Product data={this.props.data[0]} />
-                {`</td>
-                  <td align="center" width="33.3%">`}
-                    <Product data={this.props.data[1]} />
-                {`</td>
-                  <td align="center" width="33.3%">`}
-                    <Product data={this.props.data[2]} />
-                  {`</td>
+                  <td align="center" width="33.3%">
+                    ${Product (this.props.data[0])}
+                  </td>
+                  <td align="center" width="33.3%">
+                    ${Product (this.props.data[1])}
+                  </td>
+                  <td align="center" width="33.3%">
+                    ${Product (this.props.data[2])}
+                  </td>
                 </tr>
               </table>
-              <table width="100%" align="center" cellspacing="0" cellpadding="0" class="hide_mobile">
+              <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
                 <tr>
-                  <td width="50%" align="center">`}
-                    <Product data={this.props.data[3]} />
-                {`</td>
-                  <td width="50%" align="center">`}
-                    <Product data={this.props.data[4]} />
-                {`</td>
-                </tr>
-              </table>
-              <table width="100%" align="center" cellspacing="0" cellpadding="0" class="hide_mobile">
-                <tr>
-                  <td width="50%" align="center">`}
-                    <Product data={this.props.data[5]} />
-                {`</td>
-                  <td width="50%" align="center">`}
-                    <Product data={this.props.data[6]} />
-                {`</td>
+                  <td align="center" width="33.3%">
+                    ${Product (this.props.data[3])}
+                  </td>
+                  <td align="center" width="33.3%">
+                    ${Product (this.props.data[4])}
+                  </td>
+                  <td align="center" width="33.3%">
+                    ${Product (this.props.data[6])}
+                  </td>
                 </tr>
               </table>
               <!-- mobile view -->
@@ -309,123 +228,190 @@ class Snippet extends Component {
               <div class="show_for_mobile" align="center" style="display: none; width: 0px; height: 0px; overflow: hidden; min-height: 0px; line-height: 0px; font-size: 0px;">
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[0]} />
-                  {`</td>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[1]} />
-                  {`</td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[0])}
+                  </td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[1])}
+                    </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[2]} />
-                  {`</td>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[3]} />
-                  {`</td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[2])}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[3])}
+                    </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[4]} />
-                  {`</td>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[5]} />
-                  {`</td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[4])}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[5])}
+                    </td>
                   </tr>
                 </table>
               </div>
-              <!--<![endif]-->`}
-            </div>
+              <!--<![endif]-->`
+            );
+          case "7":
+            return (
+              `<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
+                <tr>
+                  <td align="center" width="33.3%">
+                    ${Product (this.props.data[0])}
+                  </td>
+                  <td align="center" width="33.3%">
+                    ${Product (this.props.data[1])}
+                  </td>
+                  <td align="center" width="33.3%">
+                    ${Product (this.props.data[2])}
+                  </td>
+                </tr>
+              </table>
+              <table width="100%" align="center" cellspacing="0" cellpadding="0" class="hide_mobile">
+                <tr>
+                  <td width="50%" align="center">
+                    ${Product (this.props.data[3])}
+                  </td>
+                  <td width="50%" align="center">
+                    ${Product (this.props.data[4])}
+                  </td>
+                </tr>
+              </table>
+              <table width="100%" align="center" cellspacing="0" cellpadding="0" class="hide_mobile">
+                <tr>
+                  <td width="50%" align="center">
+                    ${Product (this.props.data[5])}
+                  </td>
+                  <td width="50%" align="center">
+                    ${Product (this.props.data[6])}
+                  </td>
+                </tr>
+              </table>
+              <!-- mobile view -->
+              <!--[if !mso]><!-- -->
+              <div class="show_for_mobile" align="center" style="display: none; width: 0px; height: 0px; overflow: hidden; min-height: 0px; line-height: 0px; font-size: 0px;">
+                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[0])}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[1])}
+                    </td>
+                  </tr>
+                </table>
+                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[2])}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[3])}
+                    </td>
+                  </tr>
+                </table>
+                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[4])}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[5])}
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--<![endif]-->`
             );
           case "8":
             return (
-              <div id="snippet">
-              {`<table width="100%" align="center" cellspacing="0" cellpadding="0">
+              `<table width="100%" align="center" cellspacing="0" cellpadding="0">
                   <tr>
-                    <td width="50%" align="center">`}
-              <Product data={this.props.data[0]} />
-              {`</td>
-                    <td width="50%" align="center">`}
-              <Product data={this.props.data[1]} />
-              {`</td>
+                    <td width="50%" align="center">
+                      ${Product (this.props.data[0])}
+                    </td>
+                    <td width="50%" align="center">
+                      ${Product (this.props.data[1])}
+                    </td>
                 </tr>
               </table>
               <table width="100%" align="center" cellspacing="0" cellpadding="0">
-                <tr>
-                  <td width="50%" align="center">`}
-                    <Product data={this.props.data[2]} />
-                {`</td>
-                  <td width="50%" align="center">`}
-                    <Product data={this.props.data[3]} />
-                {`</td>
+                  <tr>
+                    <td width="50%" align="center">
+                      ${Product (this.props.data[2])}
+                    </td>
+                    <td width="50%" align="center">
+                      ${Product (this.props.data[3])}
+                    </td>
                 </tr>
               </table>
               <table width="100%" align="center" cellspacing="0" cellpadding="0">
-                <tr>
-                  <td width="50%" align="center">`}
-                    <Product data={this.props.data[4]} />
-                {`</td>
-                  <td width="50%" align="center">`}
-                    <Product data={this.props.data[5]} />
-                {`</td>
+                  <tr>
+                    <td width="50%" align="center">
+                      ${Product (this.props.data[4])}
+                    </td>
+                    <td width="50%" align="center">
+                      ${Product (this.props.data[5])}
+                    </td>
                 </tr>
               </table>
               <table width="100%" align="center" cellspacing="0" cellpadding="0">
-                <tr>
-                  <td width="50%" align="center">`}
-                    <Product data={this.props.data[6]} />
-                {`</td>
-                  <td width="50%" align="center">`}
-                    <Product data={this.props.data[7]} />
-                {`</td>
+                  <tr>
+                    <td width="50%" align="center">
+                      ${Product (this.props.data[6])}
+                    </td>
+                    <td width="50%" align="center">
+                      ${Product (this.props.data[7])}
+                    </td>
                 </tr>
-              </table>`}
-            </div>
+              </table>`
             );
           case "9":
           return (
-            <div id="snippet">
-              {`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
+              `<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
               <tr>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[0]} />
-              {`</td>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[1]} />
-              {`</td>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[2]} />
-                {`</td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[0])}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[1])}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[2])}
+                </td>
               </tr>
             </table>
             <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
               <tr>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[3]} />
-              {`</td>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[4]} />
-              {`</td>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[5]} />
-                {`</td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[3])}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[4])}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[5])}
+                </td>
               </tr>
             </table>
             <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
               <tr>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[6]} />
-              {`</td>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[7]} />
-              {`</td>
-                <td align="center" width="33.3%">`}
-                  <Product data={this.props.data[8]} />
-                {`</td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[6])}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[7])}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product (this.props.data[8])}
+                </td>
               </tr>
             </table>
             <!-- mobile view -->
@@ -433,47 +419,46 @@ class Snippet extends Component {
               <div class="show_for_mobile" align="center" style="display: none; width: 0px; height: 0px; overflow: hidden; min-height: 0px; line-height: 0px; font-size: 0px;">
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[0]} />
-                  {`</td>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[1]} />
-                  {`</td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[0])}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[1])}
+                    </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[2]} />
-                  {`</td>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[3]} />
-                  {`</td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[2])}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[3])}
+                    </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[4]} />
-                  {`</td>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[5]} />
-                  {`</td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[4])}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[5])}
+                    </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[6]} />
-                  {`</td>
-                    <td align="center" width="50%">`}
-                      <Product data={this.props.data[7]} />
-                  {`</td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[6])}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product (this.props.data[7])}
+                    </td>
                   </tr>
                 </table>
               </div>
-              <!--<![endif]-->`}
-          </div>
+              <!--<![endif]-->`
           );
         default:
       }

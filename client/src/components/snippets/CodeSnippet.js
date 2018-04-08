@@ -36,26 +36,24 @@ class CodeSnippet extends Component {
   render() {
     if (!this.props.newImagesAndLinks || !this.props.numberOfProducts) {
       return <div>Select a url!</div>;
+    } else {
+      return (
+        <div>
+          <button
+            type="button"
+            className="btn btn-primary btn-sm float-right"
+            onClick={event => this.copyToDasboard(event)}
+          >
+            copy
+          </button>
+          {this.snippet(
+            this.props.newImagesAndLinks.data,
+            this.props.numberOfProducts,
+            this.props.gridTitle
+          )}
+        </div>
+      );
     }
-    return (
-      <div
-        className="display-linebreak"
-        // onMouseOver={this.handleMouseOver}
-      >
-        <button
-          type="button"
-          className="btn btn-primary btn-sm float-right"
-          onClick={event => this.copyToDasboard(event)}
-        >
-          copy
-        </button>
-        {this.snippet(
-          this.props.newImagesAndLinks.data,
-          this.props.numberOfProducts,
-          this.props.gridTitle
-        )}
-      </div>
-    );
   }
 }
 
