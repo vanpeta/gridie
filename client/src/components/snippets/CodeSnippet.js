@@ -4,9 +4,6 @@ import { connect } from "react-redux";
 import Snippet from "./Snippet";
 
 class CodeSnippet extends Component {
-  handleMouseOver(e) {
-    console.log("MOUSEOVER in codeSnippet", e);
-  }
 
   snippet(data, numProds, title) {
     console.log("snippet function", title);
@@ -21,31 +18,18 @@ class CodeSnippet extends Component {
     });
     return <Snippet data={newData} numProds={numProds} title={title} />;
   }
-  copyToDasboard(e) {
-    e.preventDefault();
-    console.log(e);
-    document.execCommand(
-      this.snippet(
-        this.props.newImagesAndLinks.data,
-        this.props.numberOfProducts,
-        this.props.gridTitle
-      )
-    );
-    // e.clipboardData.setData('text/plain', this.snippet(this.props.newImagesAndLinks.data, this.props.numberOfProducts));
-  }
+
+
+
   render() {
     if (!this.props.newImagesAndLinks || !this.props.numberOfProducts) {
       return <div>Select a url!</div>;
     } else {
       return (
         <div>
-          <button
-            type="button"
-            className="btn btn-primary btn-sm float-right"
-            onClick={event => this.copyToDasboard(event)}
-          >
-            copy
-          </button>
+          <div>
+            
+          </div>
           {this.snippet(
             this.props.newImagesAndLinks.data,
             this.props.numberOfProducts,

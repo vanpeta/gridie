@@ -35,23 +35,69 @@ const style = `<!--[if !mso]><!-- -->
 <!--<![endif]-->`;
 
 class Snippet extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { copySuccess: "" };
+    this.copyToClipboard = this.copyToClipboard.bind(this);
+  }
+
+  copyToClipboard (e) {
+    this.textArea.select();
+    document.execCommand("copy");
+    e.target.focus();
+    this.setState({ copySuccess: "Copied!" });
+  }
   render () {
     console.log("PROPS in snippet", this.props)
     if (this.props.title) {
-      console.log("INSIDE CONDITION")
       return (
         <div className="col-12">
-          <form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
-            <textarea class="form-control" id="snippetContainer" type="text-area" value={style + Title(this.props.title) + this.getGrid(this.props.numProds)} />
+          <form
+            className="input-group input-group-sm"
+            onSubmit={e => { e.preventDefault(); }}
+          >
+            <button
+              type="button"
+              className="btn btn-primary btn-sm"
+              onClick={this.copyToClipboard}
+            >
+              Copy
+            </button>
+            {this.state.copySuccess}
+            <textarea
+              ref={(textarea) => this.textArea = textarea}
+              readOnly={true}
+              className="form-control"
+              id="snippetContainer"
+              type="text-area"
+              value={style + Title(this.props.title) + this.getGrid(this.props.numProds)}
+            />
           </form>
         </div>
       )
     } else {
-      console.log("OUTSIDE CONDITION");
       return (
         <div className="col-12">
-          <form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
-            <textarea class="form-control" id="snippetContainer" type="text-area" value={style + this.getGrid(this.props.numProds)} />
+          <form 
+            className="input-group input-group-sm"
+            onSubmit={e => { e.preventDefault(); }}
+          >
+            <button
+              type="button"
+              className="btn btn-primary btn-sm"
+              onClick={this.copyToClipboard}
+            >
+              Copy
+            </button>
+            {this.state.copySuccess}
+            <textarea
+              ref={(textarea) => this.textArea = textarea}
+              readOnly={true}
+              className="form-control"
+              id="snippetContainer"
+              type="text-area"
+              value={style + this.getGrid(this.props.numProds)}
+            />
           </form>
         </div>
       )
