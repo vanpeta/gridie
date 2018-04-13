@@ -56,9 +56,23 @@ export function updateTitleCopy (titleCopy) {
 	}
 }
 
+export const UPDATE_CTA_COPY = "UPDATE_CTA_COPY";
 
+export function updateCTACopy (CTACopy) {
+	console.log("ACTION=",CTACopy )
+	return {
+		type: UPDATE_CTA_COPY,
+		payload: CTACopy
+	}
+}
 
+export const SELECT_CATEGORY = "SELECT_CATEGORY";
 
-
-
+export function selectCategory (url) {
+	console.log("ACTION=",url )
+	return {
+		type: SELECT_CATEGORY,
+		payload: url
+	}
+}
 

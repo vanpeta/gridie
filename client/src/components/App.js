@@ -8,7 +8,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <header className="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">GRIDSTER</header>
         <div className="row">
           <div className="col-3">

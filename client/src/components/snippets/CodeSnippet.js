@@ -5,8 +5,8 @@ import Snippet from "./Snippet";
 
 class CodeSnippet extends Component {
 
-  snippet(data, numProds, title) {
-    console.log("snippet function", title);
+  snippet(data, numProds, title, CTA, category) {
+    console.log("snippet function", category);
     let newData = [];
     data.links.map((link, index) => {
       return (newData[index] = {
@@ -16,7 +16,7 @@ class CodeSnippet extends Component {
         price: data.price[index]
       });
     });
-    return <Snippet data={newData} numProds={numProds} title={title} />;
+    return <Snippet data={newData} numProds={numProds} title={title} CTA={CTA} category={category} />;
   }
 
 
@@ -33,7 +33,9 @@ class CodeSnippet extends Component {
           {this.snippet(
             this.props.newImagesAndLinks.data,
             this.props.numberOfProducts,
-            this.props.gridTitle
+            this.props.gridTitle,
+            this.props.CTA,
+            this.props.category
           )}
         </div>
       );
@@ -45,7 +47,9 @@ function mapStateToProps(state) {
   return {
     newImagesAndLinks: state.newImagesAndLinks,
     numberOfProducts: state.numberOfProducts,
-    gridTitle: state.titleCopy
+    gridTitle: state.titleCopy,
+    CTA: state.CTACopy,
+    category: state.selectCategory
   };
 }
 

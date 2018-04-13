@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { selectSite, fetchImages } from "../../actions/index";
+import { selectSite, fetchImages, selectCategory } from "../../actions/index";
 
 class SideMenuItem extends Component {
 
@@ -9,6 +9,7 @@ class SideMenuItem extends Component {
 		event.stopPropagation();
 		if (data.value !== "") {
 			this.props.callForProducts(data.value);
+			this.props.updateSelectedCategory(data.value);
 		} else {
 			this.props.openSideMenuItem(address, data, sites);
 		}
@@ -46,7 +47,8 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
 			openSideMenuItem: selectSite,
-			callForProducts: fetchImages
+			callForProducts: fetchImages,
+			updateSelectedCategory: selectCategory
     },
     dispatch
   );

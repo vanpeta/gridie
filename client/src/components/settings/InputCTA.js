@@ -2,9 +2,9 @@ import React, { Component } from "react"
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { updateTitleCopy } from "../../actions/index";
+import { updateCTACopy } from "../../actions/index";
 
-class InputTitle extends Component {
+class InputCTA extends Component {
     constructor(props) {
         super(props);
         this.state = { copy: "" }
@@ -13,15 +13,15 @@ class InputTitle extends Component {
 
     handleChange(event) {
 			this.setState({ copy: event.target.value }, () => {
-				this.props.newGridTitleCopy(this.state.copy);
+				this.props.newGridCTACopy(this.state.copy);
 			});
     }
 
     renderError() {
-			if (this.props.titleCopy.length > 25) {
+			if (this.props.CTACopy.length > 25) {
 				console.log("error=", this.props);
 				return (
-					<div className="error">{this.props.titleCopy}</div>
+					<div className="error">{this.props.titleCopy} is too long</div>
 				)
 			}
 		}
@@ -31,7 +31,7 @@ class InputTitle extends Component {
             <div className="col-9">
 				<form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
 						<div className="input-group-prepend">
-								<span className="input-group-text" id="inputGroup-sizing-sm">title copy</span>
+								<span className="input-group-text" id="inputGroup-sizing-sm">CTA copy</span>
 						</div>
 						<input 
 								type="text"
@@ -48,18 +48,17 @@ class InputTitle extends Component {
 
 function mapStateToProps (state) {
     return {
-				newImagesAndLinks: state.newImagesAndLinks,
-				titleCopy: state.titleCopy
+			CTACopy: state.CTACopy
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(
       {
-				newGridTitleCopy: updateTitleCopy
+				newGridCTACopy: updateCTACopy
       },
       dispatch
     );
   }
   
-export default connect(mapStateToProps, mapDispatchToProps)(InputTitle);
+export default connect(mapStateToProps, mapDispatchToProps)(InputCTA);

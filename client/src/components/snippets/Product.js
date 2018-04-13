@@ -10,14 +10,14 @@ const Product = props => {
 				</tr>
 				<tr>
 					<td align="center" style="padding-left:5%; padding-right:5%;">
-						<a _label="product-grid" href="${props.link}" class="gridName" style="text-decoration: none; font-family: 'Century Gothic', Futura, Verdana, sans-serif; font-size: 13px; color: #000000; letter-spacing: .15em; line-height: 200%; font-weight: bold;">
+						<a _label="product-grid" href="${props.link}" class="gridName" style="text-decoration: none; font-family: 'Century Gothic', Futura, Verdana, sans-serif; font-size: 13px; color: #000000; letter-spacing: .15em; line-height: 200%">
 							${props.name}
 						</a>
 					</td>
 				</tr>
 				<tr>
 					<td align="center" style="padding-left:5%; padding-right:5%;">
-						<a _label="product-grid" href="${props.link}" class="gridName" style="text-decoration: none; font-family: 'Century Gothic', Futura, Verdana, sans-serif; font-size: 13px; color: #000000; letter-spacing: .15em; line-height: 200%; font-weight: bold;">
+						<a _label="product-grid" href="${props.link}" class="gridName" style="text-decoration: none; font-family: 'Century Gothic', Futura, Verdana, sans-serif; font-size: 13px; color: #000000; letter-spacing: .15em; line-height: 200%;">
 							${props.price}
 						</a>
 					</td>

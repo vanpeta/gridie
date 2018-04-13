@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import InputUrl from "./InputUrl"
 import InputTitle from "./InputTitle";
+import InputCTA from "./InputCTA";
 import InputNumberOrProducts from "./InputNumberOfProducts";
 
 class Settings extends Component {
@@ -16,6 +17,9 @@ class Settings extends Component {
 				</div>
 				<div className="row">
 					<InputTitle />
+				</div>
+				<div className="row">
+					<InputCTA />
 				</div>
       </div>
     );
