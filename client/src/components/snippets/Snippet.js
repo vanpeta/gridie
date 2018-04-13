@@ -84,15 +84,15 @@ class Snippet extends Component {
   getGrid(numProds) {
     switch (numProds) {
       case "1":
-        return Product(this.props.data[0]);
+        return Product(this.props.data[0], this.props.enablePrice, this.props.enableName);
       case "2":
         return `<table width="100%" align="center" cellspacing="0" cellpadding="0">
               <tr>
                 <td width="50%" align="center">
-                  ${Product(this.props.data[0])}
+                  ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                 </td>
                 <td width="50%" align="center">
-                  ${Product(this.props.data[1])}
+                  ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                 </td>
               </tr>
             </table>`;
@@ -100,13 +100,13 @@ class Snippet extends Component {
         return `<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
               <tr>
                 <td align="center" width="33.3%">
-                  ${Product(this.props.data[0])}
+                  ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                 </td>
                 <td align="center" width="33.3%">
-                  ${Product(this.props.data[1])}
+                  ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                 </td>
                 <td align="center" width="33.3%">
-                  ${Product(this.props.data[2])}
+                  ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
                 </td>
               </tr>
             </table>
@@ -116,17 +116,17 @@ class Snippet extends Component {
               <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td align="center" width="50%">
-                    ${Product(this.props.data[0])}
+                    ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                   </td>
                   <td align="center" width="50%">
-                    ${Product(this.props.data[1])}
+                    ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                   </td>
                 </tr>
               </table>
               <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td align="center" width="50%" style="max-width: 50%;">
-                    ${Product(this.props.data[2])}
+                    ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
                   </td>
                 </tr>
               </table>
@@ -136,20 +136,20 @@ class Snippet extends Component {
         return `<table width="100%" align="center" cellspacing="0" cellpadding="0">
               <tr>
                 <td width="50%" align="center">
-                  ${Product(this.props.data[0])}
+                  ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                 </td>
                 <td width="50%" align="center">
-                  ${Product(this.props.data[1])}
+                  ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                 </td>
               </tr>
             </table>
             <table width="100%" align="center" cellspacing="0" cellpadding="0">
               <tr>
                 <td width="50%" align="center">
-                  ${Product(this.props.data[2])}
+                  ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
                 </td>
                 <td width="50%" align="center">
-                  ${Product(this.props.data[3])}
+                  ${Product(this.props.data[3], this.props.enablePrice, this.props.enableName)}
                 </td>
               </tr>
             </table>`;
@@ -157,23 +157,23 @@ class Snippet extends Component {
         return `<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
               <tr>
                 <td align="center" width="33.3%">
-                  ${Product(this.props.data[0])}
+                  ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                 </td>
                 <td align="center" width="33.3%">
-                  ${Product(this.props.data[1])}
+                  ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                   </td>
                   <td align="center" width="33.3%">
-                  ${Product(this.props.data[2])}
+                  ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
                   </td>
                 </tr>
               </table>
               <table width="100%" align="center" cellspacing="0" cellpadding="0" class="hide_mobile">
                 <tr>
                   <td width="50%" align="center">
-                    ${Product(this.props.data[3])}
+                    ${Product(this.props.data[3], this.props.enablePrice, this.props.enableName)}
                   </td>
                   <td width="50%" align="center">
-                    ${Product(this.props.data[4])}
+                    ${Product(this.props.data[4], this.props.enablePrice, this.props.enableName)}
                   </td>
                 </tr>
               </table>
@@ -183,27 +183,27 @@ class Snippet extends Component {
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[0])}
+                      ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                     </td>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[1])}
+                      ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                     </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[2])}
+                      ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
                     </td>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[3])}
+                      ${Product(this.props.data[3], this.props.enablePrice, this.props.enableName)}
                     </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="center" width="50%" style="max-width: 50%;">
-                      ${Product(this.props.data[4])}
+                      ${Product(this.props.data[4], this.props.enablePrice, this.props.enableName)}
                     </td>
                   </tr>
                 </table>
@@ -213,26 +213,26 @@ class Snippet extends Component {
         return `<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
                 <tr>
                   <td align="center" width="33.3%">
-                    ${Product(this.props.data[0])}
+                    ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                   </td>
                   <td align="center" width="33.3%">
-                    ${Product(this.props.data[1])}
+                    ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                   </td>
                   <td align="center" width="33.3%">
-                    ${Product(this.props.data[2])}
+                    ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
                   </td>
                 </tr>
               </table>
               <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
                 <tr>
                   <td align="center" width="33.3%">
-                    ${Product(this.props.data[3])}
+                    ${Product(this.props.data[3], this.props.enablePrice, this.props.enableName)}
                   </td>
                   <td align="center" width="33.3%">
-                    ${Product(this.props.data[4])}
+                    ${Product(this.props.data[4], this.props.enablePrice, this.props.enableName)}
                   </td>
                   <td align="center" width="33.3%">
-                    ${Product(this.props.data[6])}
+                    ${Product(this.props.data[6], this.props.enablePrice, this.props.enableName)}
                   </td>
                 </tr>
               </table>
@@ -242,30 +242,30 @@ class Snippet extends Component {
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[0])}
+                      ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                   </td>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[1])}
+                      ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                     </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[2])}
+                      ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
                     </td>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[3])}
+                      ${Product(this.props.data[3], this.props.enablePrice, this.props.enableName)}
                     </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[4])}
+                      ${Product(this.props.data[4], this.props.enablePrice, this.props.enableName)}
                     </td>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[5])}
+                      ${Product(this.props.data[5], this.props.enablePrice, this.props.enableName)}
                     </td>
                   </tr>
                 </table>
@@ -275,33 +275,33 @@ class Snippet extends Component {
         return `<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
                 <tr>
                   <td align="center" width="33.3%">
-                    ${Product(this.props.data[0])}
+                    ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                   </td>
                   <td align="center" width="33.3%">
-                    ${Product(this.props.data[1])}
+                    ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                   </td>
                   <td align="center" width="33.3%">
-                    ${Product(this.props.data[2])}
+                    ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
                   </td>
                 </tr>
               </table>
               <table width="100%" align="center" cellspacing="0" cellpadding="0" class="hide_mobile">
                 <tr>
                   <td width="50%" align="center">
-                    ${Product(this.props.data[3])}
+                    ${Product(this.props.data[3], this.props.enablePrice, this.props.enableName)}
                   </td>
                   <td width="50%" align="center">
-                    ${Product(this.props.data[4])}
+                    ${Product(this.props.data[4], this.props.enablePrice, this.props.enableName)}
                   </td>
                 </tr>
               </table>
               <table width="100%" align="center" cellspacing="0" cellpadding="0" class="hide_mobile">
                 <tr>
                   <td width="50%" align="center">
-                    ${Product(this.props.data[5])}
+                    ${Product(this.props.data[5], this.props.enablePrice, this.props.enableName)}
                   </td>
                   <td width="50%" align="center">
-                    ${Product(this.props.data[6])}
+                    ${Product(this.props.data[6], this.props.enablePrice, this.props.enableName)}
                   </td>
                 </tr>
               </table>
@@ -311,30 +311,30 @@ class Snippet extends Component {
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[0])}
+                      ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                     </td>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[1])}
-                    </td>
-                  </tr>
-                </table>
-                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td align="center" width="50%">
-                      ${Product(this.props.data[2])}
-                    </td>
-                    <td align="center" width="50%">
-                      ${Product(this.props.data[3])}
+                      ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                     </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[4])}
+                      ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
                     </td>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[5])}
+                      ${Product(this.props.data[3], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                  </tr>
+                </table>
+                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[4], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[5], this.props.enablePrice, this.props.enableName)}
                     </td>
                   </tr>
                 </table>
@@ -344,40 +344,40 @@ class Snippet extends Component {
         return `<table width="100%" align="center" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="50%" align="center">
-                      ${Product(this.props.data[0])}
+                      ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                     </td>
                     <td width="50%" align="center">
-                      ${Product(this.props.data[1])}
-                    </td>
-                </tr>
-              </table>
-              <table width="100%" align="center" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td width="50%" align="center">
-                      ${Product(this.props.data[2])}
-                    </td>
-                    <td width="50%" align="center">
-                      ${Product(this.props.data[3])}
+                      ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                     </td>
                 </tr>
               </table>
               <table width="100%" align="center" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="50%" align="center">
-                      ${Product(this.props.data[4])}
+                      ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
                     </td>
                     <td width="50%" align="center">
-                      ${Product(this.props.data[5])}
+                      ${Product(this.props.data[3], this.props.enablePrice, this.props.enableName)}
                     </td>
                 </tr>
               </table>
               <table width="100%" align="center" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="50%" align="center">
-                      ${Product(this.props.data[6])}
+                      ${Product(this.props.data[4], this.props.enablePrice, this.props.enableName)}
                     </td>
                     <td width="50%" align="center">
-                      ${Product(this.props.data[7])}
+                      ${Product(this.props.data[5], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                </tr>
+              </table>
+              <table width="100%" align="center" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="50%" align="center">
+                      ${Product(this.props.data[6], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                    <td width="50%" align="center">
+                      ${Product(this.props.data[7], this.props.enablePrice, this.props.enableName)}
                     </td>
                 </tr>
               </table>`;
@@ -385,39 +385,39 @@ class Snippet extends Component {
         return `<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
               <tr>
                 <td align="center" width="33.3%">
-                  ${Product(this.props.data[0])}
+                  ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                 </td>
                 <td align="center" width="33.3%">
-                  ${Product(this.props.data[1])}
+                  ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                 </td>
                 <td align="center" width="33.3%">
-                  ${Product(this.props.data[2])}
-                </td>
-              </tr>
-            </table>
-            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
-              <tr>
-                <td align="center" width="33.3%">
-                  ${Product(this.props.data[3])}
-                </td>
-                <td align="center" width="33.3%">
-                  ${Product(this.props.data[4])}
-                </td>
-                <td align="center" width="33.3%">
-                  ${Product(this.props.data[5])}
+                  ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
                 </td>
               </tr>
             </table>
             <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
               <tr>
                 <td align="center" width="33.3%">
-                  ${Product(this.props.data[6])}
+                  ${Product(this.props.data[3], this.props.enablePrice, this.props.enableName)}
                 </td>
                 <td align="center" width="33.3%">
-                  ${Product(this.props.data[7])}
+                  ${Product(this.props.data[4], this.props.enablePrice, this.props.enableName)}
                 </td>
                 <td align="center" width="33.3%">
-                  ${Product(this.props.data[8])}
+                  ${Product(this.props.data[5], this.props.enablePrice, this.props.enableName)}
+                </td>
+              </tr>
+            </table>
+            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
+              <tr>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[6], this.props.enablePrice, this.props.enableName)}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[7], this.props.enablePrice, this.props.enableName)}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[8], this.props.enablePrice, this.props.enableName)}
                 </td>
               </tr>
             </table>
@@ -427,40 +427,40 @@ class Snippet extends Component {
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[0])}
+                      ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
                     </td>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[1])}
-                    </td>
-                  </tr>
-                </table>
-                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td align="center" width="50%">
-                      ${Product(this.props.data[2])}
-                    </td>
-                    <td align="center" width="50%">
-                      ${Product(this.props.data[3])}
+                      ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
                     </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[4])}
+                      ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
                     </td>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[5])}
+                      ${Product(this.props.data[3], this.props.enablePrice, this.props.enableName)}
                     </td>
                   </tr>
                 </table>
                 <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[6])}
+                      ${Product(this.props.data[4], this.props.enablePrice, this.props.enableName)}
                     </td>
                     <td align="center" width="50%">
-                      ${Product(this.props.data[7])}
+                      ${Product(this.props.data[5], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                  </tr>
+                </table>
+                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[6], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[7], this.props.enablePrice, this.props.enableName)}
                     </td>
                   </tr>
                 </table>

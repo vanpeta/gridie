@@ -5,7 +5,7 @@ import Snippet from "./Snippet";
 
 class CodeSnippet extends Component {
 
-  snippet(data, numProds, title, CTA, category) {
+  snippet(data, numProds, title, CTA, category, enablePrice, enableName) {
     console.log("snippet function", category);
     let newData = [];
     data.links.map((link, index) => {
@@ -16,7 +16,17 @@ class CodeSnippet extends Component {
         price: data.price[index]
       });
     });
-    return <Snippet data={newData} numProds={numProds} title={title} CTA={CTA} category={category} />;
+    return (
+      <Snippet
+        data={newData}
+        numProds={numProds}
+        title={title}
+        CTA={CTA}
+        category={category}
+        enablePrice={enablePrice}
+        enableName={enableName}
+        />
+    );
   }
 
 
@@ -35,7 +45,9 @@ class CodeSnippet extends Component {
             this.props.numberOfProducts,
             this.props.gridTitle,
             this.props.CTA,
-            this.props.category
+            this.props.category,
+            this.props.enablePrice,
+            this.props.enableName
           )}
         </div>
       );
@@ -49,7 +61,9 @@ function mapStateToProps(state) {
     numberOfProducts: state.numberOfProducts,
     gridTitle: state.titleCopy,
     CTA: state.CTACopy,
-    category: state.selectCategory
+    category: state.selectCategory,
+    enablePrice: state.isPriceEnable,
+    enableName: state.isNameEnable
   };
 }
 

@@ -6,6 +6,8 @@ import numberOfProducts from './reducer_number_of_products';
 import titleCopy from "./reducer_title_copy";
 import CTACopy from "./reducer_CTA_copy";
 import selectCategory from "./reducer_select_category";
+import priceEnable from "./reducer_price_enable";
+import nameEnable from "./reducer_name_enable";
 
 const rootReducer = combineReducers({
   sites: selectSite,
@@ -13,7 +15,9 @@ const rootReducer = combineReducers({
   numberOfProducts: numberOfProducts,
   titleCopy: titleCopy,
   CTACopy: CTACopy,
-  selectCategory: selectCategory
+  selectCategory: selectCategory,
+  isPriceEnable: priceEnable,
+  isNameEnable: nameEnable
 });
 
 export default rootReducer;

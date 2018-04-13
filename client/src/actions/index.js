@@ -49,7 +49,6 @@ export function cleanUrl (data) {
 export const UPDATE_TITLE_COPY = "UPDATE_TITLE_COPY";
 
 export function updateTitleCopy (titleCopy) {
-	console.log("ACTION=",titleCopy )
 	return {
 		type: UPDATE_TITLE_COPY,
 		payload: titleCopy
@@ -59,7 +58,6 @@ export function updateTitleCopy (titleCopy) {
 export const UPDATE_CTA_COPY = "UPDATE_CTA_COPY";
 
 export function updateCTACopy (CTACopy) {
-	console.log("ACTION=",CTACopy )
 	return {
 		type: UPDATE_CTA_COPY,
 		payload: CTACopy
@@ -69,10 +67,27 @@ export function updateCTACopy (CTACopy) {
 export const SELECT_CATEGORY = "SELECT_CATEGORY";
 
 export function selectCategory (url) {
-	console.log("ACTION=",url )
 	return {
 		type: SELECT_CATEGORY,
 		payload: url
+	}
+}
+
+export const ENABLE_NAME = "ENABLE_NAME";
+
+export function nameEnable (boolean) {
+	return {
+		type: ENABLE_NAME,
+		payload: boolean
+	}
+}
+
+export const ENABLE_PRICE = "ENABLE_PRICE";
+
+export function priceEnable (boolean) {
+	return {
+		type: ENABLE_PRICE,
+		payload: boolean
 	}
 }
 
