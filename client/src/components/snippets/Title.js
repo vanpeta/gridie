@@ -5,7 +5,7 @@ const Title = props => {
 		return (
 			`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
 					<tr>
-							<td align="center" style="padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 40px; color: #000000; letter-spacing: .15em; line-height: 200%;">
+							<td align="center" class="gridTitle" style="padding-bottom:20px; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 40px; color: #000000; letter-spacing: .15em; line-height: 200%;">
 									${props}
 							</td>
 					</tr>

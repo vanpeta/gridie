@@ -18,10 +18,10 @@ class InputCTA extends Component {
     }
 
     renderError() {
-			if (this.props.CTACopy.length > 25) {
+			if (this.props.CTACopy.length > 15) {
 				console.log("error=", this.props);
 				return (
-					<div className="error">{this.props.titleCopy} is too long</div>
+					<div className="error">"{this.props.titleCopy}" might be too long</div>
 				)
 			}
 		}

@@ -18,10 +18,10 @@ class InputTitle extends Component {
     }
 
     renderError() {
-			if (this.props.titleCopy.length > 25) {
+			if (this.props.titleCopy.length > 19) {
 				console.log("error=", this.props);
 				return (
-					<div className="error">{this.props.titleCopy}</div>
+					<div className="error">"{this.props.titleCopy}" might be too long</div>
 				)
 			}
 		}

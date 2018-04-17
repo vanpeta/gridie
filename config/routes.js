@@ -35,10 +35,18 @@ module.exports = app => {
             } else {
               newData.productName.push(name);
             }
+            let price = Number(product.PriceToDisplay.ActualPrice).toFixed(2)
+            // if (!price.includes(".")) {
+            //   console.log(">>>>>>>>>>>>>>>>>> no decimal")
+            //   price = product.PriceToDisplay.ActualPrice + ".00"
+            // } else if (!price.slice(-2) === ".") {
+            //   console.log(">>>>>>>>>>>>>>>>>> un solo decimal")
+            //   price = product.PriceToDisplay.ActualPrice + "0"
+            // }
             if (product.PriceToDisplay.Currency === "USD") {
-              newData.price.push("$" + product.PriceToDisplay.ActualPrice);
+              newData.price.push("$" + price);
             } else {
-              newData.price.push(product.PriceToDisplay.ActualPrice + " $");
+              newData.price.push("$" + price + " CAD");
             }
           });
           res.status(200);
