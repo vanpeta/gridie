@@ -31,6 +31,9 @@ const style = `<!--[if !mso]><!-- -->
    line-height: normal !important;
    font-size: medium !important;
   }
+  .imageMobile {
+    width: 100% !important;
+  }
  }
 </style>
 <!--<![endif]-->`;
