@@ -3,13 +3,15 @@ import React, { Component } from "react";
 import SideMenu from "./sideMenu/SideMenu";
 import CodeSnippet from "./snippets/CodeSnippet";
 import Settings from "./settings/Settings";
+import Display from "./Display";
 
 class App extends Component {
 
   render() {
-    return (
-      <div className="container">
-        <header className="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">GRIDSTER</header>
+    return <div className="container">
+        <header className="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+          GRIDSTER
+        </header>
         <div className="row">
           <div className="col-3">
             <SideMenu />
@@ -22,9 +24,11 @@ class App extends Component {
           <div className="col-6">
             <CodeSnippet />
           </div>
+          <div className="col-6">
+            <Display />
+          </div>
         </div>
-      </div>
-    );
+      </div>;
   }
 }
 

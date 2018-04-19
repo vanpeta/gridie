@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Product from "./Product";
-import Title from "./Title";
-import CTA from "./CTA";
+import Product from "./snippets/Product";
+import Title from "./snippets/Title";
+import CTA from "./snippets/CTA";
 
 const style = `<!--[if !mso]><!-- -->
 <style type="text/css">
@@ -35,7 +35,7 @@ const style = `<!--[if !mso]><!-- -->
 </style>
 <!--<![endif]-->`;
 
-class Snippet extends Component {
+class Preview extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -471,4 +471,4 @@ class Snippet extends Component {
   }
 };
 
-export default Snippet;
+export default Preview;
