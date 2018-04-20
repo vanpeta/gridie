@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import SideMenu from "./sideMenu/SideMenu";
 import CodeSnippet from "./snippets/CodeSnippet";
 import Settings from "./settings/Settings";
-import Display from "./Display";
+// import Display from "./Display";
 
 class App extends Component {
 
@@ -25,7 +25,7 @@ class App extends Component {
             <CodeSnippet />
           </div>
           <div className="col-6">
-            <Display />
+            {/* <Display /> */}
           </div>
         </div>
       </div>;

@@ -6,21 +6,25 @@ import Snippet from "./Snippet";
 class CodeSnippet extends Component {
 
   snippet(data, numProds, title, CTA, category, enablePrice, enableName, hero) {
+    console.log("DATA in snippet function======",data)
     let heroData = { enable: hero };
-    if (heroData.enable) {
-      heroData.link = data.selectedSite + data.links.shift();
-      heroData.image = data.images.shift();
-      console.log("!!!!!!!!!!!!!!!", heroData);
-    }
     let newData = [];
-    data.links.map((link, index) => {
-      return (newData[index] = {
-        image: data.images[index],
-        link: data.selectedSite + link,
-        name: data.productName[index],
-        price: data.price[index]
-      });
+    data.products.map((product, index) => {
+      if (heroData.enable) {
+        index = index + 1;
+      }
+      return (newData.push({
+        image: product.image,
+        link: data.selectedSite + product.link,
+        name: product.productName,
+        price: product.price
+      }));
     });
+    if (heroData.enable) {
+      heroData.link = data.selectedSite + data.products[0].link;
+      heroData.image = data.products[0].image;
+      newData.shift();
+    };
     return (
       <Snippet
         data={newData}
