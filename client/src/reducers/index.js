@@ -8,6 +8,7 @@ import CTACopy from "./reducer_CTA_copy";
 import selectCategory from "./reducer_select_category";
 import priceEnable from "./reducer_price_enable";
 import nameEnable from "./reducer_name_enable";
+import heroEnable from "./reducer_hero_enable";
 
 const rootReducer = combineReducers({
   sites: selectSite,
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
   CTACopy: CTACopy,
   selectCategory: selectCategory,
   isPriceEnable: priceEnable,
-  isNameEnable: nameEnable
+  isNameEnable: nameEnable,
+  isHeroEnable: heroEnable
 });
 
 export default rootReducer;

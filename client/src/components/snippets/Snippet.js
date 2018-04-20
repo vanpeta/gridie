@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Product from "./Product";
 import Title from "./Title";
+import Hero from "./Hero";
 import CTA from "./CTA";
 
 const style = `<!--[if !mso]><!-- -->
@@ -77,7 +78,7 @@ class Snippet extends Component {
             className="form-control"
             id="snippetContainer"
             type="text-area"
-            value={style + Title(this.props.title) + this.getGrid(this.props.numProds) + CTA(this.props.CTA, this.props.category)}
+            value={style + Hero(this.props.hero) + Title(this.props.title) + this.getGrid(this.props.numProds) + CTA(this.props.CTA, this.props.category)}
           />
         </form>
       </div>

@@ -6,10 +6,14 @@ import InputCTA from "./InputCTA";
 import InputNumberOrProducts from "./InputNumberOfProducts";
 import ShowPrice from "./ShowPrice";
 import ShowName from "./ShowName";
+import ShowHero from "./ShowHero";
 
 class Settings extends Component {
   render() {
     return <div className="container">
+        <div className="row">
+          <ShowHero />
+        </div>
         <div className="row">
           <InputNumberOrProducts />
         </div>

@@ -91,3 +91,11 @@ export function priceEnable (boolean) {
 	}
 }
 
+export const ENABLE_HERO = "ENABLE_HERO";
+
+export function heroEnable (boolean) {
+	return {
+		type: ENABLE_HERO,
+		payload: boolean
+	}
+}

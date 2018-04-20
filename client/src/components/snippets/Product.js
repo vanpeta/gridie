@@ -1,6 +1,4 @@
 const Product = (props, priceStatus, nameStatus) => {
-	console.log(">>>>>>>>", priceStatus);
-	console.log(">>>>>>>>", nameStatus);
 	let price = "";
 	let name = "";
 	if (priceStatus) {
