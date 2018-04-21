@@ -55,6 +55,16 @@ export function updateTitleCopy (titleCopy) {
 	}
 }
 
+export const UPDATE_PARAGRAPH_COPY = "UPDATE_PARAGRAPH_COPY";
+
+export function updateParagraphCopy (paragraphCopy) {
+	return {
+		type: UPDATE_PARAGRAPH_COPY,
+		payload: paragraphCopy
+	}
+}
+
+
 export const UPDATE_CTA_COPY = "UPDATE_CTA_COPY";
 
 export function updateCTACopy (CTACopy) {

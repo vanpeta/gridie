@@ -5,7 +5,7 @@ import Snippet from "./Snippet";
 
 class CodeSnippet extends Component {
 
-  snippet(data, numProds, title, CTA, category, enablePrice, enableName, hero) {
+  snippet(data, numProds, title, CTA, category, enablePrice, enableName, hero, paragraph) {
     console.log("DATA in snippet function======",data)
     let heroData = { enable: hero };
     let newData = [];
@@ -35,21 +35,16 @@ class CodeSnippet extends Component {
         category={category}
         enablePrice={enablePrice}
         enableName={enableName}
+        paragraph={paragraph}
         />
     );
   }
-
-
-
   render() {
     if (!this.props.newImagesAndLinks || !this.props.numberOfProducts) {
       return <div>Select a url!</div>;
     } else {
       return (
         <div>
-          <div>
-            
-          </div>
           {this.snippet(
             this.props.newImagesAndLinks.data,
             this.props.numberOfProducts,
@@ -58,7 +53,8 @@ class CodeSnippet extends Component {
             this.props.category,
             this.props.enablePrice,
             this.props.enableName,
-            this.props.hero
+            this.props.hero,
+            this.props.paragraph
           )}
         </div>
       );
@@ -71,6 +67,7 @@ function mapStateToProps(state) {
     newImagesAndLinks: state.newImagesAndLinks,
     numberOfProducts: state.numberOfProducts,
     gridTitle: state.titleCopy,
+    paragraph: state.paragraphCopy,
     hero: state.isHeroEnable,
     CTA: state.CTACopy,
     category: state.selectCategory,

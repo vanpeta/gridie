@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import InputUrl from "./InputUrl"
 import InputTitle from "./InputTitle";
+import InputParagraph from "./InputParagraph";
 import InputCTA from "./InputCTA";
 import InputNumberOrProducts from "./InputNumberOfProducts";
 import ShowPrice from "./ShowPrice";
@@ -31,6 +32,9 @@ class Settings extends Component {
         </div>
         <div className="row">
           <ShowName />
+        </div>
+        <div className="row">
+          <InputParagraph />
         </div>
       </div>;
   }

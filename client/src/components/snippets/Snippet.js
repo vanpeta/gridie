@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Product from "./Product";
 import Title from "./Title";
+import Paragraph from "./Paragraph";
 import Hero from "./Hero";
 import CTA from "./CTA";
 
@@ -78,7 +79,7 @@ class Snippet extends Component {
             className="form-control"
             id="snippetContainer"
             type="text-area"
-            value={style + Hero(this.props.hero) + Title(this.props.title) + this.getGrid(this.props.numProds) + CTA(this.props.CTA, this.props.category)}
+            value={style + Hero(this.props.hero) + Title(this.props.title) + Paragraph(this.props.paragraph) + this.getGrid(this.props.numProds) + CTA(this.props.CTA, this.props.category)}
           />
         </form>
       </div>
