@@ -2,9 +2,9 @@ import React, { Component } from "react"
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { updateParagraphCopy } from "../../actions/index";
+import { updateTopCTACopy } from "../../actions/index";
 
-class InputParagraph extends Component {
+class InputTopCTA extends Component {
     constructor(props) {
         super(props);
         this.state = { copy: "" }
@@ -13,15 +13,15 @@ class InputParagraph extends Component {
 
     handleChange(event) {
 			this.setState({ copy: event.target.value }, () => {
-				this.props.newParagraphCopy(this.state.copy);
+				this.props.newGridTopCTACopy(this.state.copy);
 			});
     }
 
     renderError() {
-			if (this.props.paragraphCopy.length > 19) {
+			if (this.props.TopCTACopy.length > 15) {
 				console.log("error=", this.props);
 				return (
-					<div className="error">"{this.props.paragraphCopy}" might be too long *TIP: Use  &lt;br /&gt; to force a new line.</div>
+					<div className="error">"{this.state.copy}" might be too long</div>
 				)
 			}
 		}
@@ -31,9 +31,9 @@ class InputParagraph extends Component {
             <div className="col-9">
 				<form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
 						<div className="input-group-prepend">
-								<span className="input-group-text" id="inputGroup-sizing-sm">paragraph</span>
+								<span className="input-group-text" id="inputGroup-sizing-sm">Top CTA copy</span>
 						</div>
-						<textarea 
+						<input 
 								type="text"
 								value={this.state.copy}
 								onChange={ e => this.handleChange(e) }
@@ -48,17 +48,17 @@ class InputParagraph extends Component {
 
 function mapStateToProps (state) {
     return {
-				paragraphCopy: state.paragraphCopy
+			TopCTACopy: state.TopCTACopy
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(
       {
-		newParagraphCopy: updateParagraphCopy
+				newGridTopCTACopy: updateTopCTACopy
       },
       dispatch
     );
   }
   
-export default connect(mapStateToProps, mapDispatchToProps)(InputParagraph);
+export default connect(mapStateToProps, mapDispatchToProps)(InputTopCTA);

@@ -21,7 +21,7 @@ class InputCTA extends Component {
 			if (this.props.CTACopy.length > 15) {
 				console.log("error=", this.props);
 				return (
-					<div className="error">"{this.props.titleCopy}" might be too long</div>
+					<div className="error">"{this.state.copy}" might be too long</div>
 				)
 			}
 		}

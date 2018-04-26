@@ -74,6 +74,15 @@ export function updateCTACopy (CTACopy) {
 	}
 }
 
+export const UPDATE_TOP_CTA_COPY = "UPDATE_TOP_CTA_COPY";
+
+export function updateTopCTACopy (TopCTACopy) {
+	return {
+		type: UPDATE_TOP_CTA_COPY,
+		payload: TopCTACopy
+	}
+}
+
 export const SELECT_CATEGORY = "SELECT_CATEGORY";
 
 export function selectCategory (url) {

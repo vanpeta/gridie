@@ -4,6 +4,7 @@ import InputUrl from "./InputUrl"
 import InputTitle from "./InputTitle";
 import InputParagraph from "./InputParagraph";
 import InputCTA from "./InputCTA";
+import InputTopCTA from "./InputTopCTA";
 import InputNumberOrProducts from "./InputNumberOfProducts";
 import ShowPrice from "./ShowPrice";
 import ShowName from "./ShowName";
@@ -23,6 +24,9 @@ class Settings extends Component {
         </div>
         <div className="row">
           <InputTitle />
+        </div>
+        <div className="row">
+          <InputTopCTA />
         </div>
         <div className="row">
           <InputCTA />
