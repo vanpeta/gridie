@@ -28,7 +28,7 @@ class ShowHero extends Component {
         >
           <div className="input-group-prepend">
             <span className="input-group-text" id="inputGroup-sizing-sm">
-              Show Hero
+              Add Hero
             </span>
           </div>
           <input

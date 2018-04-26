@@ -21,7 +21,7 @@ class CodeSnippet extends Component {
       }));
     });
     if (heroData.enable) {
-      heroData.link = data.selectedSite + data.products[0].link;
+      heroData.link = category;
       heroData.image = data.products[0].image;
       newData.shift();
     };
