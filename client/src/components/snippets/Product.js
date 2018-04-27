@@ -24,9 +24,9 @@ const Product = (props, priceStatus, nameStatus) => {
   return (
       `<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0"> 
 				<tr>
-					<td align="center" width="100%" style="padding-top: 40px; padding-bottom:20px; padding-left:7px; padding-right:7px; font-family: Futura, 'Trebuchet MS', Arial, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; font-weight: 100; line-height: 150%;">
+					<td align="center" width="100%" style="padding-top: 40px; padding-bottom:20px; padding-left:3px; padding-right:3px; font-family: Futura, 'Trebuchet MS', Arial, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; font-weight: 100; line-height: 150%;">
 						<a _label="product-grid" href="${props.link}">
-							<img width="180" class="imageMobile" src="${props.image}" style="display:block; border-style: none;">
+							<img width="188" class="imageMobile" src="${props.image}" style="display:block; border-style: none;">
 						</a>
 					</td>
 				</tr>

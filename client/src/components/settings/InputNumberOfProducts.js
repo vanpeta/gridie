@@ -25,7 +25,7 @@ class InputNumberOfProducts extends Component {
 						id="productsInput"
 						type="number"
 						min="1"
-						max="9"
+						max="12"
 						step="1"
 						onChange={this.handleChange}
 					/>

@@ -473,6 +473,124 @@ class Snippet extends Component {
                 </table>
               </div>
               <!--<![endif]-->`;
+      case "12":
+        return `<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
+              <tr>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
+                </td>
+              </tr>
+            </table>
+            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
+              <tr>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[3], this.props.enablePrice, this.props.enableName)}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[4], this.props.enablePrice, this.props.enableName)}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[5], this.props.enablePrice, this.props.enableName)}
+                </td>
+              </tr>
+            </table>
+            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
+              <tr>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[6], this.props.enablePrice, this.props.enableName)}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[7], this.props.enablePrice, this.props.enableName)}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[8], this.props.enablePrice, this.props.enableName)}
+                </td>
+              </tr>
+            </table>
+            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" class="hide_mobile">
+              <tr>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[9], this.props.enablePrice, this.props.enableName)}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[10], this.props.enablePrice, this.props.enableName)}
+                </td>
+                <td align="center" width="33.3%">
+                  ${Product(this.props.data[11], this.props.enablePrice, this.props.enableName)}
+                </td>
+              </tr>
+            </table>
+            <!-- mobile view -->
+              <!--[if !mso]><!-- -->
+              <div class="show_for_mobile" align="center" style="display: none; width: 0px; height: 0px; overflow: hidden; min-height: 0px; line-height: 0px; font-size: 0px;">
+                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[0], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[1], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                  </tr>
+                </table>
+                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[3], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                  </tr>
+                </table>
+                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[4], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[5], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                  </tr>
+                </table>
+                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[6], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[7], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                  </tr>
+                </table>
+                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[8], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[9], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                  </tr>
+                </table>
+                <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[10], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                    <td align="center" width="50%">
+                      ${Product(this.props.data[11], this.props.enablePrice, this.props.enableName)}
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!--<![endif]-->`;
       default:
     }
   }
