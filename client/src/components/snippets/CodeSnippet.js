@@ -5,8 +5,9 @@ import Snippet from "./Snippet";
 
 class CodeSnippet extends Component {
 
-  snippet(data, numProds, title, CTA, category, enablePrice, enableName, hero, paragraph) {
-    console.log("DATA in snippet function======",data)
+  snippet(data, numProds, title, CTA, category, enablePrice, enableName, hero, paragraph, topCTA) {
+    console.log("topCTA in snippet function======", topCTA);
+    console.log("CTA in snippet function======", CTA);
     let heroData = { enable: hero };
     let newData = [];
     data.products.map((product, index) => {
@@ -36,6 +37,7 @@ class CodeSnippet extends Component {
         enablePrice={enablePrice}
         enableName={enableName}
         paragraph={paragraph}
+        topCTA={topCTA}
         />
     );
   }
@@ -54,7 +56,8 @@ class CodeSnippet extends Component {
             this.props.enablePrice,
             this.props.enableName,
             this.props.hero,
-            this.props.paragraph
+            this.props.paragraph,
+            this.props.topCTA
           )}
         </div>
       );
@@ -70,6 +73,7 @@ function mapStateToProps(state) {
     paragraph: state.paragraphCopy,
     hero: state.isHeroEnable,
     CTA: state.CTACopy,
+    topCTA: state.TopCTACopy,
     category: state.selectCategory,
     enablePrice: state.isPriceEnable,
     enableName: state.isNameEnable
@@ -77,3 +81,4 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(CodeSnippet);
+;

@@ -4,6 +4,7 @@ import Title from "./Title";
 import Paragraph from "./Paragraph";
 import Hero from "./Hero";
 import CTA from "./CTA";
+import topCTA from "./topCTA";
 
 const style = `<!--[if !mso]><!-- -->
 <style type="text/css">
@@ -57,6 +58,7 @@ class Snippet extends Component {
   }
 
   render() {
+    console.log(">>>>>>>>>>>>>>>>", this.props)
     return (
       <div className="col-12">
         {this.state.copySuccess}
@@ -79,7 +81,7 @@ class Snippet extends Component {
             className="form-control"
             id="snippetContainer"
             type="text-area"
-            value={style + Hero(this.props.hero) + Title(this.props.title) + Paragraph(this.props.paragraph) + this.getGrid(this.props.numProds) + CTA(this.props.CTA, this.props.category)}
+            value={style + Hero(this.props.hero) + Title(this.props.title) + Paragraph(this.props.paragraph) + topCTA(this.props.topCTA, this.props.category) + this.getGrid(this.props.numProds) + CTA(this.props.CTA, this.props.category)}
           />
         </form>
       </div>
