@@ -28,17 +28,15 @@ class InputParagraph extends Component {
 
     render() {
         return (
-            <div className="col-9">
-				<form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
-						<div className="input-group-prepend">
-								<span className="input-group-text" id="inputGroup-sizing-sm">paragraph</span>
-						</div>
-						<textarea 
-								type="text"
-								value={this.state.copy}
-								onChange={ e => this.handleChange(e) }
-								className="form-control"
-								id="basic-url" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+            <div className="col-9 bg-light m-1 p-1">
+				<form className="" onSubmit={e => { e.preventDefault(); }}>
+					<textarea 
+						type="text"
+						value={this.state.copy}
+						placeholder="paragraph"
+						onChange={ e => this.handleChange(e) }
+						className="input"
+						id="" />
 				</form>
 				{this.renderError()}
             </div>

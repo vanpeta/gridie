@@ -19,27 +19,23 @@ class ShowHero extends Component {
 
   render() {
     return (
-      <div className="col-9">
+      <div className="col-9 bg-light m-1 p-1">
         <form
-          className="input-group input-group-sm"
+          className="p-1"
           onSubmit={e => {
             e.preventDefault();
           }}
         >
-          <div className="input-group-prepend">
-            <span className="input-group-text" id="inputGroup-sizing-sm">
-              Add Hero
-            </span>
-          </div>
           <input
             type="checkbox"
             checked={this.state.enable}
             onChange={e => this.handleChange(e)}
-            className="form-control"
-            id="basic-url"
-            aria-label="Small"
-            aria-describedby="inputGroup-sizing-sm"
+            className="d-inline-block m-2 checkbox"
+            id="hero"
           />
+          <label htmlFor="hero" className="m-2 d-inline-block checkbox-text">
+              Add Hero
+          </label>
         </form>
       </div>
     );

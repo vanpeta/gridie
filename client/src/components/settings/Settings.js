@@ -17,6 +17,12 @@ class Settings extends Component {
           <ShowHero />
         </div>
         <div className="row">
+          <ShowPrice />
+        </div>
+        <div className="row">
+          <ShowName />
+        </div>
+        <div className="row">
           <InputNumberOrProducts />
         </div>
         <div className="row">
@@ -30,12 +36,6 @@ class Settings extends Component {
         </div>
         <div className="row">
           <InputCTA />
-        </div>
-        <div className="row">
-          <ShowPrice />
-        </div>
-        <div className="row">
-          <ShowName />
         </div>
         <div className="row">
           <InputParagraph />

@@ -15,13 +15,11 @@ class InputNumberOfProducts extends Component {
 
   render() {
     return (
-      <div className="col-9">
-        <form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
-					<div className="input-group-prepend">
-						<span className="input-group-text" id="inputGroup-sizing-sm"># of products</span>
-					</div>
+      <div className="col-9 bg-light m-1 p-1">
+        <form className="p-1" onSubmit={e => { e.preventDefault(); }}>
 					<input
-						className="form-control form-control-sm"
+            className="input"
+            placeholder="# of products"
 						id="productsInput"
 						type="number"
 						min="1"

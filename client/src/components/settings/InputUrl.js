@@ -34,17 +34,15 @@ class InputUrl extends Component {
     render() {
         
         return (
-            <div className="col-9">
-                <form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
-                    <div className="input-group-prepend">
-                        <span className="input-group-text" id="inputGroup-sizing-sm">url</span>
-                    </div>
+            <div className="col-9 bg-light m-1 p-1">
+                <form className="p-1" onSubmit={e => { e.preventDefault(); }}>
                     <input 
                         type="text"
                         value={this.state.url}
+                        placeholder="url"
                         onChange={ e => this.handleChange(e) }
-                        className="form-control"
-                        id="basic-url" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                        className="input"
+                        id="" />
                 </form>
                 <div className="row">
                     {this.renderError()}

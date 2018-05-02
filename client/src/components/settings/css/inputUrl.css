@@ -1,3 +1,50 @@
 .error {
     color: red;
+    font-size: 12px;
+}
+
+.bg-light {
+    background-color: #e3f2fd !important;
+}
+
+.form {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+}
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+}
+.input {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+}
+.input:focus {
+    outline: none;
+}
+input[type='checkbox'] {
+    display: none;
+}
+
+input[type='checkbox'] + label:before {
+    content: '';
+    padding: 0px 8px;
+    margin: 0px 8px;
+    border: 1px solid #000000;
+}
+
+input[type='checkbox']:checked + label:before {
+    content: '\2713';
+    padding: 0px 2px;
+    margin: 0px 8px;
+}
+
+.checkbox-text {
+    vertical-align: top;
 }

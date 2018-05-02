@@ -28,17 +28,15 @@ class InputTitle extends Component {
 
     render() {
         return (
-            <div className="col-9">
-				<form className="input-group input-group-sm" onSubmit={e => { e.preventDefault(); }}>
-						<div className="input-group-prepend">
-								<span className="input-group-text" id="inputGroup-sizing-sm">title copy</span>
-						</div>
-						<input 
-								type="text"
-								value={this.state.copy}
-								onChange={ e => this.handleChange(e) }
-								className="form-control"
-								id="basic-url" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+            <div className="col-9 bg-light m-1 p-1">
+				<form className="p-1" onSubmit={e => { e.preventDefault(); }}>
+					<input 
+						type="text"
+						value={this.state.copy}
+						placeholder="title copy"
+						onChange={ e => this.handleChange(e) }
+						className="input"
+						id="" />
 				</form>
 				{this.renderError()}
             </div>
