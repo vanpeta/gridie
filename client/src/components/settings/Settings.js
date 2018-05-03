@@ -14,6 +14,9 @@ class Settings extends Component {
   render() {
     return <div className="container">
         <div className="row">
+          <InputUrl />
+        </div>
+        <div className="row">
           <ShowHero />
         </div>
         <div className="row">
@@ -24,9 +27,6 @@ class Settings extends Component {
         </div>
         <div className="row">
           <InputNumberOrProducts />
-        </div>
-        <div className="row">
-          <InputUrl />
         </div>
         <div className="row">
           <InputTitle />

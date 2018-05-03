@@ -8,8 +8,18 @@ import "./css/inputUrl.css";
 class InputUrl extends Component {
     constructor(props) {
         super(props);
-        this.state = { url: "" }
+        this.state = { 
+            url: "",
+            selectedCategory : ""
+        }
         this.handleChange.bind(this)
+    }
+
+    componentWillReceiveProps(nextProps) {
+        // You don't have to do this check first, but it can help prevent an unneeded render
+        if (nextProps.selectedCategory !== this.state.selectedCategory) {
+            this.setState({ selectedCategory: nextProps.selectedCategory });
+        }
     }
 
     handleChange(event) {
@@ -32,14 +42,15 @@ class InputUrl extends Component {
     }
 
     render() {
-        
+        // console.log("!!!!!!!!!!!!!!!!!!!!!", this.state.selectedCategory);
+        const selectedCategory = this.state.selectedCategory;
         return (
-            <div className="col-9 bg-light m-1 p-1">
+            <div className="col-9 bg-light m-1 p-2">
                 <form className="p-1" onSubmit={e => { e.preventDefault(); }}>
                     <input 
                         type="text"
                         value={this.state.url}
-                        placeholder="url"
+                        placeholder={ selectedCategory ? selectedCategory : "url"}
                         onChange={ e => this.handleChange(e) }
                         className="input"
                         id="" />
@@ -54,7 +65,8 @@ class InputUrl extends Component {
 
 function mapStateToProps (state) {
     return {
-        newImagesAndLinks: state.newImagesAndLinks
+        newImagesAndLinks: state.newImagesAndLinks,
+        selectedCategory: state.selectCategory
     }
 }
 
