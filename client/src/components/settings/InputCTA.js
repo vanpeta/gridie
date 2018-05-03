@@ -32,7 +32,7 @@ class InputCTA extends Component {
 				<form className="p-1" onSubmit={e => { e.preventDefault(); }}>
 						<input 
 							type="text"
-							placeholder="CTA copy"
+							placeholder="Bottom CTA copy"
 							value={this.state.copy}
 							onChange={ e => this.handleChange(e) }
 							className="input"

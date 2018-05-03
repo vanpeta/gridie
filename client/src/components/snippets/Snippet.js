@@ -130,13 +130,6 @@ class Snippet extends Component {
                   </td>
                 </tr>
               </table>
-              <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td align="center" width="50%" style="max-width: 50%;">
-                    ${Product(this.props.data[2], this.props.enablePrice, this.props.enableName)}
-                  </td>
-                </tr>
-              </table>
             </div>
             <!--<![endif]-->`;
       case "4":

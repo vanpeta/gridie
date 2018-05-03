@@ -17,19 +17,16 @@ class Settings extends Component {
           <InputUrl />
         </div>
         <div className="row">
-          <ShowHero />
-        </div>
-        <div className="row">
-          <ShowPrice />
-        </div>
-        <div className="row">
-          <ShowName />
-        </div>
-        <div className="row">
           <InputNumberOrProducts />
         </div>
         <div className="row">
+          <ShowHero />
+        </div>
+        <div className="row">
           <InputTitle />
+        </div>
+        <div className="row">
+          <InputParagraph />
         </div>
         <div className="row">
           <InputTopCTA />
@@ -38,7 +35,10 @@ class Settings extends Component {
           <InputCTA />
         </div>
         <div className="row">
-          <InputParagraph />
+          <ShowName />
+        </div>
+        <div className="row">
+          <ShowPrice />
         </div>
       </div>;
   }

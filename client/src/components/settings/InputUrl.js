@@ -15,8 +15,8 @@ class InputUrl extends Component {
         this.handleChange.bind(this)
     }
 
+    //assign props to state after being initialized
     componentWillReceiveProps(nextProps) {
-        // You don't have to do this check first, but it can help prevent an unneeded render
         if (nextProps.selectedCategory !== this.state.selectedCategory) {
             this.setState({ selectedCategory: nextProps.selectedCategory });
         }
