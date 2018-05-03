@@ -6,10 +6,10 @@ const topCTA = (props, url) => {
 		return (
 			`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
 					<tr>
-						<td align="center" style="padding-top:40px; padding-bottom:30px;">
+						<td align="center" style="padding-top:48px; padding-bottom:30px;">
 							<table align="center" width="58%" border="0" cellpadding="0" cellspacing="0">
 								<tr>
-									<td align="center" style="padding-top:10px; padding-bottom:10px; border: 2px solid #000000;">
+									<td align="center" style="padding-top:10px; padding-bottom:25px; border: 2px solid #000000;">
 										<a alias="bottomCTA" href="${url}" class="gridName" style="text-decoration: none; font-family: CenturyGothic, Futura, Verdana, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; line-height: 200%; text-transform: uppercase;">
 											${props}
 										</a>
