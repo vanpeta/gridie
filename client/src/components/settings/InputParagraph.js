@@ -21,7 +21,7 @@ class InputParagraph extends Component {
 			if (this.props.paragraphCopy.length > 19) {
 				console.log("error=", this.props);
 				return (
-					<div className="error">"{this.props.paragraphCopy}" might be too long *TIP: Use  &lt;br /&gt; to force a new line.</div>
+					<div className="error">"{this.props.paragraphCopy}" might be too long *TIP: Use  '&lt;br /&gt;' to force a new line.</div>
 				)
 			}
 		}
