@@ -48,3 +48,7 @@ input[type='checkbox']:checked + label:before {
 .checkbox-text {
     vertical-align: top;
 }
+
+.preview {
+    border: navajowhite solid 3px;
+}

@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+
+import { updateCode } from "../../actions/index";
 import Product from "./Product";
 import Title from "./Title";
 import Paragraph from "./Paragraph";
@@ -56,9 +60,12 @@ class Snippet extends Component {
     e.target.focus();
     this.setState({ copySuccess: "Copied!" });
   }
+  handleChange(e) {
+    console.log("ZZZZZZZZZZZZZZZ")
+    this.props.updateCode(e.target.value);
+  }
 
   render() {
-    console.log(">>>>>>>>>>>>>>>>", this.props)
     return (
       <div className="col-12">
         {this.state.copySuccess}
@@ -589,4 +596,13 @@ class Snippet extends Component {
   }
 };
 
-export default Snippet;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    {
+      updateCode: updateCode
+    },
+    dispatch
+  );
+}
+
+export default connect(null, mapDispatchToProps)(Snippet);

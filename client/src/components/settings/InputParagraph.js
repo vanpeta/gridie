@@ -28,7 +28,7 @@ class InputParagraph extends Component {
 
     render() {
         return (
-            <div className="col-9 bg-light m-1 p-1">
+            <div className="col-12 bg-light m-1 p-1">
 				<form className="" onSubmit={e => { e.preventDefault(); }}>
 					<textarea 
 						type="text"

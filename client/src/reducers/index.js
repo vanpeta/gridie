@@ -11,6 +11,7 @@ import selectCategory from "./reducer_select_category";
 import priceEnable from "./reducer_price_enable";
 import nameEnable from "./reducer_name_enable";
 import heroEnable from "./reducer_hero_enable";
+import updateCode from "./reducer_update_code";
 
 const rootReducer = combineReducers({
   sites: selectSite,
@@ -23,7 +24,8 @@ const rootReducer = combineReducers({
   selectCategory: selectCategory,
   isPriceEnable: priceEnable,
   isNameEnable: nameEnable,
-  isHeroEnable: heroEnable
+  isHeroEnable: heroEnable,
+  code: updateCode
 });
 
 export default rootReducer;
