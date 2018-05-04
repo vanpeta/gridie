@@ -46,12 +46,12 @@ export function cleanUrl (data) {
 	}
 }
 
-export const UPDATE_TITLE_COPY = "UPDATE_TITLE_COPY";
+export const UPDATE_TITLE = "UPDATE_TITLE";
 
-export function updateTitleCopy (titleCopy) {
+export function updateTitleCopy (title) {
 	return {
-		type: UPDATE_TITLE_COPY,
-		payload: titleCopy
+		type: UPDATE_TITLE,
+		payload: title
 	}
 }
 

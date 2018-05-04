@@ -6,8 +6,7 @@ import Snippet from "./Snippet";
 class CodeSnippet extends Component {
 
   snippet(data, numProds, title, CTA, category, enablePrice, enableName, hero, paragraph, topCTA) {
-    console.log("topCTA in snippet function======", topCTA);
-    console.log("CTA in snippet function======", CTA);
+    console.log("title in snippet function======", title);
     let heroData = { enable: hero };
     let newData = [];
     data.products.map((product, index) => {
@@ -69,7 +68,7 @@ function mapStateToProps(state) {
   return {
     newImagesAndLinks: state.newImagesAndLinks,
     numberOfProducts: state.numberOfProducts,
-    gridTitle: state.titleCopy,
+    gridTitle: state.title,
     paragraph: state.paragraphCopy,
     hero: state.isHeroEnable,
     CTA: state.CTACopy,

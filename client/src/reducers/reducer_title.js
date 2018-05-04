@@ -1,7 +1,7 @@
-export default function(state = "", action) {
+export default function(state = { copy: "", biggerTitle: false}, action) {
   console.log("reducer action=", action);
   switch (action.type) {
-    case "UPDATE_TITLE_COPY":
+    case "UPDATE_TITLE":
       return action.payload;
     default:
   }

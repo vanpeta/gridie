@@ -7,21 +7,38 @@ import { updateTitleCopy } from "../../actions/index";
 class InputTitle extends Component {
     constructor(props) {
         super(props);
-        this.state = { copy: "" }
-        this.handleChange.bind(this)
+        this.state = { title: { copy: "", biggerTitle: false }};
+		this.handleCopy.bind(this);
+		this.handleChange.bind(this);
     }
 
-    handleChange(event) {
-			this.setState({ copy: event.target.value }, () => {
-				this.props.newGridTitleCopy(this.state.copy);
-			});
-    }
+    handleCopy(event) {
+		this.setState({ 
+			title: { 
+				copy: event.target.value,
+				biggerTitle: this.state.title.biggerTitle
+			}
+		}, () => {
+        	this.props.newGridTitleCopy(this.state.title);
+      });
+	}
+	
+	handleChange(event) {
+		this.setState({
+			title: {
+				copy: this.state.title.copy,
+				biggerTitle: !this.state.title.biggerTitle
+			}
+		}, () => {
+			this.props.newGridTitleCopy(this.state.title);
+		});
+	}
 
     renderError() {
-			if (this.props.titleCopy.length > 19) {
+			if (this.props.title.copy.length > 19) {
 				console.log("error=", this.props);
 				return (
-					<div className="error">"{this.state.copy}" might be too long *TIP: Use  '&lt;br /&gt;' to force a new line.</div>
+					<div className="error">"{this.state.tittle.copy}" might be too long *TIP: Use  '&lt;br /&gt;' to force a new line.</div>
 				)
 			}
 		}
@@ -34,10 +51,20 @@ class InputTitle extends Component {
 						type="text"
 						value={this.state.copy}
 						placeholder="title copy"
-						onChange={ e => this.handleChange(e) }
+						onChange={ e => this.handleCopy(e) }
 						className="input"
 						id="" />
-				</form>
+					<input
+						type="checkbox"
+						checked={this.state.title.biggerTitle}
+						onChange={e => this.handleChange(e)}
+						className="d-inline-block m-2 checkbox"
+						id="title"
+					/>
+					<label htmlFor="title" className="m-2 d-inline-block checkbox-text">
+						Bigger Title
+					</label>
+				</form>					
 				{this.renderError()}
             </div>
         )
@@ -47,7 +74,7 @@ class InputTitle extends Component {
 function mapStateToProps (state) {
     return {
 				newImagesAndLinks: state.newImagesAndLinks,
-				titleCopy: state.titleCopy
+				title: state.title
     }
 }
 

@@ -58,7 +58,6 @@ class Snippet extends Component {
   }
 
   render() {
-    console.log(">>>>>>>>>>>>>>>>", this.props)
     return (
       <div className="col-12">
         {this.state.copySuccess}
