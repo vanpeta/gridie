@@ -49,16 +49,19 @@ input[type='checkbox'] + label:before {
     padding: 0px 8px;
     margin: 0px 8px;
     border: 1px solid #000000;
+    cursor: pointer;
 }
 
 input[type='checkbox']:checked + label:before {
     content: '\2713';
     padding: 0px 2px;
     margin: 0px 8px;
+    cursor: pointer;
 }
 
 .checkbox-text {
     vertical-align: top;
+    cursor: pointer;
 }
 
 .preview {
@@ -77,9 +80,18 @@ input[type='checkbox']:checked + label:before {
 }
 
 .gridName {
-    font-size: 9px !important;
+    font-size: 8px !important;
 }
 
 #snippetContainer {
     height: 500px;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.item {
+    padding-top: .25rem!important;
+    padding-bottom: .25rem!important;
 }

@@ -1327,11 +1327,82 @@ export default [
 									children: []
 								},
 								{
+									title: "New Arrivals",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "https://guessbymarciano.guess.com/en/Catalog/browse/new-arrivals/women/view-all/",
+									children: []
+								},
+								{
 									title: "Dresses",
 									isOpen: false,
 									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
-									value: "https://guessbymarciano.guess.com/en/catalog/browse/new-arrivals/women/dresses/",
-									children: []
+									value: "",
+									children: [
+										{
+											title: "View All",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.com/en/catalog/browse/women/dresses/view-all/",
+											children: []
+										},
+										{
+											title: "Cocktail",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.com/en/catalog/browse/women/dresses/cocktail/",
+											children: []
+										},
+										{
+											title: "Special-Occasion",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.com/en/catalog/browse/women/dresses/special-occasion/",
+											children: []
+										},
+										{
+											title: "Bodycon",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.com/en/catalog/browse/women/dresses/bodycon/",
+											children: []
+										},
+										{
+											title: "Little Black Dress",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.com/en/catalog/browse/women/dresses/little-black-dress/",
+											children: []
+										},
+										{
+											title: "Maxi",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.com/en/catalog/browse/women/dresses/maxi/",
+											children: []
+										},
+										{
+											title: "Casual",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.com/en/catalog/browse/women/dresses/casual/",
+											children: []
+										},
+										{
+											title: "Rompers & Jumpsuits",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.com/en/catalog/browse/women/dresses/rompers-and-jumpsuits/",
+											children: []
+										},
+										{
+											title: "Sale",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.com/en/catalog/browse/sale/women/dresses/",
+											children: []
+										}
+									]
 								},
 								{
 									title: "Tops",
@@ -1398,7 +1469,200 @@ export default [
 							isOpen: false,
 							style: {backgroundColor: "#7c8696", color: "#ffffff"},
 							value: "",
-							children: []
+							children: [
+								{
+									title: "New Arrivals",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "",
+									children: [
+										{
+											title: "View All",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/new-arrivals/women/view-all/",
+											children: []
+										},
+										{
+											title: "Dresses",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/new-arrivals/women/dresses/",
+											children: []
+										},
+										{
+											title: "Tops",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/new-arrivals/women/tops/",
+											children: []
+										},
+										{
+											title: "Jackets & Outerwear",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/new-arrivals/women/jackets-and-outerwear/",
+											children: []
+										},
+										{
+											title: "Bottoms",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/new-arrivals/women/bottoms/",
+											children: []
+										},
+										{
+											title: "Shoes",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/new-arrivals/women/shoes/",
+											children: []
+										},
+										{
+											title: "Accessories",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/new-arrivals/women/accessories/",
+											children: []
+										}
+									]
+								},
+								{
+									title: "Dresses",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "",
+									children: [
+										{
+											title: "View all",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/dresses/view-all/",
+											children: []
+										},
+										{
+											title: "Cocktail",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/dresses/cocktail/",
+											children: []
+										},
+										{
+											title: "Special Occasion",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/dresses/special-occasion/",
+											children: []
+										},
+										{
+											title: "Bodycon",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/dresses/bodycon/",
+											children: []
+										},
+										{
+											title: "Little Black Dress",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/dresses/little-black-dress/",
+											children: []
+										},
+										{
+											title: "Maxi",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/dresses/maxi/",
+											children: []
+										},
+										{
+											title: "Casual",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/dresses/casual/",
+											children: []
+										},
+										{
+											title: "Rompers & Jumpsuits",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/dresses/rompers-and-jumpsuits/",
+											children: []
+										},
+										{
+											title: "Sale",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/sale/women/dresses/",
+											children: []
+										}
+									]
+								},
+								{
+									title: "Tops",
+									isOpen: false,
+									style: {backgroundColor: "#9eacc1", color: "#ffffff"},
+									value: "",
+									children: [
+										{
+											title: "View all",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/tops-and-sweaters/view-all/",
+											children: []
+										},
+										{
+											title: "Blouses",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/tops-and-sweaters/blouses/",
+											children: []
+										},
+										{
+											title: "Sweaters",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/tops-and-sweaters/sweaters/",
+											children: []
+										},
+										{
+											title: "Night out",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/tops-and-sweaters/night-out/",
+											children: []
+										},
+										{
+											title: "Bodysuits",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/tops-and-sweaters/bodysuits/",
+											children: []
+										},
+										{
+											title: "Crop",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/tops-and-sweaters/crop/",
+											children: []
+										},
+										{
+											title: "Essentials",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/tops-and-sweaters/essentials/",
+											children: []
+										},
+										{
+											title: "Sleeveless",
+											isOpen: false,
+											style: {backgroundColor: "#009688", color: "#ffffff"},
+											value: "https://guessbymarciano.guess.ca/en/catalog/browse/women/tops-and-sweaters/sleeveless/",
+											children: []
+										}
+									]
+								}
+							]
 						},
 						{
 							title: "Men",
