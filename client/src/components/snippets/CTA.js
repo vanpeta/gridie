@@ -1,5 +1,4 @@
 const CTA = (props, url) => {
-	console.log("CTA COMPONENT url=", url);
 	if (props === "") {
 		return ""
 	} else {

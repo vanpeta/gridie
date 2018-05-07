@@ -3,12 +3,23 @@ import { connect } from "react-redux";
 
 
 class Preview extends Component {
+  // componentWillReceiveProps() {
+    
+  //     // this.ifr.contentWindow.postMessage(this.props.code, "*");
+  //     console.log("componentWillReceiveProps => content document = ", this.ifr);
+    
+  // }
 
   render() {
-    console.log("!!!!!!!!!!!!!!!!", this.props.code);
+
     return (
       <div>
-        { this.props.code }
+        <div
+          dangerouslySetInnerHTML={{ __html: this.props.code }}
+          // sandbox="allow-scripts"
+          className="codeRender"
+          // ref={f => (this.ifr = f)}
+        />
       </div>
     );
   }

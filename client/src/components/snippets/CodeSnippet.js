@@ -44,7 +44,7 @@ class CodeSnippet extends Component {
       return <div>Select a url!</div>;
     } else {
       return (
-        <div>
+        <div className="codeSnippet">
           {this.snippet(
             this.props.newImagesAndLinks.data,
             this.props.numberOfProducts,

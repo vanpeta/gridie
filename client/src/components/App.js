@@ -25,7 +25,7 @@ class App extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-6">
+          <div className="col-12">
             <CodeSnippet />
           </div>
         </div>
