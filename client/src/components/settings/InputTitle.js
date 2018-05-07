@@ -45,7 +45,7 @@ class InputTitle extends Component {
 
     render() {
         return (
-            <div className="col-9 bg-light m-1 p-1">
+            <div className="col-12 bg-light m-1 p-1">
 				<form className="p-1" onSubmit={e => { e.preventDefault(); }}>
 					<input 
 						type="text"

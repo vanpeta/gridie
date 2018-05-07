@@ -12,7 +12,7 @@ class InputUrl extends Component {
             url: "",
             selectedCategory : ""
         }
-        this.handleChange.bind(this)
+        this.handleChange.bind(this);
     }
 
     //assign props to state after being initialized
@@ -42,10 +42,9 @@ class InputUrl extends Component {
     }
 
     render() {
-        // console.log("!!!!!!!!!!!!!!!!!!!!!", this.state.selectedCategory);
         const selectedCategory = this.state.selectedCategory;
         return (
-            <div className="col-9 bg-light m-1 p-2">
+            <div className="col-12 bg-light m-1 p-2">
                 <form className="p-1" onSubmit={e => { e.preventDefault(); }}>
                     <input 
                         type="text"
@@ -78,7 +77,7 @@ function mapDispatchToProps(dispatch) {
       },
       dispatch
     );
-  }
+}
 
 
 

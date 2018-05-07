@@ -118,3 +118,12 @@ export function heroEnable (boolean) {
 		payload: boolean
 	}
 }
+
+export const UPDATE_CODE = "UPDATE_CODE";
+
+export function updateCode (code) {
+	return {
+		type: UPDATE_CODE,
+		payload: code
+	}
+}

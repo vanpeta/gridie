@@ -48,3 +48,26 @@ input[type='checkbox']:checked + label:before {
 .checkbox-text {
     vertical-align: top;
 }
+
+.preview {
+    border: navajowhite solid 3px;
+}
+
+.codeRender {
+    border: red;
+    max-width: 100%;
+    max-height: 500px;
+    overflow: auto;
+}
+
+.imageMobile {
+    width: 100% !important;
+}
+
+.gridName {
+    font-size: 9px !important;
+}
+
+#snippetContainer {
+    height: 100%;
+}

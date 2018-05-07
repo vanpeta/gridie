@@ -5,7 +5,7 @@ const Product = (props, priceStatus, nameStatus) => {
 		price = `
 		<tr>
 			<td align="center" style="padding-left:5%; padding-right:5%;">
-				<a _label="product-grid" href="${props.link}" class="gridName" style="text-decoration: none; font-family: Futura, 'Trebuchet MS', Arial, sans-serif; font-size: 13px; color: #000000; letter-spacing: .15em; font-weight: 100; line-height: 150%">
+				<a alias="product-grid" href="${props.link}" class="gridName" style="text-decoration: none; font-family: Futura, 'Trebuchet MS', Arial, sans-serif; font-size: 13px; color: #000000; letter-spacing: .15em; font-weight: 100; line-height: 150%">
 					${props.price}
 				</a>
 			</td>
@@ -15,7 +15,7 @@ const Product = (props, priceStatus, nameStatus) => {
 		name = `
 			<tr>
 				<td align="center" style="padding-left:5%; padding-right:5%;">
-					<a _label="product-grid" href="${props.link}" class="gridName" style="text-decoration: none; font-family: Futura, 'Trebuchet MS', Arial, sans-serif; font-size: 13px; color: #000000; letter-spacing: .15em; font-weight: 100; line-height: 150%;">
+					<a alias="product-grid" href="${props.link}" class="gridName" style="text-decoration: none; font-family: Futura, 'Trebuchet MS', Arial, sans-serif; font-size: 13px; color: #000000; letter-spacing: .15em; font-weight: 100; line-height: 150%;">
 						${props.name}
 					</a>
 				</td>
