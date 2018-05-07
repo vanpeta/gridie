@@ -12,7 +12,7 @@ import ShowHero from "./ShowHero";
 
 class Settings extends Component {
   render() {
-    return <div className="container">
+    return <div className="container settings">
         <div className="row">
           <InputUrl />
         </div>

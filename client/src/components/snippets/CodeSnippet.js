@@ -41,7 +41,7 @@ class CodeSnippet extends Component {
   }
   render() {
     if (!this.props.newImagesAndLinks || !this.props.numberOfProducts) {
-      return <div>Select a url!</div>;
+      return <div className="conductor">Select number of products and url</div>;
     } else {
       return (
         <div className="codeSnippet">
