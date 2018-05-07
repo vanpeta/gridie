@@ -1,7 +1,7 @@
 const Title = props => {
 	console.log("props in TITLE======", props);
 	let size = "40"
-	if (props.copy === "") {
+	if (!props.copy) {
 		return ""
 	} else {
 		if (props.biggerTitle) {

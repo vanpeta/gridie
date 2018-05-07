@@ -62,12 +62,10 @@ class Snippet extends Component {
   }
 
   componentDidMount() {
-    console.log("!!!!!!!!!!!!!!!!componentDidMount", this.textArea.textContent);
     this.props.updateCode(this.textArea.textContent);
   }
 
   componentDidUpdate() {
-    console.log("!!!!!!!!!!!!!!!!componentDidUpdate", this.textArea.textContent);
     this.props.updateCode(this.textArea.textContent);
   }
 
