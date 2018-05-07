@@ -59,6 +59,9 @@ class Snippet extends Component {
     document.execCommand("copy");
     e.target.focus();
     this.setState({ copySuccess: "Copied!" });
+    setTimeout(() => {
+      this.setState({ copySuccess: "" });
+    }, 3000);
   }
 
   componentDidMount() {
@@ -70,9 +73,10 @@ class Snippet extends Component {
   }
 
   render() {
+    const copied = this.state.copySuccess  ? <div className="copied">Copied</div> : "";
     return (
       <div className="col-12">
-        {this.state.copySuccess}
+        {copied}
         <form
           className="input-group input-group-sm"
           onSubmit={e => {
