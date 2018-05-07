@@ -1,5 +1,4 @@
 const topCTA = (props, url) => {
-	console.log("topCTA COMPONENT url=", url);
 	if (props === "") {
 		return ""
 	} else {
