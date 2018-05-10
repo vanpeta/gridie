@@ -90,6 +90,18 @@ input[type='checkbox']:checked + label:before {
     font-size: 8px !important;
 }
 
+.gridTitle {
+    font-size: 24px !important;
+}
+
+.paragraph {
+    font-size: 12px !important;
+}
+
+#gridCTA {
+    font-size: 15px !important;
+}
+
 #snippetContainer {
     height: 500px;
 }
