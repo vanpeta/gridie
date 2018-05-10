@@ -18,6 +18,13 @@ body {
     z-index: 1;
 }
 
+.copyButton {
+    position: fixed;
+    top: 0;
+    left: 45%;
+    width: 10%;
+}
+
 .bg-light {
     background-color: #e3f2fd !important;
 }
@@ -103,8 +110,8 @@ input[type='checkbox']:checked + label:before {
 .conductor {
     position: fixed;
     top: 0;
-    left: 20%;
-    width: 60%;
+    left: 30%;
+    width: 40%;
     text-align: center;
     background-color: dodgerblue;
     padding: 2px;
