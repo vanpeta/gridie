@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { fetchImages, cleanUrl } from "../../actions/index";
+import { fetchImages, cleanUrl, selectCategory } from "../../actions/index";
 import "./css/inputUrl.css";
 
 class InputUrl extends Component {
@@ -27,6 +27,7 @@ class InputUrl extends Component {
         this.setState({ url: event.target.value }, () => {
             const url = this.state.url.split("?")[0];
             this.props.callForProducts(url);
+            this.props.updateSelectedCategory(url);
         });
     }
 
@@ -73,7 +74,8 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators(
       {
         callForProducts: fetchImages,
-        cleanUrl: cleanUrl
+        cleanUrl: cleanUrl,
+        updateSelectedCategory: selectCategory
       },
       dispatch
     );
