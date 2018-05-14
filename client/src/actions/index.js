@@ -119,6 +119,15 @@ export function heroEnable (boolean) {
 	}
 }
 
+export const ENABLE_AMPSCRIPT = "ENABLE_AMPSCRIPT";
+
+export function ampScriptEnable(boolean) {
+	return {
+		type: ENABLE_AMPSCRIPT,
+		payload: boolean
+	}
+}
+
 export const UPDATE_CODE = "UPDATE_CODE";
 
 export function updateCode (code) {

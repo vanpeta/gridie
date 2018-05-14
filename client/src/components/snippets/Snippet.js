@@ -8,42 +8,8 @@ import Title from "./Title";
 import Paragraph from "./Paragraph";
 import Hero from "./Hero";
 import CTA from "./CTA";
-import topCTA from "./topCTA";
-
-const style = `<!--[if !mso]><!-- -->
-<style type="text/css">
- @media only screen and (max-width: 480px) {
-  .MobileCtaTextSize {
-   font-size: 2.5vw !important;
-  }
- }
-
- @media only screen and (max-width: 600px) {
-  .hide_mobile {
-   display: none !important;
-   width: 0px !important;
-   height: 0px !important;
-   visibility: hidden !important;
-   overflow: hidden !important;
-   font-size: 0px !important;
-   line-height: 0px !important;
-  }
-  .show_for_mobile {
-   display: block !important;
-   width: auto !important;
-   height: auto !important;
-   overflow: visible !important;
-   position: static !important;
-   min-height: 0px !important;
-   line-height: normal !important;
-   font-size: medium !important;
-  }
-  .imageMobile {
-    width: 100% !important;
-  }
- }
-</style>
-<!--<![endif]-->`;
+import Style from "./Style";
+import AmpScript from "./ampScript/grid";
 
 class Snippet extends Component {
   constructor(props) {
@@ -72,8 +38,27 @@ class Snippet extends Component {
     this.props.updateCode(this.textArea.textContent);
   }
 
+  bundleValue() {
+    if (this.props.ampScript) {
+      return (
+        Style() +
+        AmpScript(this.props)
+      )
+    }
+    return (
+      Style() +
+      Hero(this.props.hero) +
+      Title(this.props.gridTitle) +
+      Paragraph(this.props.paragraph) +
+      CTA(this.props.topCTA, this.props.category) +
+      this.getGrid(this.props.numberOfProducts) +
+      CTA(this.props.CTA, this.props.category)
+    );
+  }
+
   render() {
     const copied = this.state.copySuccess  ? <div className="copied">Copied</div> : "";
+    
     return (
       <div className="col-12">
         {copied}
@@ -96,15 +81,7 @@ class Snippet extends Component {
             className="form-control"
             id="snippetContainer"
             type="text-area"
-            value={
-              style +
-              Hero(this.props.hero) +
-              Title(this.props.title) +
-              Paragraph(this.props.paragraph) +
-              topCTA(this.props.topCTA, this.props.category) +
-              this.getGrid(this.props.numProds) +
-              CTA(this.props.CTA, this.props.category)
-            }
+            value={this.bundleValue()}
           />
         </form>
       </div>
@@ -1005,4 +982,15 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-export default connect(null, mapDispatchToProps)(Snippet);
+function mapStateToProps(state) {
+  return {
+    numberOfProducts: state.numberOfProducts,
+    gridTitle: state.title,
+    CTA: state.CTACopy,
+    topCTA: state.TopCTACopy,
+    paragraph: state.paragraphCopy,
+    ampScript: state.isAmpScriptEnable
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Snippet);

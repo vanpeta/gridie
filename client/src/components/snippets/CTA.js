@@ -5,7 +5,7 @@ const CTA = (props, url) => {
 		return (
 			`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
 					<tr>
-						<td align="center" style="padding-top:40px; padding-bottom:60px;">
+						<td align="center" style="padding-top: 30px; padding-bottom:10px;">
 							<table align="center" width="50%" border="0" cellpadding="0" cellspacing="0">
 								<tr>
 									<td align="center" style="padding-top:10px; padding-bottom:10px; border: 2px solid #000000;">

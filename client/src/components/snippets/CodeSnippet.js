@@ -5,7 +5,7 @@ import Snippet from "./Snippet";
 
 class CodeSnippet extends Component {
 
-  snippet(data, numProds, title, CTA, category, enablePrice, enableName, hero, paragraph, topCTA) {
+  snippet(data, category, enablePrice, enableName, hero) {
     let heroData = { enable: hero };
     let newData = [];
     data.products.map((product, index) => {
@@ -27,15 +27,10 @@ class CodeSnippet extends Component {
     return (
       <Snippet
         data={newData}
-        numProds={numProds}
-        title={title}
         hero={heroData}
-        CTA={CTA}
         category={category}
         enablePrice={enablePrice}
         enableName={enableName}
-        paragraph={paragraph}
-        topCTA={topCTA}
         />
     );
   }
@@ -47,15 +42,10 @@ class CodeSnippet extends Component {
         <div className="codeSnippet">
           {this.snippet(
             this.props.newImagesAndLinks.data,
-            this.props.numberOfProducts,
-            this.props.gridTitle,
-            this.props.CTA,
             this.props.category,
             this.props.enablePrice,
             this.props.enableName,
-            this.props.hero,
-            this.props.paragraph,
-            this.props.topCTA
+            this.props.hero
           )}
         </div>
       );
@@ -67,11 +57,7 @@ function mapStateToProps(state) {
   return {
     newImagesAndLinks: state.newImagesAndLinks,
     numberOfProducts: state.numberOfProducts,
-    gridTitle: state.title,
-    paragraph: state.paragraphCopy,
     hero: state.isHeroEnable,
-    CTA: state.CTACopy,
-    topCTA: state.TopCTACopy,
     category: state.selectCategory,
     enablePrice: state.isPriceEnable,
     enableName: state.isNameEnable

@@ -12,6 +12,7 @@ import priceEnable from "./reducer_price_enable";
 import nameEnable from "./reducer_name_enable";
 import heroEnable from "./reducer_hero_enable";
 import updateCode from "./reducer_update_code";
+import ampScriptEnable from "./reducer_ampscript_enable";
 
 const rootReducer = combineReducers({
   sites: selectSite,
@@ -25,6 +26,7 @@ const rootReducer = combineReducers({
   isPriceEnable: priceEnable,
   isNameEnable: nameEnable,
   isHeroEnable: heroEnable,
+  isAmpScriptEnable: ampScriptEnable,
   code: updateCode
 });
 
