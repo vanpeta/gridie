@@ -1,290 +1,99 @@
 import Title from "../Title";
 import Paragraph from "../Paragraph";
 import CTA from "../CTA";
+import ampScript1 from "./ampScript1";
+import ampScript2 from "./ampScript2";
+import ampScript3 from "./ampScript3";
+import ampScript4 from "./ampScript4";
+import ampScript5 from "./ampScript5";
+import ampScript6 from "./ampScript6";
+import ampScript7 from "./ampScript7";
+import ampScript8 from "./ampScript8";
+import ampScript9 from "./ampScript9";
+import ampScript10 from "./ampScript10";
+import ampScript11 from "./ampScript11";
+import ampScript12 from "./ampScript12";
 
 const ampScript = (props) => {
 	console.log(props);
 	const url = props.category + '?xml=1'
 	const title = props.gridTitle.copy ? Title(props.gridTitle) : "";
 	const paragraph = props.paragraph ? Paragraph(props.paragraph) : "";
-	const topCTA = props.topCTA ? CTA(props.topCTA) : '';
-	const bottomCTA = props.CTA ? CTA(props.CTA) : "";
-
-	return `<!--[if !mso]><!-- -->
-		<style type="text/css">
-		@media only screen and (max-width: 480px) {
-			.MobileCtaTextSize {
-			font-size: 2.5vw !important;
-			}
-		}
-
-		@media only screen and (max-width: 600px) {
-			.hide_mobile {
-			display: none !important;
-			width: 0px !important;
-			height: 0px !important;
-			visibility: hidden !important;
-			overflow: hidden !important;
-			font-size: 0px !important;
-			line-height: 0px !important;
-			}
-			.show_for_mobile {
-			display: block !important;
-			width: auto !important;
-			height: auto !important;
-			overflow: visible !important;
-			position: static !important;
-			min-height: 0px !important;
-			line-height: normal !important;
-			font-size: medium !important;
-			}
-		}
-		</style>
-		<!--<![endif]-->
-		<!-- Grid -->
-		<script runat="server" language="ampscript">
-		var @GridUrl, @NewArrivalsUrl, @GridXML, @ProductCount, @Product, @rows, @Scene7, @ProductTitles, @ProductTitle, @ProductPrice, @ProductUrls, @ProductUrl, @fixedUrl, @ProductImageUrls, @ProductImageUrl, @NumberOfProducts, @TopCTA, @Paragraph, @BottomCTA, @Price, @ProductName
-		
-		SET @GridUrl = '${url}'
-		SET @NumberOfProducts = ${props.numberOfProducts}
-		SET @Price = '${props.enablePrice}'
-		SET @ProductName = '${props.enableName}'
-
-		SET @GridXML = HTTPGet(@GridUrl)
-		SET @ProductTitles = BuildRowSetFromXML(@GridXML, "//ProductTitle")
-		SET @ProductPrice = BuildRowSetFromXML(@GridXML, "//CurrentPrice")
-		SET @ProductUrls = BuildRowSetFromXML(@GridXML, "//ProductUrl")
-		SET @ProductImageUrls = BuildRowSetFromXML(@GridXML, "//ProductImageUrl")
-		SET @ProductCount = RowCount(@ProductTitles)
-		SET @Scene7 = "?wid=600&hei=807&fmt=pjpeg&pscan=auto&qlt=70,0&op_sharpen=1&resMode=bicub&op_usm=0.1,0.1,5,0&crop=0,136,1684,2261"
-		set @NewArrivalsUrl = Substring(@GridUrl, 1, Subtract(Length(@GridUrl), 6))
-		</script>
-		${title}
-		${paragraph}
-		${topCTA}
-		<script runat="server" language="ampscript">
-		for @Product = 1 to @ProductCount do
-			Set @ProductTitle = field(row(@ProductTitles, @Product), "Value")
-			Set @ProductUrl = field(row(@ProductUrls, @Product), "Value")
-			Set @ProductImageUrl = field(row(@ProductImageUrls, @Product), "Value")
-		next @Product
-		</script>
-		<!-- GRID desktop -->
-		<table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="container hide_mobile">
-		<tr>
-			<script runat="server" language="ampscript">
-			If RowCount(@ProductTitles) > 3 THEN
-			SET @rows = 3
-			ELSE
-			SET @rows = RowCount(@ProductTitles)
-			ENDIF
-			IF @rows >= 1 THEN
-			for @ProductCount = 1 to @rows do
-				Set @ProductTitle = Field(Row(@ProductTitles, @ProductCount), "Value")
-			Set @ProductUrl = Field(Row(@ProductUrls, @ProductCount), "Value")
-			Set @ProductImageUrl = Field(Row(@ProductImageUrls, @ProductCount), "Value")
-			Set @fixedUrl = Replace(@ProductUrl, 'http', 'https')
-			</script>
-			<td align="center" width="200" style="padding-top: 10px; padding-bottom: 20px;">
-			<table align="center" cellspacing="0" cellpadding="0" border="0">
-				<tr>
-				<td align="center">
-					<a href="%%=RedirectTo(@fixedUrl)=%%">
-					<img src="%%=RedirectTo(Concat(@ProductImageUrl,@Scene7))=%%" width="190" style="display: block;">
-					</a>
-				</td>
-				</tr>
-				<script runat="server" language="ampscript">
-				IF @ProductName == 'TRUE' THEN
-				</script>
-				<tr>
-				<td align="center" valign="top" height="30" style="padding-top: 5px; padding-right: 5%; padding-left: 5%; font-family: arial; font-size: 10px; letter-spacing: .10em;">
-					%%=v(@ProductTitle)=%%
-					<br>
-				</td>
-				</tr>
-				<script runat="server" language="ampscript">
-				ENDIF
-				</script>
-				<script runat="server" language="ampscript">
-				IF @Price == 'TRUE' THEN
-				</script>
-				<tr>
-				<td align="center" valign="top" height="30" style="padding-top: 5px; padding-right: 5%; padding-left: 5%; font-family: arial; font-size: 10px; letter-spacing: .10em;">
-					%%=v(@ProductPrice)=%%
-					<br>
-				</td>
-				</tr>
-				<script runat="server" language="ampscript">
-				ENDIF
-				</script>
-			</table>
-			</td>
-			<script runat="server" language="ampscript">
-			NEXT @ProductCount
-			ENDIF
-			</script>
-		</tr>
-		<tr>
-			<script runat="server" language="ampscript">
-			If RowCount(@ProductTitles) > 6 THEN
-			SET @rows = 6
-			ELSE
-			SET @rows = RowCount(@ProductTitles)
-			ENDIF
-			IF @rows >= 1 THEN
-			for @ProductCount = 4 to @rows do
-				Set @ProductTitle = Field(Row(@ProductTitles, @ProductCount), "Value")
-			Set @ProductUrl = Field(Row(@ProductUrls, @ProductCount), "Value")
-			Set @ProductImageUrl = Field(Row(@ProductImageUrls, @ProductCount), "Value")
-			Set @fixedUrl = Replace(@ProductUrl, 'http', 'https')
-			</script>
-			<td align="center" width="200" style="padding-top: 10px; padding-bottom: 20px;">
-			<table align="center" cellspacing="0" cellpadding="0" border="0">
-				<tr>
-				<td align="center">
-					<a href="%%=RedirectTo(@fixedUrl)=%%">
-					<img src="%%=RedirectTo(Concat(@ProductImageUrl,@Scene7))=%%" width="190" style="display: block;">
-					</a>
-				</td>
-				</tr>
-				<tr>
-				<td align="center" valign="top" height="30" style="padding-top: 5px; padding-right: 5%; padding-left: 5%; font-family: arial; font-size: 10px; letter-spacing:
-																																.10em;">
-					%%=v(@ProductTitle)=%%
-					<br>
-				</td>
-				</tr>
-			</table>
-			</td>
-			<script runat="server" language="ampscript">
-			NEXT @ProductCount
-			</script>
-			<script runat="server" language="ampscript">
-			ENDIF
-			</script>
-		</tr>
-		</table>
-		<!-- mobile -->
-		<!--[if !mso]><!-- -->
-		<div class="show_for_mobile" align="center" style="display: none; width: 0px; height: 0px; overflow: hidden; min-height: 0px; line-height: 0px; font-size: 0px;">
-		<table width="100%" cellspacing="0" cellpadding="0" border="0" class="container">
-			<tr>
-			<script runat="server" language="ampscript">
-				If RowCount(@ProductTitles) > 2 THEN
-				SET @rows = 2
-				ELSE
-				SET @rows = RowCount(@ProductTitles)
-				ENDIF
-				IF @rows >= 1 THEN
-				for @ProductCount = 1 to @rows do
-				Set @ProductTitle = Field(Row(@ProductTitles, @ProductCount), "Value")
-				Set @ProductUrl = Field(Row(@ProductUrls, @ProductCount), "Value")
-				Set @ProductImageUrl = Field(Row(@ProductImageUrls, @ProductCount), "Value")
-				Set @fixedUrl = Replace(@ProductUrl, 'http', 'https')
-			</script>
-			<td align="center" style="padding-top: 10px; padding-bottom: 20px;">
-				<table align="center" cellspacing="0" cellpadding="0" border="0">
-				<tr>
-					<td align="center" width="50%">
-					<a href="%%=RedirectTo(@fixedUrl)=%%">
-						<img src="%%=RedirectTo(Concat(@ProductImageUrl,@Scene7))=%%" width="95%" style="display: block;">
-					</a>
-					</td>
-				</tr>
-				<tr>
-					<td align="center" valign="top" height="20" style="padding-top: 5px; padding-right: 5%; padding-left: 5%; font-family: arial; font-size: 10px; letter-spacing: .10em;">
-					%%=v(@ProductTitle)=%%
-					</td>
-				</tr>
-				</table>
-			</td>
-			<script runat="server" language="ampscript">
-				NEXT @ProductCount
-			</script>
-			<script runat="server" language="ampscript">
-				ENDIF
-			</script>
-			</tr>
-			<tr>
-			<script runat="server" language="ampscript">
-				If RowCount(@ProductTitles) > 4 THEN
-				SET @rows = 4
-				ELSE
-				SET @rows = RowCount(@ProductTitles)
-				ENDIF
-				IF @rows >= 1 THEN
-				for @ProductCount = 3 to @rows do
-				Set @ProductTitle = Field(Row(@ProductTitles, @ProductCount), "Value")
-				Set @ProductUrl = Field(Row(@ProductUrls, @ProductCount), "Value")
-				Set @ProductImageUrl = Field(Row(@ProductImageUrls, @ProductCount), "Value")
-				Set @fixedUrl = Replace(@ProductUrl, 'http', 'https')
-			</script>
-			<td align="center" style="padding-top: 10px; padding-bottom: 20px;">
-				<table align="center" cellspacing="0" cellpadding="0" border="0">
-				<tr>
-					<td align="center" width="50%">
-					<a href="%%=RedirectTo(@fixedUrl)=%%">
-						<img src="%%=RedirectTo(Concat(@ProductImageUrl,@Scene7))=%%" width="95%" style="display: block;">
-					</a>
-					</td>
-				</tr>
-				<tr>
-					<td align="center" valign="top" height="20" style="padding-top: 5px; padding-right: 5%; padding-left: 5%; font-family: arial; font-size: 10px; letter-spacing: .10em;">
-					%%=v(@ProductTitle)=%%
-					</td>
-				</tr>
-				</table>
-			</td>
-			<script runat="server" language="ampscript">
-				NEXT @ProductCount
-			</script>
-			<script runat="server" language="ampscript">
-				ENDIF
-			</script>
-			</tr>
-			<tr>
-			<script runat="server" language="ampscript">
-				If RowCount(@ProductTitles) > 6 THEN
-				SET @rows = 6
-				ELSE
-				SET @rows = RowCount(@ProductTitles)
-				ENDIF
-				IF @rows >= 1 THEN
-				for @ProductCount = 5 to @rows do
-				Set @ProductTitle = Field(Row(@ProductTitles, @ProductCount), "Value")
-				Set @ProductUrl = Field(Row(@ProductUrls, @ProductCount), "Value")
-				Set @ProductImageUrl = Field(Row(@ProductImageUrls, @ProductCount), "Value")
-				Set @fixedUrl = Replace(@ProductUrl, 'http', 'https')
-			</script>
-			<td align="center" style="padding-top: 10px; padding-bottom: 20px;">
-				<table align="center" cellspacing="0" cellpadding="0" border="0">
-				<tr>
-					<td align="center" width="50%">
-					<a href="%%=RedirectTo(@fixedUrl)=%%">
-						<img src="%%=RedirectTo(Concat(@ProductImageUrl,@Scene7))=%%" width="95%" style="display: block;">
-					</a>
-					</td>
-				</tr>
-				<tr>
-					<td align="center" valign="top" height="20" style="padding-top: 5px; padding-right: 5%; padding-left: 5%; font-family: arial; font-size: 10px; letter-spacing: .10em;">
-					%%=v(@ProductTitle)=%%
-					</td>
-				</tr>
-				</table>
-			</td>
-			<script runat="server" language="ampscript">
-				NEXT @ProductCount
-			</script>
-			<script runat="server" language="ampscript">
-				ENDIF
-			</script>
-			</tr>
-		</table>
-		</div>
-		<!--<![endif]-->
-		<!-- CTA -->
-		${bottomCTA}`;
+	const topCTA = props.topCTA ? CTA(props.topCTA, props.category) : '';
+	const bottomCTA = props.CTA ? CTA(props.CTA, props.category) : "";
+	const script = `<script runat="server" language="ampscript">
+			var @GridUrl, @NewArrivalsUrl
+			var @GridXML
+			var @ProductCount
+			var @Product, @rows, @Scene7
+			var @ProductTitles, @ProductTitle
+			var @ProductPrices, @ProductPrice
+			var @ProductUrls, @ProductUrl, @fixedUrl
+			var @ProductImageUrls, @ProductImageUrl
+			set @GridUrl = '${url}'
+			set @GridXML = HTTPGet(@GridUrl)
+			set @ProductTitles = BuildRowSetFromXML(@GridXML, "//ProductTitle")
+			set @ProductPrices = BuildRowSetFromXML(@GridXML, "//CurrentPrice")
+			set @ProductUrls = BuildRowSetFromXML(@GridXML, "//ProductUrl")
+			set @ProductImageUrls = BuildRowSetFromXML(@GridXML, "//ProductImageUrl")
+			set @ProductCount = RowCount(@ProductTitles)
+			set @Scene7 = "?wid=600&hei=807&fmt=pjpeg&pscan=auto&qlt=70,0&op_sharpen=1&resMode=bicub&op_usm=0.1,0.1,5,0&crop=0,136,1684,2261"
+			set @NewArrivalsUrl = Substring(@GridUrl, 1, Subtract(Length(@GridUrl), 6))
+		</script>`;
+	const grid = (props) => {
+		switch (props.numberOfProducts) {
+      case "1":
+        return `<!-- Grid -->
+					${script}
+					${ampScript1(props)}`;
+      case "2":
+        return `<!-- Grid -->
+					${script}
+					${ampScript2(props)}`;
+      case "3":
+        return `<!-- Grid -->
+					${script}
+					${ampScript3(props)}`;
+      case "4":
+        return `<!-- Grid -->
+					${script}
+					${ampScript4(props)}`;
+      case "5":
+        return `<!-- Grid -->
+					${script}
+					${ampScript5(props)}`;
+      case "6":
+        return `<!-- Grid -->
+					${script}
+					${ampScript6(props)}`;
+      case "7":
+        return `<!-- Grid -->
+					${script}
+					${ampScript7(props)}`;
+      case "8":
+        return `<!-- Grid -->
+					${script}
+					${ampScript8(props)}`;
+      case "9":
+        return `<!-- Grid -->
+					${script}
+					${ampScript9(props)}`;
+			case "10":
+				return `<!-- Grid -->
+					${script}
+					${ampScript10(props)}`;
+			case "11":
+				return `<!-- Grid -->
+					${script}
+					${ampScript11(props)}`;
+      case "12":
+        return `<!-- Grid -->
+					${script}
+					${ampScript12(props)}`;
+      default:
+    }
+	}
+	return title + paragraph + topCTA + grid(props) + bottomCTA;
 }
 
 export default ampScript;
