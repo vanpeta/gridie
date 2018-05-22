@@ -60,6 +60,7 @@ class InputTopCTA extends Component {
 						<input
 							type="number"
 							value={this.state.paddingTop}
+							min="0"
 							placeholder="add space"
 							onChange={e => this.handleChange(e, "paddingTop")}
 							className="input"
@@ -70,6 +71,7 @@ class InputTopCTA extends Component {
 						<input
 							type="number"
 							value={this.state.paddingBottom}
+							min="0"
 							placeholder="add space"
 							onChange={e => this.handleChange(e, "paddingBottom")}
 							className="input"

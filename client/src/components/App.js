@@ -22,7 +22,7 @@ class App extends Component {
             <Settings />
           </div>
           <div className="col-4 preview">
-            <EnableAmpScript />
+            {/* <EnableAmpScript /> */}
             <Preview />
           </div>
         </div>
