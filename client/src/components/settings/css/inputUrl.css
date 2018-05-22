@@ -123,6 +123,11 @@ input[type='checkbox']:checked + label:before {
     font-size: 12px;
 }
 
+.productSettings {
+    display: inherit;
+    padding: 2px;
+}
+
 .conductor {
     position: fixed;
     top: 0;

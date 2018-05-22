@@ -7,8 +7,7 @@ import InputTitle from "./InputTitle";
 import InputParagraph from "./InputParagraph";
 import InputCta from "./InputCta";
 import InputNumberOrProducts from "./InputNumberOfProducts";
-import ShowPrice from "./ShowPrice";
-import ShowName from "./ShowName";
+import ProductSettings from "./ProductSettings";
 import ShowHero from "./ShowHero";
 
 class Settings extends Component {
@@ -16,27 +15,26 @@ class Settings extends Component {
     console.log("PROPS =>", this.props)
     if (this.props.numberOfProducts > 0 && this.props.category) {
       return (
-        <div className="secondarySettings">
-          <div className="row">
-            <ShowHero />
-          </div>
-          <div className="row">
-            <InputTitle />
-          </div>
-          <div className="row">
-            <InputParagraph />
-          </div>
-          <div className="row">
-            <InputCta mode="top"/>
-          </div>
-          <div className="row">
-            <InputCta  mode="bottom"/>
-          </div>
-          <div className="row">
-            <ShowName />
-          </div>
-          <div className="row">
-            <ShowPrice />
+        <div className="row secondarySettings">
+          <div className="container">
+            <div className="row">
+              <ShowHero />
+            </div>
+            <div className="row">
+              <InputTitle />
+            </div>
+            <div className="row">
+              <InputParagraph />
+            </div>
+            <div className="row">
+              <InputCta mode="top"/>
+            </div>
+            <div className="row">
+              <InputCta  mode="bottom"/>
+            </div>
+            <div className="row">
+              <ProductSettings />
+            </div>
           </div>
         </div>
       );

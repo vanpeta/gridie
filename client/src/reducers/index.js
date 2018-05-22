@@ -13,6 +13,7 @@ import nameEnable from "./reducer_name_enable";
 import heroEnable from "./reducer_hero_enable";
 import updateCode from "./reducer_update_code";
 import ampScriptEnable from "./reducer_ampscript_enable";
+import enableCategory from "./reducer_enable_category";
 
 const rootReducer = combineReducers({
   sites: selectSite,
@@ -27,7 +28,8 @@ const rootReducer = combineReducers({
   isNameEnable: nameEnable,
   isHeroEnable: heroEnable,
   isAmpScriptEnable: ampScriptEnable,
-  code: updateCode
+  code: updateCode,
+  enableCategory: enableCategory
 });
 
 export default rootReducer;

@@ -135,3 +135,11 @@ export function updateCode (code) {
 		payload: code
 	}
 }
+
+export const ENABLE_CATEGORY = "ENABLE_CATEGORY";
+export function enableCategory (bool) {
+	return {
+		type: ENABLE_CATEGORY,
+		payload: bool
+	}
+}

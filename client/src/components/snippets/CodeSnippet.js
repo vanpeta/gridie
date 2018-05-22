@@ -4,7 +4,13 @@ import { connect } from "react-redux";
 import Snippet from "./Snippet";
 
 class CodeSnippet extends Component {
-
+  addLink(data, product) {
+    if (!this.props.enableCategory) {
+      return data.selectedSite + product.link
+    } else {
+      return this.props.category
+    }
+  }
   snippet(data, category, enablePrice, enableName, hero) {
     let heroData = { enable: hero };
     let newData = [];
@@ -14,7 +20,7 @@ class CodeSnippet extends Component {
       }
       return (newData.push({
         image: product.image,
-        link: data.selectedSite + product.link,
+        link: this.addLink(data, product),
         name: product.productName,
         price: product.price
       }));
@@ -60,7 +66,8 @@ function mapStateToProps(state) {
     hero: state.isHeroEnable,
     category: state.selectCategory,
     enablePrice: state.isPriceEnable,
-    enableName: state.isNameEnable
+    enableName: state.isNameEnable,
+    enableCategory: state.enableCategory
   };
 }
 

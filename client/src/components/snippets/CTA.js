@@ -2,7 +2,6 @@ const CTA = (props) => {
 	if (!props || props.copy === "") {
 		return ""
 	} else {
-		console.log("props= ", props)
 		return (
 			`<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
 					<tr>
