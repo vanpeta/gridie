@@ -22,15 +22,19 @@ const productImage = (props) => {
 			<tr>`;
   }
 	return (
-		`<tr>
-			<td align="center" width="100%" style="padding-top: 40px; padding-bottom:20px; padding-left:3px; padding-right:3px; font-family: 'Futura pt', 'century gothic', Arial, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; font-weight: 100; line-height: 150%;">
-				<a alias="product-grid" href="%%=RedirectTo(@fixedUrl)=%%">
-					<img width="188" class="imageMobile" src="%%=RedirectTo(Concat(@ProductImageUrl,@Scene7))=%%" style="display:block; border-style: none;">
-				</a>
-			</td>
-		</tr>
-		${name}
-		${price}`
+		`<td align="center" width="200" style="padding-top: 10px; padding-bottom: 20px;">
+			<table align="center" cellspacing="0" cellpadding="0" border="0">
+				<tr>
+					<td align="center" width="100%" style="padding-top: 40px; padding-bottom:20px; padding-left:3px; padding-right:3px; font-family: 'Futura pt', 'century gothic', Arial, sans-serif; font-size: 20px; color: #000000; letter-spacing: .15em; font-weight: 100; line-height: 150%;">
+						<a alias="product-grid" href="%%=RedirectTo(@fixedUrl)=%%">
+							<img width="188" class="imageMobile" src="%%=RedirectTo(Concat(@ProductImageUrl,@Scene7))=%%" style="display:block; border-style: none;">
+						</a>
+					</td>
+				</tr>
+				${name}
+				${price}
+			</table>
+		</td>`
 	);
 }
 

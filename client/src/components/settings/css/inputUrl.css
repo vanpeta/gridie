@@ -69,6 +69,10 @@ input[type='checkbox']:checked + label:before {
     cursor: pointer;
 }
 
+.inputCTA {
+    display: inline-block;
+}
+
 .checkbox-text {
     vertical-align: top;
     cursor: pointer;

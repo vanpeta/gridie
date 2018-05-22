@@ -9,9 +9,6 @@ import EnableAmpScript from "./settings/EnableAmpScript";
 class App extends Component {
 
   render() {
-    console.log("Created by Carlos Allende for GUESS inc.");
-    console.log("Open Source project, fork the repo: https://github.com/vanpeta/gridie.git");
-    console.log("contact: callende@guess.com");
     return (
       <div className="container">
         <header className="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">

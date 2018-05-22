@@ -3,8 +3,7 @@ import React, { Component } from "react";
 import InputUrl from "./InputUrl"
 import InputTitle from "./InputTitle";
 import InputParagraph from "./InputParagraph";
-import InputCTA from "./InputCTA";
-import InputTopCTA from "./InputTopCTA";
+import InputCta from "./InputCta";
 import InputNumberOrProducts from "./InputNumberOfProducts";
 import ShowPrice from "./ShowPrice";
 import ShowName from "./ShowName";
@@ -29,10 +28,10 @@ class Settings extends Component {
           <InputParagraph />
         </div>
         <div className="row">
-          <InputTopCTA />
+          <InputCta mode="top"/>
         </div>
         <div className="row">
-          <InputCTA />
+          <InputCta  mode="bottom"/>
         </div>
         <div className="row">
           <ShowName />

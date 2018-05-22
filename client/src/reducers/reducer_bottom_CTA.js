@@ -1,6 +1,6 @@
-export default function(state = "", action) {
+export default function(state = null, action) {
   switch (action.type) {
-    case "UPDATE_TOP_CTA_COPY":
+    case "BOTTOM_CTA":
       return action.payload;
     default:
   }

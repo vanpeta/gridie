@@ -64,22 +64,21 @@ export function updateParagraphCopy (paragraphCopy) {
 	}
 }
 
+export const UPDATE_TOP_CTA = "UPDATE_TOP_CTA";
 
-export const UPDATE_CTA_COPY = "UPDATE_CTA_COPY";
-
-export function updateCTACopy (CTACopy) {
+export function updateTopCTACopy (topCta) {
 	return {
-		type: UPDATE_CTA_COPY,
-		payload: CTACopy
+		type: UPDATE_TOP_CTA,
+		payload: topCta
 	}
 }
 
-export const UPDATE_TOP_CTA_COPY = "UPDATE_TOP_CTA_COPY";
+export const BOTTOM_CTA = "BOTTOM_CTA";
 
-export function updateTopCTACopy (TopCTACopy) {
+export function updateBottomCTA(bottomCta) {
 	return {
-		type: UPDATE_TOP_CTA_COPY,
-		payload: TopCTACopy
+		type: BOTTOM_CTA,
+		payload: bottomCta
 	}
 }
 

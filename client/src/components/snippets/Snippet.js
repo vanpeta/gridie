@@ -52,7 +52,7 @@ class Snippet extends Component {
       Paragraph(this.props.paragraph) +
       CTA(this.props.topCTA, this.props.category) +
       this.getGrid(this.props.numberOfProducts) +
-      CTA(this.props.CTA, this.props.category)
+      CTA(this.props.bottomCTA, this.props.category)
     );
   }
 
@@ -986,8 +986,8 @@ function mapStateToProps(state) {
   return {
     numberOfProducts: state.numberOfProducts,
     gridTitle: state.title,
-    CTA: state.CTACopy,
-    topCTA: state.TopCTACopy,
+    bottomCTA: state.bottomCta,
+    topCTA: state.topCta,
     paragraph: state.paragraphCopy,
     ampScript: state.isAmpScriptEnable
   };
