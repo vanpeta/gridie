@@ -4,6 +4,7 @@ import SideMenu from "./sideMenu/SideMenu";
 import CodeSnippet from "./snippets/CodeSnippet";
 import Settings from "./settings/Settings";
 import Preview from "./Preview";
+// eslint-disable-next-line
 import EnableAmpScript from "./settings/EnableAmpScript";
 
 class App extends Component {

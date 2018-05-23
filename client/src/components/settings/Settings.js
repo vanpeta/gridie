@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import InputUrl from "./InputUrl"
 import InputTitle from "./InputTitle";
 import InputParagraph from "./InputParagraph";
-import InputCta from "./InputCta";
+import InputCta from "./InputCTA";
 import InputNumberOrProducts from "./InputNumberOfProducts";
 import ProductSettings from "./ProductSettings";
 import ShowHero from "./ShowHero";
