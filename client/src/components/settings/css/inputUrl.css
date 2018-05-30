@@ -139,3 +139,11 @@ input[type='checkbox']:checked + label:before {
     color: white;
     margin: 2px;
 }
+.imageContainer {
+    display: inline;
+}
+.productImage {
+    padding: 2px;
+    max-width: 19%;
+    
+}

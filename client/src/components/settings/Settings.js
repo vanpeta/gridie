@@ -9,16 +9,25 @@ import InputCta from "./InputCTA";
 import InputNumberOrProducts from "./InputNumberOfProducts";
 import ProductSettings from "./ProductSettings";
 import ShowHero from "./ShowHero";
+import AllProducts from "./AllProducts";
 
 class Settings extends Component {
   renderSecondarySettings() {
-    console.log("PROPS =>", this.props)
+    let allProducts = ""
+    if (this.props.mode === "manual") {
+      allProducts = <AllProducts />
+    }
     if (this.props.numberOfProducts > 0 && this.props.category) {
       return (
         <div className="row secondarySettings">
           <div className="container">
             <div className="row">
               <ShowHero />
+            </div>
+            <div className="row">
+              <div className="col-12 bg-light m-1 p-1">
+                {allProducts}
+              </div>
             </div>
             <div className="row">
               <InputTitle />

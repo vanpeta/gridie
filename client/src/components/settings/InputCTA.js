@@ -22,7 +22,7 @@ class InputTopCTA extends Component {
 					className="input checkbox"
 					id={field.name}
 					type={field.type}
-					onChange={() => dispatch(submit('remoteSubmit'))}
+					//onChange={() => dispatch(submit('remoteSubmit'))}
 					{...field.input}
 				/>
 				{field.meta.error}
