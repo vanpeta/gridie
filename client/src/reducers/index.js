@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from "redux-form";
 
 import linkAndImages from './reducer_links_images';
 import selectSite from './reducer_site_opened';
@@ -29,7 +30,8 @@ const rootReducer = combineReducers({
   isHeroEnable: heroEnable,
   isAmpScriptEnable: ampScriptEnable,
   code: updateCode,
-  enableCategory: enableCategory
+  enableCategory: enableCategory,
+  form: formReducer
 });
 
 export default rootReducer;

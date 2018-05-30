@@ -1,129 +1,81 @@
 import React, { Component } from "react"
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { Field, reduxForm, submit } from "redux-form";
 
-import { updateTopCTACopy, updateBottomCTA } from "../../actions/index";
+import { updateTopCTA, updateBottomCTA } from "../../actions/index";
 
 class InputTopCTA extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { copy: "", paddingTop: 30, paddingBottom: 10 }
-        this.handleChange.bind(this)
-	}
-	
-	updateAppState(newState) {
-		if (this.props.mode === "top") {
-			this.props.newTopCta(newState);
-		} else {
-			this.props.newBottomCta(newState);
-		}
-	}
-
-    handleChange(event, property) {
-		switch (property) {
-		case "copy":
-			return (
-				this.setState({ copy: event.target.value }, () => {
-					this.updateAppState(this.state);
-				})
-			);
-		case "paddingTop":
-			return (
-				this.setState({ paddingTop: event.target.value }, () => {
-					this.updateAppState(this.state);
-				})
-			);
-		case "paddingBottom":
-			return (
-				this.setState({ paddingBottom: event.target.value }, () => {
-					this.updateAppState(this.state);
-				})
-			);
-		default:
-		}
+  updateAppState(newState) {
+    if (this.props.mode === "top") {
+      this.props.newTopCta(newState);
+    } else {
+      this.props.newBottomCta(newState);
     }
-
-    renderError() {
-		if (this.state.copy.length > 15) {
-			console.log("error=", this.props);
-			return (
-				<div className="error">"{this.state.copy}" might be too long</div>
-			)
-		}
-	}
-	paddingControls() {
-		if (this.state.copy) {
-			return (
-				<div>
-					<div className="inputCTA">
-						<label htmlFor="paddingTop">top</label>
-						<input
-							type="number"
-							value={this.state.paddingTop}
-							min="0"
-							placeholder="add space"
-							onChange={e => this.handleChange(e, "paddingTop")}
-							className="input"
-							id="paddingTop" />
-					</div>
-					<div className="inputCTA">
-						<label htmlFor="paddingBottom">bottom</label>
-						<input
-							type="number"
-							value={this.state.paddingBottom}
-							min="0"
-							placeholder="add space"
-							onChange={e => this.handleChange(e, "paddingBottom")}
-							className="input"
-							id="paddingBottom" />
-					</div>
-				</div>
-			);
-		}
-	}
-	placeholder() {
-		if (this.props.mode === "top") {
-			return "Top CTA"
-		} else {
-			return "Bottom CTA"
-		}
+  }
+	renderFields(field) {
+		
+		return (
+			<div>
+				<label htmlFor={field.name}>{field.label}</label>
+				<input
+					className="input checkbox"
+					id={field.name}
+					type={field.type}
+					onChange={() => dispatch(submit('remoteSubmit'))}
+					{...field.input}
+				/>
+				{field.meta.error}
+			</div>
+		)
 	}
 
-    render() {
-		const placeholder = this.placeholder()
-        return (
-            <div className="col-12 bg-light m-1 p-1">
-				<form className="p-1" onSubmit={e => { e.preventDefault(); }}>
-					<input 
-						type="text"
-						value={this.state.copy}
-						placeholder={ placeholder }
-						onChange={ e => this.handleChange(e, "copy") }
-						className="input"
-						id="" />
-					{this.paddingControls()}
-				</form>
-				{this.renderError()}
-            </div>
-        )
-    }
-} 
 
-function mapStateToProps (state) {
-    return {
-		topCta: state.topCta,
-		bottomCta: state.bottomCta
-    }
+	handleChange(event) {
+		console.log(event);
+		// updateAppState(newState);
+	}
+
+	onSubmit(values) {
+		console.log(values);
+		// updateAppState(newState);
+	}
+  render() {
+		const { handleSubmit } = this.props;
+    return (
+      <div className="col-12 bg-light m-1 p-1">
+				<form onSubmit={handleSubmit}>
+					<Field name="copy" label="copy" type="text" component={this.renderFields} />
+					<Field name="topPadding" label="topPadding" type="number" min="0" component={this.renderFields} />
+					<Field name="bottomPadding" label="bottomPadding" type="number" min="0" component={this.renderFields} />
+					<Field name="width" label="width" type="number" min="0" component={this.renderFields} />
+					<Field name="border" label="border" type="checkbox" component={this.renderFields} />
+					<Field name="borderWidth" label="borderWidth" type="number" min="0" component={this.renderFields} />
+					<Field name="borderColor" label="borderColor" type="color" component={this.renderFields} />
+					<Field name="color" label="color" type="color" component={this.renderFields} />
+					<Field name="backgroundColor" label="backgroundColor" type="color" component={this.renderFields} />
+        </form>
+      </div>
+    );
+  }
+}
+
+function validate(values) {
+	const errors = {};
+	return errors;
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators(
-    	{
-			newTopCta: updateTopCTACopy,
+	return bindActionCreators(
+		{
+			newTopCta: updateTopCTA,
 			newBottomCta: updateBottomCTA
-    	},
-    	dispatch
-    );
-  }
-  
-export default connect(mapStateToProps, mapDispatchToProps)(InputTopCTA);
+		},
+		dispatch
+	);
+}
+
+InputTopCTA = reduxForm({ validate, form: "ctaForm" })(InputTopCTA);
+
+InputTopCTA = connect(mapDispatchToProps)(InputTopCTA);
+export default InputTopCTA;

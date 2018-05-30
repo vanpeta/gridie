@@ -66,7 +66,7 @@ export function updateParagraphCopy (paragraphCopy) {
 
 export const UPDATE_TOP_CTA = "UPDATE_TOP_CTA";
 
-export function updateTopCTACopy (topCta) {
+export function updateTopCTA (topCta) {
 	return {
 		type: UPDATE_TOP_CTA,
 		payload: topCta
